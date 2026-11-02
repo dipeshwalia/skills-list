@@ -81,7 +81,7 @@ The root [`.skillignore`](../.skillignore) starts with:
 !/skills/**
 ```
 
-This enables your originals and leaves imported skills unselected. After importing and reviewing skills, append exact directory selections, for example:
+These first rules enable your originals. The file also contains exact selections for the four requested Matt Pocock skills and their eight supporting dependencies, documented with original-source credits in [the inventory](../INVENTORY.md). Other imported skills remain unselected. After importing and reviewing more skills, append exact directory selections, for example:
 
 ```gitignore
 !/upstreams/mattpocock/skills/engineering/tdd
@@ -120,7 +120,7 @@ skillshare sync -g
 
 Skillshare does not read `upstreams.json`. Its `install --track` mechanism creates separate Git clones, while regular installs copy skill files and updates reinstall them. The subtree helper remains responsible for merging this repository's upstreams. Avoid registering those same upstreams a second time through Skillshare.
 
-This setup adds configuration examples and selection rules only. It does not install Skillshare, configure your global targets, import upstream skills, or publish a repository.
+Skillshare configuration examples and selection rules do not install the CLI, configure your global targets, or publish this repository. Imported source content and enabled skill selections are recorded separately in [the inventory](../INVENTORY.md).
 
 ## Checked against
 

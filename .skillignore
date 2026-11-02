@@ -1,11 +1,20 @@
 # Skillshare matches skill-directory paths relative to this repository root.
-# Enable original skills; select imported skills explicitly below.
+# Enable original skills and the curated inventory below.
 *
 !/skills/**
 
-# Examples after importing and reviewing the upstream skills:
-# !/upstreams/mattpocock/skills/engineering/tdd
-# !/upstreams/mattpocock/skills/engineering/codebase-design
-# !/upstreams/mattpocock/skills/engineering/code-review
-# Or enable the engineering collection:
-# !/upstreams/mattpocock/skills/engineering/**
+# Requested inventory — original author: Matt Pocock (see INVENTORY.md).
+!/upstreams/mattpocock/skills/engineering/grill-with-docs
+!/upstreams/mattpocock/skills/engineering/wayfinder
+!/upstreams/mattpocock/skills/engineering/to-tickets
+!/upstreams/mattpocock/skills/engineering/implement-spec
+
+# Supporting skills called by the selected workflows.
+!/upstreams/mattpocock/skills/productivity/grilling
+!/upstreams/mattpocock/skills/engineering/domain-modeling
+!/upstreams/mattpocock/skills/engineering/tdd
+!/upstreams/mattpocock/skills/engineering/code-review
+!/upstreams/mattpocock/skills/engineering/research
+!/upstreams/mattpocock/skills/engineering/prototype
+!/upstreams/mattpocock/skills/engineering/codebase-design
+!/upstreams/mattpocock/skills/engineering/setup-matt-pocock-skills

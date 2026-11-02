@@ -10,22 +10,17 @@ upstreams/                      # Created when you import a source
     skills/engineering/...
   another-author/...
 upstreams.json                  # Source repositories and tracked refs
+INVENTORY.md                     # Selected skills, dependencies, and original credits
 scripts/upstream.py             # Small wrapper around Git subtree
 .skillignore                    # Which skills Skillshare can discover
 skillshare.config.example.yaml   # Global Skillshare config example
 ```
 
-Matt Pocock's repository is configured as an example. No external skills are imported or installed by the initial setup.
+The [inventory](INVENTORY.md) includes Matt Pocock's `grill-with-docs`, `wayfinder`, `to-tickets`, and `implement-spec`, plus eight supporting skills their workflows use. His repository is imported with its original MIT license; each selected skill carries portable source attribution and license files. The selection is ready for Skillshare; live agent installation is separate.
 
 ## Start
 
-Requires Python 3 and Git with `git subtree`. This folder must be its own Git repository with at least one commit before importing a source:
-
-```sh
-git init -b main
-git add .gitignore .skillignore AGENTS.md README.md upstreams.json scripts skills docs skillshare.config.example.yaml
-git commit -m "Set up personal skills repository"
-```
+Requires Python 3 and Git with `git subtree`. This repository is already initialized and includes its upstream import history. Use a Git clone when moving it to another machine so that history, including the subtree merge baselines, travels with the files. Commit or stash changes before importing or updating a source.
 
 Your eventual `origin` remote is your personal repository. Upstream sources are configured separately and do not need to be added as Git remotes.
 
@@ -86,7 +81,7 @@ Use a normal merge when bringing the update branch back into your main branch. P
 
 Use [Skillshare](https://github.com/runkids/skillshare) to distribute this repository's edited skills to your AI tools. The existing directory layout works: configure the **repository root** as `sources.skills`, use `mode: merge` for per-skill links, and `target_naming: standard` for names such as `tdd`.
 
-The [config example](skillshare.config.example.yaml) is ready to adapt for your machine. The root [`.skillignore`](.skillignore) enables original skills and leaves imported collections opt-in. After importing an upstream, enable the desired skill directories there, including any sibling skills they depend on.
+The [config example](skillshare.config.example.yaml) is ready to adapt for your machine. The root [`.skillignore`](.skillignore) enables original skills and the curated inventory; other imported skills remain opt-in. After importing another upstream, credit its author and source in the inventory, then enable the desired skill directories and their dependencies.
 
 See [Skillshare setup and skill requirements](docs/skillshare.md) for configuration, naming rules, selection examples, and preview commands. Keep using the subtree helper to merge upstream changes; Skillshare handles discovery and target links.
 
