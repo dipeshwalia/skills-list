@@ -1,7 +1,6 @@
 ---
 name: writing-unslop
 description: Cut AI tells from any writing.
-disable-model-invocation: true
 ---
 
 This collection uses category-prefixed invocation names. When referring to another bundled skill, use its name from [the collection map](COLLECTION.md).

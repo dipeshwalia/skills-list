@@ -2238,11 +2238,11 @@
     },
     "skills/writing-unslop/SKILL.md": {
       "executable": false,
-      "sha256": "ec43d3795bca5f54e90a35c124cd022740c9005805c19d2585c50502e0efaefb"
+      "sha256": "d26d760ef2e5e7bdedc03502c5b3ef4f2af83fcd9085c6875eb7c84d6d031fde"
     },
     "skills/writing-unslop/UPSTREAM.md": {
       "executable": false,
-      "sha256": "f412c7b748ca6f0530d1e48bb72bc960d71294eead94b29b82fc12e5c2638c93"
+      "sha256": "80bd83aef7dcebc162c25a3e28d0480eeafc8eeca9834561d5764604016ff111"
     }
   },
   "packages": {
