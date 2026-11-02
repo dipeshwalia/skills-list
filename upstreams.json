@@ -6,5 +6,21 @@
   "cursor-plugins": {
     "repository": "https://github.com/cursor/plugins.git",
     "ref": "main"
+  },
+  "i-have-adhd": {
+    "repository": "https://github.com/ayghri/i-have-adhd.git",
+    "ref": "main"
+  },
+  "jscpd": {
+    "repository": "https://github.com/kucherenko/jscpd.git",
+    "ref": "master"
+  },
+  "simple-english": {
+    "repository": "https://github.com/AminBlg/SimpleEnglish.git",
+    "ref": "main"
+  },
+  "improve": {
+    "repository": "https://github.com/shadcn/improve.git",
+    "ref": "main"
   }
 }
