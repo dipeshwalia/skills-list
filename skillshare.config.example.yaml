@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
+# Use these settings in ~/.config/skillshare/config.yaml.
+# For an existing config, merge the settings instead of replacing the file.
+sources:
+  # Point at the repository root to discover both skills/ and upstreams/.
+  skills: ~/personal/skills
+
+# Create one link per enabled skill, preserving unrelated target skills.
+mode: merge
+# Use SKILL.md's name, rather than flattening the entire source path.
+target_naming: standard
+
+targets:
+  codex:
+    skills:
+      path: ~/.codex/skills
+  # Add other tools you use, for example:
+  # claude:
+  #   skills:
+  #     path: ~/.claude/skills

@@ -11,6 +11,8 @@ upstreams/                      # Created when you import a source
   another-author/...
 upstreams.json                  # Source repositories and tracked refs
 scripts/upstream.py             # Small wrapper around Git subtree
+.skillignore                    # Which skills Skillshare can discover
+skillshare.config.example.yaml   # Global Skillshare config example
 ```
 
 Matt Pocock's repository is configured as an example. No external skills are imported or installed by the initial setup.
@@ -21,7 +23,7 @@ Requires Python 3 and Git with `git subtree`. This folder must be its own Git re
 
 ```sh
 git init -b main
-git add .gitignore AGENTS.md README.md upstreams.json scripts skills
+git add .gitignore .skillignore AGENTS.md README.md upstreams.json scripts skills docs skillshare.config.example.yaml
 git commit -m "Set up personal skills repository"
 ```
 
@@ -82,7 +84,11 @@ Use a normal merge when bringing the update branch back into your main branch. P
 
 ## Use the skills
 
-Importing a repository and enabling skills in an agent are separate steps. Install or link only the skill directories you choose, using your agent's supported mechanism, and point it at these customized copies. Copy each entire skill directory so supporting references and scripts remain available. Some skills also depend on sibling skills.
+Use [Skillshare](https://github.com/runkids/skillshare) to distribute this repository's edited skills to your AI tools. The existing directory layout works: configure the **repository root** as `sources.skills`, use `mode: merge` for per-skill links, and `target_naming: standard` for names such as `tdd`.
+
+The [config example](skillshare.config.example.yaml) is ready to adapt for your machine. The root [`.skillignore`](.skillignore) enables original skills and leaves imported collections opt-in. After importing an upstream, enable the desired skill directories there, including any sibling skills they depend on.
+
+See [Skillshare setup and skill requirements](docs/skillshare.md) for configuration, naming rules, selection examples, and preview commands. Keep using the subtree helper to merge upstream changes; Skillshare handles discovery and target links.
 
 Keep upstream license and attribution files when sharing adapted material. Avoid installing an upstream-managed copy and your customized copy under the same skill name.
 

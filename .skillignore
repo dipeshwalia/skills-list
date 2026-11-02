@@ -1,0 +1,11 @@
+# Skillshare matches skill-directory paths relative to this repository root.
+# Enable original skills; select imported skills explicitly below.
+*
+!/skills/**
+
+# Examples after importing and reviewing the upstream skills:
+# !/upstreams/mattpocock/skills/engineering/tdd
+# !/upstreams/mattpocock/skills/engineering/codebase-design
+# !/upstreams/mattpocock/skills/engineering/code-review
+# Or enable the engineering collection:
+# !/upstreams/mattpocock/skills/engineering/**
