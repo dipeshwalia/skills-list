@@ -7,6 +7,8 @@ export interface Source {
   category: string
   /** Skill names to pick; omitted means every canonical skill in the source. */
   skills?: string[]
+  /** Development-only paths, relative to each selected skill, to leave out of its package. */
+  exclude?: string[]
 }
 
 /** Edit sources.json; both TypeScript consumers and the package builder read it. */

@@ -6,4 +6,4 @@ disable-model-invocation: true
 
 This collection uses category-prefixed invocation names. When referring to another bundled skill, use its name from [the collection map](COLLECTION.md).
 
-Call the Skill tool with "grilling".
+Call the Skill tool with "workflow-grilling".

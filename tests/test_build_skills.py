@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import stat
@@ -20,7 +21,8 @@ class BuildSkillsTests(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
         (self.root / "scripts").mkdir()
-        shutil.copy2(PROJECT / "scripts/build-skills.py", self.root / "scripts/build-skills.py")
+        for script in ("build-skills.py", "upstream.py"):
+            shutil.copy2(PROJECT / "scripts" / script, self.root / "scripts" / script)
         self.write("upstreams.json", json.dumps({
             "example": {"repository": "https://github.com/example/repo.git", "ref": "main"},
         }))
@@ -45,6 +47,7 @@ class BuildSkillsTests(unittest.TestCase):
             f"---\nname: {name}\ndescription: Explain {name} in a local test.\n"
             "disable-model-invocation: true\n---\n\n"
             f"# {name}\n\nRead /two and $two, then [the companion](../two/SKILL.md).\n"
+            "Call the Skill tool with \"two\", then `two`. Label tickets `two`.\n"
             "The upstream example is https://example.com/two.\n"
             "Keep https://example.com/#/two and [docs](https://example.com/?next=/two).\n"
         ))
@@ -101,6 +104,7 @@ class BuildSkillsTests(unittest.TestCase):
         self.assertIn("/workflow-two", text)
         self.assertIn("$workflow-two", text)
         self.assertIn("../workflow-two/SKILL.md", text)
+        self.assertIn('Call the Skill tool with "workflow-two", then `workflow-two`. Label tickets `two`.', text)
         self.assertIn("https://example.com/two", text)
         self.assertIn("https://example.com/#/two", text)
         self.assertIn("https://example.com/?next=/two", text)
@@ -136,6 +140,7 @@ class BuildSkillsTests(unittest.TestCase):
         self.assertFalse((self.root / "skills/workflow-two").exists())
         self.assertEqual((self.root / "skills/my-original/SKILL.md").read_text(), "My independently authored skill.\n")
         self.assertEqual((self.root / "skills/README.md").read_text(), "My hand-written catalog.\n")
+        self.assertFalse([path for path in (self.root / "skills").iterdir() if path.name.startswith(".build-")])
         self.build("--check")
 
     def test_unknown_selection_fails_before_any_generated_write(self):
@@ -205,6 +210,71 @@ class BuildSkillsTests(unittest.TestCase):
         self.assertEqual(self.snapshot(), before)
         self.build()
         self.assertIn("An upstream improvement.", (self.root / "skills/workflow-one/SKILL.md").read_text())
+        self.build("--check")
+
+    def test_hidden_and_tool_files_are_not_packaged_or_treated_as_edits(self):
+        self.write("upstreams/example/skills/one/.DS_Store", b"finder")
+        self.write("upstreams/example/skills/one/scripts/__pycache__/run.cpython.pyc", b"cache")
+        self.build()
+        package = self.root / "skills/workflow-one"
+        self.assertFalse((package / ".DS_Store").exists())
+        self.assertFalse((package / "scripts/__pycache__").exists())
+        self.assertNotIn("DS_Store", (self.root / "skills/.generated.json").read_text())
+        self.write("skills/workflow-one/.DS_Store", b"finder")
+        self.write("skills/workflow-one/scripts/node_modules/tool/index.js", "module.exports = 1\n")
+        self.build("--check")
+        self.build()
+
+    def test_other_hosts_trailing_slashes_and_malformed_upstreams(self):
+        self.write("upstreams.json", json.dumps({
+            "example": {"repository": "https://github.com/example/repo.git/", "ref": "main"},
+            "elsewhere": {"repository": "https://gitlab.com/example/other.git", "ref": "main"},
+        }))
+        self.build()
+        self.write("upstreams.json", json.dumps({"example": "https://github.com/example/repo.git"}))
+        result = self.build(success=False)
+        self.assertIn("error:", result.stderr)
+        self.assertNotIn("Traceback", result.stderr)
+
+    def test_unselected_broken_skills_do_not_block_selected_ones(self):
+        self.write("upstreams/example/skills/draft/SKILL.md", "---\nname: Draft Skill\n---\n")
+        self.skill("three", "upstreams/example/skills/drafts/three")
+        self.skill("three", "upstreams/example/skills/archive/three")
+        self.build()
+        for pick, message in (("draft", "expected a valid name"), ("three", "Ambiguous skill")):
+            with self.subTest(pick=pick):
+                self.sources[0]["skills"] = ["one", pick]
+                self.save_sources()
+                self.assertIn(message, self.build(success=False).stderr)
+
+    def test_excluded_paths_are_left_out_and_recorded(self):
+        self.write("upstreams/example/skills/one/scripts/test/fixture.txt", "A large test fixture.\n")
+        self.sources[0]["exclude"] = ["scripts/test"]
+        self.save_sources()
+        self.build()
+        package = self.root / "skills/workflow-one"
+        self.assertFalse((package / "scripts/test").exists())
+        self.assertIn("`scripts/test`", (package / "UPSTREAM.md").read_text())
+        for bad in (["../escape"], ["LICENSE.upstream"], "scripts/test"):
+            with self.subTest(exclude=bad):
+                self.sources[0]["exclude"] = bad
+                self.save_sources()
+                self.build(success=False)
+
+    @unittest.skipIf(os.name != "posix" or os.geteuid() == 0, "needs POSIX permissions as a non-root user")
+    def test_failed_write_leaves_current_packages_intact(self):
+        self.build()
+        package = self.root / "skills/workflow-one/SKILL.md"
+        before = package.read_bytes()
+        source = self.root / "upstreams/example/skills/one/SKILL.md"
+        source.write_text(source.read_text() + "\nAn upstream improvement.\n")
+        skills = self.root / "skills"
+        skills.chmod(0o555)
+        self.addCleanup(skills.chmod, 0o755)
+        self.build(success=False)
+        skills.chmod(0o755)
+        self.assertEqual(package.read_bytes(), before)
+        self.build()
         self.build("--check")
 
     def test_existing_unmanaged_destination_is_not_overwritten(self):

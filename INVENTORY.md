@@ -56,12 +56,12 @@ These complete the selected workflows. They are included separately from the use
 
 ## Local changes and runtime requirements
 
-- Generated packages prefix the skill name with its category, rewrite explicit invocations and selected sibling links, and add a `COLLECTION.md` alias guide. Canonical upstream directories retain their original names. Credits and licenses travel with both copies.
+- Generated packages prefix the skill name with its category, rewrite explicit invocations (including quoted names in Skill tool instructions) and selected sibling links, and add a `COLLECTION.md` alias guide. Canonical upstream directories retain their original names. Credits and licenses travel with both copies.
 - The canonical pstack `how` copy uses host-supported delegation and model settings, with direct exploration when delegation is unavailable. Its [provenance](upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md) records that change.
 - The canonical `jscpd` copy links its optional comparison workflows to the reviewed upstream revision. Those optional skills are not selected; [its provenance](upstreams/jscpd/skills/jscpd/UPSTREAM.md) records the link change.
 - Original invocation settings remain intact, with one exception. The pstack `how`, `statechart`, and `technical-writing` skills retain `disable-model-invocation: true`; `i-have-adhd` also retains its explicit-only agent metadata. Hosts that honor those fields require explicit invocation.
 - `technical-writing` requires `unslop`, which is also a requested Writing skill. The canonical `unslop` copy drops `disable-model-invocation: true` so the agent can load it when `technical-writing` asks; its [provenance](upstreams/cursor-plugins/pstack/skills/unslop/UPSTREAM.md) records that change. `dry-refactoring` requires the supporting `jscpd` skill; generated sibling links resolve to `workflow-jscpd`.
-- `statechart` includes its scripts and references. Running it needs a supported JavaScript or TypeScript runtime and TLC with Java, with setup through `mise`; image rendering uses Pele.
+- `statechart` includes its scripts and references. Its package leaves out the upstream `scripts/test` fixtures, which only its developers use. Running it needs a supported JavaScript or TypeScript runtime and TLC with Java, with setup through `mise`; image rendering uses Pele.
 - `dry-refactoring` and `jscpd` use the jscpd CLI when invoked. `improve` can audit without subagents, but its optional `execute` mode requires isolated-worktree delegation and host-compatible model settings.
 - This inventory does not install runtime dependencies or activate upstream plugin hooks. `simple-english` includes its four reference files, not the copyrighted official STE dictionary.
 

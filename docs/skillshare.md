@@ -58,6 +58,8 @@ The category becomes a lowercase invocation prefix: `Workflow` plus `tdd` produc
 
 A source can name a whole repository or a skill subdirectory. With no `skills` list, the builder includes every canonical skill under that source. Review additions and their dependencies before broadening a selection.
 
+An optional `exclude` list names development-only paths, relative to each selected skill, that the package leaves out, such as `["scripts/test"]`. It cannot exclude `SKILL.md`, `UPSTREAM.md`, or `LICENSE.upstream`. The generated `UPSTREAM.md` lists the omitted paths. Hidden files and tool output such as `__pycache__` and `node_modules` are never packaged.
+
 Generate and check the packages after changing the manifest or a canonical skill:
 
 ```sh

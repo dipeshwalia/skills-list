@@ -29,7 +29,8 @@
   },
   {
     "source": "cursor/plugins/pstack/skills/statechart",
-    "category": "Workflow"
+    "category": "Workflow",
+    "exclude": ["scripts/test"]
   },
   {
     "source": "cursor/plugins/pstack/skills/technical-writing",

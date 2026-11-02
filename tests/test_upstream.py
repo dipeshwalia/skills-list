@@ -211,7 +211,13 @@ class UpstreamSyncTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertTrue(self.imported("alpha").exists())
         self.assertIn("skill package generation failed", result.stdout)
+        self.assertIn("Updated: alpha", result.stdout)
+        self.assertIn("Upstream merges for alpha are committed", result.stdout)
         self.assertEqual(self.git(self.repo, "status", "--porcelain").stdout, "")
+        unchanged = self.sync("alpha", check=False)
+        self.assertNotEqual(unchanged.returncode, 0)
+        self.assertIn("No upstream changes were merged", unchanged.stdout)
+        self.assertNotIn("are committed", unchanged.stdout)
 
     def test_configured_branch_and_pinned_tag_are_honored(self):
         alpha = Path(self.sources["alpha"]["repository"])

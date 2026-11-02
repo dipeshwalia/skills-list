@@ -14,3 +14,5 @@ Local additions are this provenance file and `LICENSE.upstream`. Keep both with 
 ## Collection packaging
 
 The source-change statements above describe the editable upstream copy. This generated package changes its frontmatter name to the category-prefixed invocation, updates explicit skill invocations and selected sibling links, and adds a [collection name map](COLLECTION.md) with a reference to it in `SKILL.md`. Portable license links point to `LICENSE.upstream`; the license text is unchanged.
+
+This package omits these development-only upstream paths: `scripts/test`.

@@ -123,22 +123,26 @@ def main():
             changed.append(name)
         print(f"Finished {name}. Upstream revision is recorded in Git subtree history.")
 
-    builder = ROOT / "scripts/build-skills.py"
-    if builder.is_file():
-        result = subprocess.run([sys.executable, str(builder)], cwd=ROOT)
-        if result.returncode:
-            raise ValueError(
-                "Upstream merges are committed, but skill package generation failed. "
-                "Fix the reported source or package issue and run python3 scripts/build-skills.py."
-            )
-        print("Skill packages refreshed. Review and commit any generated changes.")
-
     if changed:
         print(
             f"Updated: {', '.join(changed)}. Review skill changes and dependencies, then refresh "
             "INVENTORY.md, UPSTREAM.md, and portable license copies as needed. "
             "Reviewed revisions were not advanced automatically."
         )
+
+    builder = ROOT / "scripts/build-skills.py"
+    if builder.is_file():
+        result = subprocess.run([sys.executable, str(builder)], cwd=ROOT)
+        if result.returncode:
+            merged = (
+                f"Upstream merges for {', '.join(changed)} are committed"
+                if changed else "No upstream changes were merged"
+            )
+            raise ValueError(
+                f"{merged}, but skill package generation failed. "
+                "Fix the reported source or package issue and run python3 scripts/build-skills.py."
+            )
+        print("Skill packages refreshed. Review and commit any generated changes.")
 
 
 if __name__ == "__main__":
