@@ -34,6 +34,14 @@ targets:
 
 The example is not loaded automatically. Adding packages here does not change global configuration, install a CLI, or update your agent directories.
 
+### Desktop 0.7.7 onboarding loop
+
+Desktop 0.7.7 incorrectly derives its config directory from the parent of `sources.skills`. With a custom checkout path, initialization and sync can succeed while **Open dashboard** returns to onboarding. See the desktop app's [config-path detection](https://github.com/runkids/skillshare-app/blob/v0.7.7/src-tauri/src/services/cli_manager.rs#L123) and [onboarding check](https://github.com/runkids/skillshare-app/blob/v0.7.7/src-tauri/src/commands/app.rs#L9).
+
+A tested workaround is to point `~/.config/skillshare/skills` at the checkout root with a directory symlink, then set `sources.skills` to that alias in `~/.config/skillshare/config.yaml`. The checkout stays in place, and its `.skillignore` still controls selection. Back up the config and inspect any existing default source directory before replacing it; preserve its contents. Preview and run `skillshare sync -g`, then restart the desktop app. If the window opens with an empty dashboard, use its **Reload** button.
+
+Keep the alias while using this workaround. Editing the desktop app's `projects.json` alone does not fix the loop because the app recalculates that path at startup.
+
 ## Select skills and categories
 
 Edit [sources.json](../sources.json). Each entry contains `source`, `category`, and optionally `skills`:
