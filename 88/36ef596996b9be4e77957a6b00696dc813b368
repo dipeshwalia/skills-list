@@ -1,0 +1,58 @@
+skills/README.md
+  s_3b6f959956be33::t_5a072dc5239ab2 7,46
+  s_3b6f959956be33::t_b96cdbf112c4f5 5
+  s_3b6f959956be33::t_5c19191886b550 6
+  s_3b6f959956be33::t_bc83af03ebc1dc 47
+tests/test_build_skills.py
+  s_3b6f959956be33::t_482bbc5326f57e 285
+  s_3b6f959956be33::t_789cc7fa886d4d 1,16-23,31-36,38,43,46-62,73,83-84,87-91,95-101,105,116-117,168-205,207-241,248,250,259,269-274,277-280,282,361,366,373
+scripts/upstream.py
+  s_3b6f959956be33::t_6b83a78a3be92a 44-53
+  s_3b6f959956be33::t_d5f64345fdc9db 134,136,138-141
+sources.ts
+  s_3b6f959956be33::t_4b4b382038ddf0 3,5,7-31,35-36
+docs/skillshare.md
+  s_3b6f959956be33::t_e820c346260ccb 47,52-54,56-59,63,65,67
+  s_3b6f959956be33::t_e725779f13a17e 107
+scripts/build-skills.py
+  s_3b6f959956be33::t_37e60f77dc5f39 2,21-30,58-59,62-63,81-82,110-126,142,151,155,179,200-231
+INVENTORY.md
+  s_3b6f959956be33::t_52cea30b98e9df 3,7,18-19,24,51-52,55-57,67-73,90-91,97-98,105,107
+  s_3b6f959956be33::t_5a072dc5239ab2 8,12,14,25,74-89
+sources.json
+  s_3b6f959956be33::t_e954daf4f49d36 4-6,9-72,76-104,108-114,117-134,138-144,148-154
+README.md
+  s_3b6f959956be33::t_ecb2cad3bbb7f8 59
+  s_3b6f959956be33::t_a07286389b544d 39
+  s_3b6f959956be33::t_7f4f22c191827f 73-74
+  s_3b6f959956be33::t_5a072dc5239ab2 89-90,94,100
+  s_3b6f959956be33::t_58fc15af0b69af 66-67
+  s_3b6f959956be33::t_ebd285efc8b4e1 101
+AGENTS.md
+  s_3b6f959956be33::t_994030600ad9b3 16-17
+  s_3b6f959956be33::t_cde4dffba8bbe6 22
+  s_3b6f959956be33::t_348aa5b8914115 13-14
+scripts/inventory.py
+  s_3b6f959956be33::t_838c9a26f3f78b 1-390
+tests/test_upstream.py
+  s_3b6f959956be33::t_5d2c40ea3db170 188,191,194-205
+docs/upstreams.md
+  s_3b6f959956be33::t_1e25eac39258d2 88,90,92-94,96
+  s_3b6f959956be33::t_4d448fe4572ed4 61,63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8836ef596996b9be4e77957a6b00696dc813b368",
+  "prompts": {},
+  "sessions": {
+    "s_3b6f959956be33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a09e81a1-4e33-4660-8324-4d0f74bd090b",
+        "model": "unknown"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
