@@ -36,46 +36,97 @@ def read_sources():
     return sources
 
 
+def is_present(name):
+    destination = ROOT / "upstreams" / name
+    return destination.exists() or destination.is_symlink()
+
+
+def require_clean_repository(names):
+    top = Path(git("rev-parse", "--show-toplevel", capture=True).stdout.strip()).resolve()
+    if top != ROOT:
+        raise ValueError("Initialize this folder as its own Git repository first.")
+    git("rev-parse", "--verify", "HEAD", capture=True)
+    git_dir = Path(git("rev-parse", "--absolute-git-dir", capture=True).stdout.strip())
+    for operation in ("MERGE_HEAD", "CHERRY_PICK_HEAD", "REVERT_HEAD", "rebase-merge", "rebase-apply"):
+        if (git_dir / operation).exists():
+            raise ValueError("Finish the current Git merge, rebase, or cherry-pick before syncing.")
+    if git("status", "--porcelain", "--untracked-files=all", capture=True).stdout:
+        raise ValueError("Commit or stash local changes, including new files, before syncing.")
+    if (ROOT / "upstreams").is_symlink() or any(
+        (ROOT / "upstreams" / name).is_symlink() for name in names
+    ):
+        raise ValueError("Upstream destinations must be normal directories, not symlinks.")
+
+
+def subtree_command(name, source):
+    operation = "pull" if is_present(name) else "add"
+    return [
+        "subtree", operation, f"--prefix=upstreams/{name}",
+        source["repository"], source["ref"], "--squash",
+    ]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("list", help="List configured sources; does not contact remotes")
     sync = commands.add_parser("sync", help="Import a source or merge its latest changes")
-    sync.add_argument("name")
+    sync.add_argument("names", nargs="*", help="Sources to sync; defaults to all imported sources")
+    sync.add_argument("--all", action="store_true", help="Sync all already-imported sources")
     sync.add_argument("--dry-run", action="store_true", help="Print the Git command only")
     args = parser.parse_args()
     sources = read_sources()
 
     if args.command == "list":
         for name, source in sources.items():
-            status = "present" if (ROOT / "upstreams" / name).exists() else "not imported"
+            status = "present" if is_present(name) else "not imported"
             print(f"{name}: {status}; {source['repository']} ({source['ref']})")
         return
 
-    if args.name not in sources:
-        raise ValueError(f"Unknown source {args.name!r}; add it to upstreams.json first.")
-    source = sources[args.name]
-    prefix = f"upstreams/{args.name}"
-    operation = "pull" if (ROOT / prefix).exists() else "add"
-    command = [
-        "subtree", operation, f"--prefix={prefix}",
-        source["repository"], source["ref"], "--squash",
+    if args.all and args.names:
+        parser.error("Choose named sources or --all, not both.")
+    unknown = [name for name in args.names if name not in sources]
+    if unknown:
+        raise ValueError(f"Unknown source(s): {', '.join(unknown)}; add them to upstreams.json first.")
+    names = list(dict.fromkeys(args.names)) if args.names else [
+        name for name in sources if is_present(name)
     ]
-    print(shlex.join(["git", *command]), flush=True)
-    if args.dry_run:
+    if not args.names:
+        for name in sources:
+            if name not in names:
+                print(f"Skipping {name}: not imported. Import with: python3 scripts/upstream.py sync {name}")
+    if not names:
+        print("No imported upstreams to sync.")
         return
 
-    top = Path(git("rev-parse", "--show-toplevel", capture=True).stdout.strip()).resolve()
-    if top != ROOT:
-        raise ValueError("Initialize this folder as its own Git repository first.")
-    git("rev-parse", "--verify", "HEAD", capture=True)
-    if git("status", "--porcelain", "--untracked-files=all", capture=True).stdout:
-        raise ValueError("Commit or stash local changes, including new files, before syncing.")
-    if (ROOT / "upstreams").is_symlink() or (ROOT / prefix).is_symlink():
-        raise ValueError("The upstream destination must be a normal directory, not a symlink.")
+    if args.dry_run:
+        for name in names:
+            print(shlex.join(["git", *subtree_command(name, sources[name])]))
+        return
 
-    git(*command)
-    print(f"Finished {args.name}. Git subtree records the upstream commit in local history.")
+    require_clean_repository(names)
+    changed = []
+    for name in names:
+        command = subtree_command(name, sources[name])
+        print(shlex.join(["git", *command]), flush=True)
+        before = git("rev-parse", "HEAD", capture=True).stdout.strip()
+        try:
+            git(*command)
+        except subprocess.CalledProcessError:
+            print(f"Stopped at {name}; remaining sources were not synced.", file=sys.stderr)
+            if changed:
+                print(f"Earlier updates remain committed: {', '.join(changed)}.", file=sys.stderr)
+            raise
+        if git("rev-parse", "HEAD", capture=True).stdout.strip() != before:
+            changed.append(name)
+        print(f"Finished {name}. Upstream revision is recorded in Git subtree history.")
+
+    if changed:
+        print(
+            f"Updated: {', '.join(changed)}. Review skill changes and dependencies, then refresh "
+            "INVENTORY.md, UPSTREAM.md, and portable license copies as needed. "
+            "Reviewed revisions were not advanced automatically."
+        )
 
 
 if __name__ == "__main__":

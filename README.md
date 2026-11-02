@@ -12,6 +12,7 @@ upstreams/                      # Created when you import a source
 upstreams.json                  # Source repositories and tracked refs
 INVENTORY.md                     # Selected skills, dependencies, and original credits
 scripts/upstream.py             # Small wrapper around Git subtree
+scripts/sync-upstreams.sh       # Update imported parent repositories
 .skillignore                    # Which skills Skillshare can discover
 skillshare.config.example.yaml   # Global Skillshare config example
 ```
@@ -65,15 +66,32 @@ The configuration records where updates come from; subtree commits record the ex
 
 ## Merge upstream updates
 
+Update every imported parent repository from its configured ref:
+
+```sh
+./scripts/sync-upstreams.sh --dry-run
+./scripts/sync-upstreams.sh
+```
+
+The script works from any working directory when invoked by its path. It reads `upstreams.json`; `origin`, when configured, is your personal repository, not these original sources. For Matt Pocock's source, the configured ref is `main`, so sync fetches its latest commit. Pinned tags or commits stay pinned.
+
+To choose sources, run `./scripts/sync-upstreams.sh mattpocock` or pass several source names. With no names (or with `--all`), only already-imported sources are updated; configured sources that are not imported are skipped. Name a source explicitly to import it. The equivalent Python command is `python3 scripts/upstream.py sync --all`.
+
 Commit your current work first, including any new files. Use a branch to review an update:
 
 ```sh
 git switch -c update-mattpocock
-python3 scripts/upstream.py sync mattpocock
+./scripts/sync-upstreams.sh mattpocock
 git diff main...HEAD -- upstreams/mattpocock
 ```
 
 If both sides edit the same content, Git leaves a normal merge conflict. Inspect `git status`, resolve the affected files, stage those files, and run `git commit` to complete the merge. Then review the skill instructions, resource links, and any scripts before using the updated skills. A clean textual merge can still change a skill's behavior.
+
+Sources sync sequentially. A failure stops the remaining updates; earlier successful sources remain committed. The script refuses a dirty working tree or an unfinished Git operation. `--dry-run` prints the planned commands without fetching or changing files.
+
+Attribution and license files remain part of the normal Git merge. After reviewing an update, refresh [the inventory](INVENTORY.md), each selected skill's `UPSTREAM.md`, and its `LICENSE.upstream` if the applicable license changed. Sync does not automatically mark new content as reviewed, enable new skills, push commits, or run Skillshare.
+
+Run `python3 -m unittest discover -s tests -v` to verify the helper against temporary local Git repositories; the tests need no network access.
 
 Use a normal merge when bringing the update branch back into your main branch. Preserve the subtree-generated commits and their metadata; squash-merging or rewriting them can lose the information needed for later subtree updates.
 

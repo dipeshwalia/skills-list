@@ -118,6 +118,8 @@ skillshare sync -g --dry-run
 skillshare sync -g
 ```
 
+Use `./scripts/sync-upstreams.sh` to update all imported parents, or add `--dry-run` to preview. Review the resulting changes and refresh source credits and license copies before distributing the update. The script preserves the existing skill selection and does not run Skillshare itself.
+
 Skillshare does not read `upstreams.json`. Its `install --track` mechanism creates separate Git clones, while regular installs copy skill files and updates reinstall them. The subtree helper remains responsible for merging this repository's upstreams. Avoid registering those same upstreams a second time through Skillshare.
 
 Skillshare configuration examples and selection rules do not install the CLI, configure your global targets, or publish this repository. Imported source content and enabled skill selections are recorded separately in [the inventory](../INVENTORY.md).
