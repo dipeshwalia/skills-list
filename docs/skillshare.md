@@ -81,7 +81,7 @@ The root [`.skillignore`](../.skillignore) starts with:
 !/skills/**
 ```
 
-These first rules enable your originals. The file also contains exact selections for the four requested Matt Pocock skills and their eight supporting dependencies, documented with original-source credits in [the inventory](../INVENTORY.md). Other imported skills remain unselected. After importing and reviewing more skills, append exact directory selections, for example:
+These first rules enable your originals. The file also contains exact selections for the requested Matt Pocock and pstack skills and their supporting dependencies, documented with original-source credits in [the inventory](../INVENTORY.md). Other imported skills remain unselected. After importing and reviewing more skills, append exact directory selections, for example:
 
 ```gitignore
 !/upstreams/mattpocock/skills/engineering/tdd

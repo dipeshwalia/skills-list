@@ -10,6 +10,11 @@ Open a skill below to read its instructions. These are editable copies in this r
 | wayfinder | [Open SKILL.md](../upstreams/mattpocock/skills/engineering/wayfinder/SKILL.md) | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/wayfinder) |
 | to-tickets | [Open SKILL.md](../upstreams/mattpocock/skills/engineering/to-tickets/SKILL.md) | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-tickets) |
 | implement-spec | [Open SKILL.md](../upstreams/mattpocock/skills/engineering/implement-spec/SKILL.md) | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/implement-spec) |
+| how | [Open SKILL.md](../upstreams/cursor-plugins/pstack/skills/how/SKILL.md) | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/how) |
+| technical-writing | [Open SKILL.md](../upstreams/cursor-plugins/pstack/skills/technical-writing/SKILL.md) | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/technical-writing) |
+| statechart | [Open SKILL.md](../upstreams/cursor-plugins/pstack/skills/statechart/SKILL.md) | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/statechart) |
+
+`technical-writing` also includes the supporting [unslop skill](../upstreams/cursor-plugins/pstack/skills/unslop/SKILL.md).
 
 The [full inventory](../INVENTORY.md) lists the supporting skills, their roles, original sources, licenses, and reviewed revisions.
 

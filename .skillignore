@@ -18,3 +18,11 @@
 !/upstreams/mattpocock/skills/engineering/prototype
 !/upstreams/mattpocock/skills/engineering/codebase-design
 !/upstreams/mattpocock/skills/engineering/setup-matt-pocock-skills
+
+# Requested pstack skills — original author: Lauren Tan (see INVENTORY.md).
+!/upstreams/cursor-plugins/pstack/skills/how
+!/upstreams/cursor-plugins/pstack/skills/technical-writing
+!/upstreams/cursor-plugins/pstack/skills/statechart
+
+# Required by technical-writing.
+!/upstreams/cursor-plugins/pstack/skills/unslop

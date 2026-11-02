@@ -15,7 +15,7 @@ Keep the skills that fit your work. Adapt them in place. Bring in improvements f
 
 ## In the collection
 
-The starting collection features four workflows by **[Matt Pocock](https://github.com/mattpocock/skills)**:
+The collection includes workflows by **[Matt Pocock](https://github.com/mattpocock/skills)** and **[Lauren Tan](https://github.com/cursor/plugins/tree/main/pstack)**:
 
 | Skill | What it helps you do | Original source |
 | --- | --- | --- |
@@ -23,8 +23,11 @@ The starting collection features four workflows by **[Matt Pocock](https://githu
 | [wayfinder](upstreams/mattpocock/skills/engineering/wayfinder/SKILL.md) | Map a large effort into decisions and work through the unknowns. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/wayfinder) |
 | [to-tickets](upstreams/mattpocock/skills/engineering/to-tickets/SKILL.md) | Turn a plan into implementation tickets with clear dependencies. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-tickets) |
 | [implement-spec](upstreams/mattpocock/skills/engineering/implement-spec/SKILL.md) | Coordinate implementation of a specification and its ticket graph. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/implement-spec) |
+| [how](upstreams/cursor-plugins/pstack/skills/how/SKILL.md) | Explain a codebase’s architecture, runtime flow, and ownership boundaries. | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/how) |
+| [technical-writing](upstreams/cursor-plugins/pstack/skills/technical-writing/SKILL.md) | Write and review technical documentation with clear structure and plain language. | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/technical-writing) |
+| [statechart](upstreams/cursor-plugins/pstack/skills/statechart/SKILL.md) | Model state transitions in TLA+, check invariants, and produce Mermaid statecharts. | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/statechart) |
 
-Eight supporting skills complete these workflows. The [full inventory](INVENTORY.md) records their roles, original authors, licenses, and exact upstream revisions. The original instructions and invocation settings are preserved.
+Supporting skills complete these workflows, including `unslop` for `technical-writing`. The [full inventory](INVENTORY.md) records their roles, original authors, licenses, and exact upstream revisions. Original invocation settings are preserved. The local `how` copy adapts delegation to the host agent, as recorded in its [provenance](upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md).
 
 ## Get started
 
@@ -38,7 +41,7 @@ python3 scripts/upstream.py list
 
 To use the skills in an agent, follow the [Skillshare setup guide](docs/skillshare.md). Adapt [the configuration example](skillshare.config.example.yaml) so `sources.skills` points to **your checkout's root**, covering both `skills/` and `upstreams/`.
 
-The root [`.skillignore`](.skillignore) selects the four workflows and their eight supporting skills. Other imported skills remain available to review and select later. Preview your configured targets with `skillshare sync -g --dry-run` before syncing.
+The root [`.skillignore`](.skillignore) selects the requested workflows and their supporting skills. Other imported skills remain available to review and select later. Preview your configured targets with `skillshare sync -g --dry-run` before syncing.
 
 ## Keep your copies current
 
@@ -56,7 +59,7 @@ See [the upstream workflow](docs/upstreams.md) for adding sources, customizing s
 ## Repository map
 
 ```text
-skills/                         Your original skills
+skills/                         Skill catalog and your original skills
 upstreams/<source>/             Editable copies of original repositories
 INVENTORY.md                    Selected skills and original-source credits
 upstreams.json                  Parent repository URLs and refs
@@ -71,6 +74,6 @@ Run the sync helper's checks with `python3 -m unittest discover -s tests -v`. Th
 
 ## Credit stays with the work
 
-This collection's curation and maintenance are by [Dipesh Walia](https://github.com/dipeshwalia). Imported skills retain their original authorship and applicable licenses. The initial collection is from [Matt Pocock](https://github.com/mattpocock/skills), under his repository's [MIT license](upstreams/mattpocock/LICENSE).
+This collection's curation and maintenance are by [Dipesh Walia](https://github.com/dipeshwalia). Imported skills retain their original authorship and applicable licenses. Matt Pocock’s skills retain his [MIT license](upstreams/mattpocock/LICENSE). Lauren Tan’s pstack skills retain the [pstack MIT license](upstreams/cursor-plugins/pstack/LICENSE).
 
 Each selected imported skill includes `UPSTREAM.md` and `LICENSE.upstream`, so source links, revision details, and license notices travel with individual copies. Existing inline acknowledgements and upstream notices remain intact. See [the inventory and attribution policy](INVENTORY.md) for every source.
