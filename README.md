@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="skills/README.md">Browse skills</a> ·
   <a href="INVENTORY.md">Inventory & credits</a> ·
   <a href="docs/skillshare.md">Skillshare setup</a> ·
   <a href="docs/upstreams.md">Upstream workflow</a>
