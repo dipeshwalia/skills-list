@@ -36,7 +36,7 @@ To distribute the packages, follow the [Skillshare setup guide](docs/skillshare.
 
 ## Select and customize
 
-Edit [sources.json](sources.json) to choose a source, category, and optional list of skill names. [sources.ts](sources.ts) exports the same data through the `Source` interface. Omitting `skills` selects every canonical skill in that source.
+[sources.json](sources.json) is the single inventory record: each original project's author, license, and reviewed revision, plus every selected skill with its category, purpose, role, and required or recommended companions. [sources.ts](sources.ts) exports the same records through typed interfaces. The builder validates them and generates the attribution tables in this README, the [inventory](INVENTORY.md), and the [catalog](skills/README.md); edit the records, not the tables.
 
 Edit the canonical copies under `upstreams/`, then generate the packages:
 
@@ -56,21 +56,22 @@ Commit local work, then preview and merge updates from the configured parent rep
 ./scripts/sync-upstreams.sh
 ```
 
-Pass source names to update individual parents. Successful syncs rebuild the category packages for review. Inspect the changes, refresh reviewed attribution where needed, rebuild again, and commit the results before running `skillshare sync -g`.
+Pass source names to update individual parents. Updates follow one sequence: **merge upstreams → review changes and provenance → build installed packages**. A merge publishes nothing, so installed links keep serving the reviewed packages. After reviewing, refresh each affected skill's `UPSTREAM.md` and set the project's `reviewed` revision in sources.json. The builder refuses to publish until both match the merged revision. Then build, commit, and run `skillshare sync -g`.
 
 See [the upstream workflow](docs/upstreams.md) for adding sources and resolving conflicts. `origin` is this repository; original parent sources live in [upstreams.json](upstreams.json).
 
 ## Repository map
 
 ```text
-sources.json                    Source selections and invocation categories
-sources.ts                      Typed Source interface and manifest export
+sources.json                    Inventory records: selection, credits, reviews, companions
+sources.ts                      Typed interfaces for the inventory records
 skills/<category>-<name>/       Generated installable packages
 skills/README.md                Categorized catalog
 upstreams/<source>/             Editable canonical copies and merge history
 upstreams.json                  Parent repository URLs and refs
 INVENTORY.md                    Original-source credits and reviewed revisions
-scripts/build-skills.py         Build or check category packages
+scripts/inventory.py            Validate the inventory records
+scripts/build-skills.py         Publish packages and attribution tables
 scripts/sync-upstreams.sh       Merge original parent updates
 skillshare.config.example.yaml Agent distribution settings
 docs/                          Setup and maintenance guides
@@ -85,14 +86,18 @@ Curation, category naming, and local maintenance are by [Dipesh Walia](https://g
 
 Every selected skill is listed here, including supporting dependencies. Names use the upstream originals; links open this collection's category-prefixed copies.
 
+<!-- inventory:attribution -->
+
 | Original author | Original project | Included skills | License |
 | --- | --- | --- | --- |
 | Matt Pocock | [mattpocock/skills](https://github.com/mattpocock/skills) | [code-review](skills/workflow-code-review/SKILL.md), [codebase-design](skills/workflow-codebase-design/SKILL.md), [domain-modeling](skills/workflow-domain-modeling/SKILL.md), [grill-me](skills/workflow-grill-me/SKILL.md), [grill-with-docs](skills/workflow-grill-with-docs/SKILL.md), [grilling](skills/workflow-grilling/SKILL.md), [handoff](skills/workflow-handoff/SKILL.md), [implement-spec](skills/workflow-implement-spec/SKILL.md), [prototype](skills/workflow-prototype/SKILL.md), [research](skills/workflow-research/SKILL.md), [setup-matt-pocock-skills](skills/workflow-setup-matt-pocock-skills/SKILL.md), [tdd](skills/workflow-tdd/SKILL.md), [teach](skills/workflow-teach/SKILL.md), [to-questionnaire](skills/workflow-to-questionnaire/SKILL.md), [to-spec](skills/workflow-to-spec/SKILL.md), [to-tickets](skills/workflow-to-tickets/SKILL.md), [wayfinder](skills/workflow-wayfinder/SKILL.md), [writing-for-agents](skills/workflow-writing-for-agents/SKILL.md) | [MIT](upstreams/mattpocock/LICENSE) |
-| Lauren Tan | [pstack in cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) | [how](skills/workflow-how/SKILL.md), [statechart](skills/workflow-statechart/SKILL.md), [technical-writing](skills/writing-technical-writing/SKILL.md), [unslop](skills/writing-unslop/SKILL.md) | [MIT](upstreams/cursor-plugins/pstack/LICENSE) |
+| Lauren Tan | [pstack in cursor/plugins](https://github.com/cursor/plugins/tree/ae5650febf4320793844c12c4adaa937f417f8da/pstack) | [how](skills/workflow-how/SKILL.md), [statechart](skills/workflow-statechart/SKILL.md), [technical-writing](skills/writing-technical-writing/SKILL.md), [unslop](skills/writing-unslop/SKILL.md) | [MIT](upstreams/cursor-plugins/pstack/LICENSE) |
 | Ayoub Ghriss | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | [i-have-adhd](skills/writing-i-have-adhd/SKILL.md) | [MIT](upstreams/i-have-adhd/LICENSE) |
 | Andrey Kucherenko | [kucherenko/jscpd](https://github.com/kucherenko/jscpd) | [dry-refactoring](skills/workflow-dry-refactoring/SKILL.md), [jscpd](skills/workflow-jscpd/SKILL.md) | [MIT](upstreams/jscpd/LICENSE) |
 | AminBlg | [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish) | [simple-english](skills/writing-simple-english/SKILL.md) | [MIT](upstreams/simple-english/LICENSE) |
 | shadcn | [shadcn/improve](https://github.com/shadcn/improve) | [improve](skills/workflow-improve/SKILL.md) | [MIT](upstreams/improve/LICENSE.md) |
+
+<!-- /inventory:attribution -->
 
 The pstack license covers pstack; other plugins retained in the Cursor upstream keep their own authorship and notices. Existing inline acknowledgements and additional upstream notices remain with their files.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build prefixed, installable skills from the reviewed editable upstream copies."""
+"""Publish the reviewed inventory: category-prefixed skill packages and generated attribution tables."""
 
 import argparse
 import hashlib
@@ -14,16 +14,20 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "skills/.generated.json"
-NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
-FRONTMATTER = re.compile(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|\Z)", re.S)
-NAME_FIELD = re.compile(r"^name:\s*(['\"]?)([a-z0-9-]+)\1\s*(?:#.*)?$", re.M)
 # Files that operating systems and tools create on their own; Git ignores them.
 TOOL_FILES = {"Thumbs.db", "__pycache__", "node_modules"}
-REQUIRED_FILES = {"SKILL.md", "UPSTREAM.md", "LICENSE.upstream"}
 
 
-def valid_name(value):
-    return isinstance(value, str) and len(value) <= 64 and NAME.fullmatch(value)
+def load_inventory_module():
+    """Load scripts/inventory.py, which owns selection, credit, review, and companion facts."""
+    spec = importlib.util.spec_from_file_location("skill_inventory", Path(__file__).with_name("inventory.py"))
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+inventory_lib = load_inventory_module()
 
 
 def unmanaged(relative):
@@ -31,132 +35,6 @@ def unmanaged(relative):
     return relative.suffix in (".pyc", ".pyo") or any(
         part.startswith(".") or part in TOOL_FILES for part in relative.parts
     )
-
-
-def read_upstreams():
-    """Reuse the sync helper's validation so both scripts accept the same upstreams.json."""
-    spec = importlib.util.spec_from_file_location("upstream_helper", Path(__file__).with_name("upstream.py"))
-    helper = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(helper)
-    return helper.read_sources()
-
-
-def skill_name(path):
-    text = (path / "SKILL.md").read_text()
-    frontmatter = FRONTMATTER.match(text)
-    fields = NAME_FIELD.findall(frontmatter[1]) if frontmatter else []
-    if len(fields) != 1 or not valid_name(fields[0][1]):
-        raise ValueError(f"{path}: expected a valid name in SKILL.md frontmatter.")
-    name = fields[0][1]
-    if path.name != name:
-        raise ValueError(f"{path}: folder name must match skill name {name!r}.")
-    return name
-
-
-def repository_id(url):
-    """Return owner/repo for a GitHub URL, or None for hosts that sources.json cannot select."""
-    for prefix in ("https://github.com/", "git@github.com:"):
-        if url.startswith(prefix):
-            value = url[len(prefix):].strip("/").removesuffix(".git")
-            if len(value.split("/")) == 2:
-                return value.lower()
-    return None
-
-
-def discover(path):
-    """Map skill names to folders. Problems are reported only if a broken skill is selected."""
-    if not path.is_dir() or path.is_symlink():
-        raise ValueError(f"Source directory does not exist or is a symlink: {path}")
-    found, problems = {}, {}
-    for directory, dirs, files in os.walk(path, followlinks=False):
-        dirs[:] = sorted(d for d in dirs if not d.startswith(".") and not (Path(directory) / d).is_symlink())
-        if "SKILL.md" in files:
-            package = Path(directory)
-            dirs[:] = []
-            try:
-                name = skill_name(package)
-            except ValueError as error:
-                problems.setdefault(package.name, str(error))
-                continue
-            if name in found:
-                problems[name] = f"Ambiguous skill {name!r} under {path}."
-            found.setdefault(name, package)
-    return found, problems
-
-
-def resolve_source_path(base, parts):
-    """owner/repo/sub/path selects that folder; owner/repo selects its skills/ folder when present."""
-    if len(parts) > 2:
-        return base.joinpath(*parts[2:])
-    if (base / "skills").is_dir():
-        return base / "skills"
-    return base
-
-
-def selected_packages():
-    repositories = {}
-    for key, upstream in read_upstreams().items():
-        repo = repository_id(upstream["repository"])
-        if repo is None:
-            continue  # Other hosts can still be synced; sources.json selects GitHub repositories only.
-        if repo in repositories:
-            raise ValueError(f"Repository {repo!r} has more than one configured upstream.")
-        repositories[repo] = ROOT / "upstreams" / key
-    sources = json.loads((ROOT / "sources.json").read_text())
-    if not isinstance(sources, list):
-        raise ValueError("sources.json must contain an array.")
-    selected, names = {}, set()
-    for entry in sources:
-        if not isinstance(entry, dict) or set(entry) - {"source", "category", "skills", "exclude"} or not {"source", "category"} <= set(entry):
-            raise ValueError("Each source must specify source, category, and optionally skills and exclude.")
-        source = entry["source"]
-        if not isinstance(source, str):
-            raise ValueError("source must be owner/repo or owner/repo/sub/path.")
-        parts = source.split("/")
-        if len(parts) < 2 or any(not part or part in (".", "..") or "\\" in part for part in parts):
-            raise ValueError(f"Invalid source: {source!r}")
-        base = repositories.get("/".join(parts[:2]).lower())
-        if base is None:
-            raise ValueError(f"{source}: configure and import this GitHub repository in upstreams.json first.")
-        path = resolve_source_path(base, parts)
-        if not path.resolve().is_relative_to(base.resolve()):
-            raise ValueError(f"Source escapes its upstream repository: {source}")
-        category = entry["category"]
-        if not isinstance(category, str):
-            raise ValueError("category must be a string.")
-        category = re.sub(r"[\s_]+", "-", category.strip().lower())
-        if not valid_name(category):
-            raise ValueError(f"Invalid category: {entry['category']!r}")
-        excludes = entry.get("exclude", [])
-        if not isinstance(excludes, list) or any(
-            not isinstance(item, str) or not item or item.startswith("/") or ".." in Path(item).parts
-            or Path(item).parts[0] in REQUIRED_FILES for item in excludes
-        ):
-            raise ValueError(f"{source}: exclude must list relative paths inside the skill, not its required files.")
-        excludes = [Path(item) for item in excludes]
-        found, problems = discover(path)
-        picks = entry.get("skills", sorted(found))
-        if not isinstance(picks, list) or any(not isinstance(pick, str) for pick in picks):
-            raise ValueError(f"{source}: skills must be an array of names.")
-        if not found or not picks:
-            raise ValueError(f"{source}: no skills selected.")
-        for name in picks:
-            if name in problems:
-                raise ValueError(problems[name])
-            if name not in found:
-                raise ValueError(f"{source}: skill {name!r} was not found.")
-            alias = f"{category}-{name}"
-            if not valid_name(alias):
-                raise ValueError(f"Invalid invocation name: {alias!r}")
-            if alias in selected or name in names:
-                raise ValueError(f"Duplicate or ambiguous skill selection: {name!r} ({alias}).")
-            package = found[name]
-            for required in ("UPSTREAM.md", "LICENSE.upstream"):
-                if not (package / required).is_file():
-                    raise ValueError(f"{package}: missing {required}; record source credits before building.")
-            selected[alias] = (name, package, excludes)
-            names.add(name)
-    return dict(sorted(selected.items()))
 
 
 def rewrite_references(text, aliases):
@@ -177,11 +55,12 @@ def rewrite_references(text, aliases):
     return "".join(parts)
 
 
-def desired_files(selected):
-    aliases = {name: alias for alias, (name, _, _) in selected.items()}
+def desired_files(inventory):
+    aliases = {skill.name: skill.alias for skill in inventory.skills}
     rows = "\n".join(f"| `{name}` | `/{alias}` |" for name, alias in sorted(aliases.items()))
     files = {}
-    for alias, (name, source, excludes) in selected.items():
+    for skill in inventory.skills:
+        source, alias, excludes = skill.package, skill.alias, skill.excludes
         destination = Path("skills") / alias
         if (source / "COLLECTION.md").exists():
             raise ValueError(f"{source}: COLLECTION.md is reserved for generated invocation guidance.")
@@ -199,8 +78,8 @@ def desired_files(selected):
             if path.suffix.lower() == ".md" or (relative.parts[0] == "agents" and path.suffix.lower() in (".yaml", ".yml", ".toml")):
                 text = rewrite_references(data.decode("utf-8"), aliases)
                 if relative == Path("SKILL.md"):
-                    frontmatter = FRONTMATTER.match(text)
-                    header = NAME_FIELD.sub(f"name: {alias}", frontmatter[1], count=1)
+                    frontmatter = inventory_lib.FRONTMATTER.match(text)
+                    header = inventory_lib.NAME_FIELD.sub(f"name: {alias}", frontmatter[1], count=1)
                     note = "\nThis collection uses category-prefixed invocation names. When referring to another bundled skill, use its name from [the collection map](COLLECTION.md).\n\n"
                     text = "---\n" + header + "\n---\n" + note + text[frontmatter.end():].lstrip("\n")
                 elif relative == Path("UPSTREAM.md"):
@@ -228,6 +107,23 @@ def desired_files(selected):
     return files
 
 
+def render_catalogs(sections):
+    """Return each catalog file's text with its generated sections replaced; handwritten text is kept."""
+    rendered = {}
+    for (relative, section), body in sections.items():
+        path = ROOT / relative
+        if relative not in rendered:
+            if not path.is_file():
+                raise ValueError(f"{relative} is missing; it holds generated attribution tables.")
+            rendered[relative] = path.read_text()
+        start, end = f"<!-- inventory:{section} -->", f"<!-- /inventory:{section} -->"
+        pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.S)
+        if len(pattern.findall(rendered[relative])) != 1:
+            raise ValueError(f"{relative} needs exactly one generated section between `{start}` and `{end}`.")
+        rendered[relative] = pattern.sub(lambda _: f"{start}\n\n{body}\n\n{end}", rendered[relative])
+    return rendered
+
+
 def fingerprint(data, mode):
     return {"sha256": hashlib.sha256(data).hexdigest(), "executable": bool(mode & 0o111)}
 
@@ -243,7 +139,7 @@ def read_state():
     if not isinstance(state["packages"], dict) or not isinstance(state["files"], dict):
         raise ValueError("Invalid generated state file.")
     for alias in state["packages"]:
-        if not valid_name(alias):
+        if not inventory_lib.valid_name(alias):
             raise ValueError("Invalid package name in generated state.")
     for path in state["files"]:
         parts = Path(path).parts
@@ -252,11 +148,11 @@ def read_state():
     return state
 
 
-def verify_managed(state, selected):
+def verify_managed(state, aliases):
     skills = ROOT / "skills"
     if skills.is_symlink():
         raise ValueError("skills/ must not be a symlink.")
-    for alias in selected:
+    for alias in aliases:
         path = skills / alias
         if (path.exists() or path.is_symlink()) and alias not in state["packages"]:
             raise ValueError(f"Refusing to overwrite unmanaged skill directory: {path}")
@@ -280,25 +176,7 @@ def verify_managed(state, selected):
         raise ValueError("Generated files were removed. Restore them before rebuilding.")
 
 
-def build(check=False):
-    selected = selected_packages()
-    files = desired_files(selected)
-    previous = read_state()
-    verify_managed(previous, selected)
-    state = {
-        "version": 1,
-        "packages": {alias: path.relative_to(ROOT).as_posix() for alias, (_, path, _) in selected.items()},
-        "files": {path: fingerprint(data, mode) for path, (data, mode) in sorted(files.items())},
-    }
-    if check:
-        if previous != state or not STATE.is_file():
-            raise ValueError("Generated skills are stale. Run python3 scripts/build-skills.py.")
-        print(f"Checked {len(selected)} generated skills.")
-        return
-    if previous == state and STATE.is_file():
-        print(f"All {len(selected)} generated skills are current.")
-        return
-    # All inputs, destinations, and existing generated files are checked before any write.
+def publish_packages(files, previous, state):
     # Stage every file first, so a failed write leaves the current packages untouched.
     staging, retired = ROOT / "skills/.build-staging", ROOT / "skills/.build-retired"
     for leftover in (staging, retired):
@@ -319,7 +197,38 @@ def build(check=False):
     os.replace(pending, STATE)
     shutil.rmtree(retired)
     shutil.rmtree(staging)
-    print(f"Built {len(selected)} generated skills.")
+
+
+def build(check=False):
+    # The inventory validates selection, credits, reviewed revisions, and companions before any write.
+    inventory = inventory_lib.resolve_inventory(ROOT)
+    files = desired_files(inventory)
+    catalogs = render_catalogs(inventory_lib.catalog_sections(inventory))
+    previous = read_state()
+    verify_managed(previous, [skill.alias for skill in inventory.skills])
+    state = {
+        "version": 1,
+        "packages": {skill.alias: skill.package.relative_to(ROOT).as_posix() for skill in inventory.skills},
+        "files": {path: fingerprint(data, mode) for path, (data, mode) in sorted(files.items())},
+    }
+    packages_current = previous == state and STATE.is_file()
+    stale = sorted(path for path, text in catalogs.items() if (ROOT / path).read_text() != text)
+    count = len(inventory.skills)
+    if check:
+        if not packages_current:
+            raise ValueError("Generated skills are stale. Run python3 scripts/build-skills.py.")
+        if stale:
+            raise ValueError(f"Generated attribution tables are stale in {', '.join(stale)}. Run python3 scripts/build-skills.py.")
+        print(f"Checked {count} generated skills and their attribution tables.")
+        return
+    if packages_current and not stale:
+        print(f"All {count} generated skills and attribution tables are current.")
+        return
+    if not packages_current:
+        publish_packages(files, previous, state)
+    for path in stale:
+        (ROOT / path).write_text(catalogs[path])
+    print(f"Built {count} generated skills and their attribution tables.")
 
 
 def main():

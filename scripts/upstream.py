@@ -41,6 +41,16 @@ def is_present(name):
     return destination.exists() or destination.is_symlink()
 
 
+def imported_revision(name):
+    """Return the upstream commit most recently merged into upstreams/<name>, or None."""
+    result = subprocess.run(
+        ["git", "log", "-1", "--format=%B", f"--grep=^git-subtree-dir: upstreams/{name}/*$"],
+        cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+    )
+    match = re.search(r"^git-subtree-split: ([0-9a-f]{40})\s*$", result.stdout, re.M)
+    return match[1] if match else None
+
+
 def require_clean_repository(names):
     top = Path(git("rev-parse", "--show-toplevel", capture=True).stdout.strip()).resolve()
     if top != ROOT:
@@ -102,8 +112,6 @@ def main():
     if args.dry_run:
         for name in names:
             print(shlex.join(["git", *subtree_command(name, sources[name])]))
-        if (ROOT / "scripts/build-skills.py").is_file():
-            print(shlex.join([sys.executable, str(ROOT / "scripts/build-skills.py")]))
         return
 
     require_clean_repository(names)
@@ -123,26 +131,15 @@ def main():
             changed.append(name)
         print(f"Finished {name}. Upstream revision is recorded in Git subtree history.")
 
+    # Merging never publishes. The builder refuses to publish until sources.json records the review.
     if changed:
+        merged = ", ".join(f"{name} at {imported_revision(name)}" for name in changed)
         print(
-            f"Updated: {', '.join(changed)}. Review skill changes and dependencies, then refresh "
-            "INVENTORY.md, UPSTREAM.md, and portable license copies as needed. "
-            "Reviewed revisions were not advanced automatically."
+            f"Merged {merged}. Nothing was published. Next: review the merged changes and provenance, "
+            "refresh each selected skill's UPSTREAM.md and LICENSE.upstream, and set \"reviewed\" for "
+            "the affected projects in sources.json. Then run python3 scripts/build-skills.py to publish "
+            "the packages and attribution tables."
         )
-
-    builder = ROOT / "scripts/build-skills.py"
-    if builder.is_file():
-        result = subprocess.run([sys.executable, str(builder)], cwd=ROOT)
-        if result.returncode:
-            merged = (
-                f"Upstream merges for {', '.join(changed)} are committed"
-                if changed else "No upstream changes were merged"
-            )
-            raise ValueError(
-                f"{merged}, but skill package generation failed. "
-                "Fix the reported source or package issue and run python3 scripts/build-skills.py."
-            )
-        print("Skill packages refreshed. Review and commit any generated changes.")
 
 
 if __name__ == "__main__":

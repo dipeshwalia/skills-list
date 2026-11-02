@@ -58,9 +58,9 @@ Replace the example URL and ref with the actual source. Commit the configuration
 
 `upstreams.json` records where updates come from; subtree commits record the exact upstream revisions imported. A source stays at its imported version until you explicitly sync it.
 
-After importing, add the applicable credits and license to each selected source skill, then add its source and category to [sources.json](../sources.json). Use a `skills` list to pick named skills, or omit it to select every canonical skill in the given source. The category becomes the invocation prefix, for example `Workflow` and `improve` become `/workflow-improve`. [sources.ts](../sources.ts) exports the same manifest through a typed interface.
+After importing, give each selected skill an `UPSTREAM.md` that names the imported revision and a verbatim `LICENSE.upstream`. Then add one project record to [sources.json](../sources.json) with the original author, the license file, name, and copyright as the file states them, and `reviewed` set to the imported revision. List each selected skill with its purpose, category, and role (`requested` or `supporting`). Record the companions it calls in `requires`, and optional pointers in `recommends`. The category becomes the invocation prefix, for example `Workflow` and `improve` become `/workflow-improve`. [sources.ts](../sources.ts) exports the same records through typed interfaces.
 
-Run `python3 scripts/build-skills.py`, inspect the generated packages and sibling dependencies, and update [the inventory](../INVENTORY.md) and [catalog](../skills/README.md). The root `.skillignore` includes only `skills/`, so upstream copies do not create duplicate invocations.
+Run `python3 scripts/build-skills.py`. It validates the records, rejects a selection that leaves out a required companion, and generates the packages and the attribution tables in the README, [the inventory](../INVENTORY.md), and [the catalog](../skills/README.md). Edit the records, not the generated tables. The root `.skillignore` includes only `skills/`, so upstream copies do not create duplicate invocations.
 
 ## Merge upstream updates
 
@@ -85,13 +85,15 @@ git diff main...HEAD -- upstreams/mattpocock
 
 If both sides edit the same content, Git leaves a normal merge conflict. Inspect `git status`, resolve the affected files, stage those files, and run `git commit` to complete the merge. Then review the skill instructions, resource links, and any scripts before using the updated skills. A clean textual merge can still change a skill's behavior.
 
-Sources sync sequentially. A failure stops the remaining updates; earlier successful sources remain committed. The script refuses a dirty working tree or an unfinished Git operation. After all selected sources sync successfully, it rebuilds the packages. Generated changes remain uncommitted for review. `--dry-run` prints the planned merge and build commands without fetching or changing files.
+Sources sync sequentially. A failure stops the remaining updates; earlier successful sources remain committed. The script refuses a dirty working tree or an unfinished Git operation. `--dry-run` prints the planned merge commands without fetching or changing files.
 
-After resolving an interrupted merge, run `python3 scripts/build-skills.py` explicitly. A failed sync does not rebuild the packages.
+Updates follow one sequence: **merge upstreams → review changes and provenance → build installed packages**.
 
-Attribution and license files remain part of the normal Git merge. After reviewing an update, refresh [the inventory](../INVENTORY.md), each canonical skill's `UPSTREAM.md`, and its `LICENSE.upstream` if the applicable license changed. Rebuild again so those changes reach the installable copies, then commit the generated files and `skills/.generated.json` with the source changes. Sync does not automatically mark new content as reviewed, change the source manifest, push commits, or run Skillshare.
+1. **Merge.** Sync merges and commits the upstream changes, then prints each merged revision. It publishes nothing: the generated packages, which Skillshare links into your agents, keep serving the reviewed versions.
+2. **Review.** Read the merged skill instructions, resource links, scripts, and license notices. Refresh each selected skill's `UPSTREAM.md` with the merged revision and any local-change notes, and its `LICENSE.upstream` if the license changed. Then set the project's `reviewed` revision in [sources.json](../sources.json) to the merged revision. Update its skill records if selections or companions changed.
+3. **Build.** Run `python3 scripts/build-skills.py`. It refuses to publish while a project's `reviewed` revision differs from the merged revision, or while a selected skill's `UPSTREAM.md` does not name it. Commit the generated packages, tables, and `skills/.generated.json` with the review changes, then run `skillshare sync -g`.
 
-If a manifest entry omits `skills`, new canonical skills in that source become candidates on the next build. Missing attribution stops the build until the new packages are reviewed and credited. Use explicit `skills` lists when selection must stay fixed.
+Sync does not mark content as reviewed, change the inventory records, publish packages, push commits, or run Skillshare.
 
 Run `python3 -m unittest discover -s tests -v` to verify the helper against temporary local Git repositories; the tests need no network access.
 

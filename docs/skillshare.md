@@ -44,21 +44,27 @@ Keep the alias while using this workaround. Editing the desktop app's `projects.
 
 ## Select skills and categories
 
-Edit [sources.json](../sources.json). Each entry contains `source`, `category`, and optionally `skills`:
+Edit [sources.json](../sources.json), the single inventory record. Each project record credits one original author and lists the skills selected from it:
 
 ```json
 {
   "source": "mattpocock/skills",
+  "author": "Matt Pocock",
+  "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Matt Pocock" },
+  "reviewed": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
   "category": "Workflow",
-  "skills": ["grill-me", "tdd"]
+  "skills": [
+    { "name": "grill-me", "purpose": "Sharpen a plan or design through questions.", "requires": ["grilling"] },
+    { "name": "grilling", "purpose": "Work through decisions with focused questions." }
+  ]
 }
 ```
 
-The category becomes a lowercase invocation prefix: `Workflow` plus `tdd` produces `workflow-tdd`. The original name is the domain within the category. The [TypeScript interface](../sources.ts) exposes the same manifest to code consumers.
+The category becomes a lowercase invocation prefix: `Workflow` plus `tdd` produces `workflow-tdd`. The original name is the domain within the category. A skill's own `category` overrides the project default. The [TypeScript interfaces](../sources.ts) expose the same records to code consumers.
 
-A source can name a whole repository or a skill subdirectory. With no `skills` list, the builder includes every canonical skill under that source. Review additions and their dependencies before broadening a selection.
+A source can name a whole repository or a subdirectory such as `cursor/plugins/pstack`. Every selected skill is listed by name with a one-line `purpose`. `role` is `requested` by default; a `supporting` skill must be required or recommended by another selected skill. `requires` lists companions the skill calls, and the builder rejects a selection that leaves one out. `recommends` lists optional companions, which may be skills this collection does not include. `reviewed` must equal the revision merged into the project's subtree, as described in [the upstream workflow](upstreams.md).
 
-An optional `exclude` list names development-only paths, relative to each selected skill, that the package leaves out, such as `["scripts/test"]`. It cannot exclude `SKILL.md`, `UPSTREAM.md`, or `LICENSE.upstream`. The generated `UPSTREAM.md` lists the omitted paths. Hidden files and tool output such as `__pycache__` and `node_modules` are never packaged.
+An optional `exclude` list on a skill names development-only paths, relative to that skill, that the package leaves out, such as `["scripts/test"]`. It cannot exclude `SKILL.md`, `UPSTREAM.md`, or `LICENSE.upstream`. The generated `UPSTREAM.md` lists the omitted paths. Hidden files and tool output such as `__pycache__` and `node_modules` are never packaged.
 
 Generate and check the packages after changing the manifest or a canonical skill:
 
@@ -98,7 +104,7 @@ python3 scripts/build-skills.py --check
 skillshare sync -g --dry-run
 ```
 
-Review upstream changes and refresh provenance before distributing them. The subtree helper rebuilds packages after successful merges, but it does not run Skillshare. Its Git merge workflow is separate from Skillshare's `update` command and `install --track` clones.
+Review upstream changes and refresh provenance before distributing them. The subtree helper only merges; it neither rebuilds packages nor runs Skillshare, so installed links keep serving the reviewed packages until you build. Its Git merge workflow is separate from Skillshare's `update` command and `install --track` clones.
 
 See [the upstream workflow](upstreams.md) for customization and conflict resolution, and [the inventory](../INVENTORY.md) for credits and usage-time prerequisites.
 

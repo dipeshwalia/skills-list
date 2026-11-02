@@ -2,7 +2,9 @@
 
 Use the category prefix when invoking a skill: `/workflow-improve`, `/workflow-tdd`, or `/writing-unslop`. The original skill name is its domain within that category. Your host may use different invocation syntax, but the installed names include these prefixes.
 
-These folders contain the actual installable packages. [sources.json](../sources.json) selects the sources, categories, and skill names; [sources.ts](../sources.ts) exposes the same manifest through the `Source` interface.
+These folders contain the actual installable packages. The tables below are generated from [sources.json](../sources.json), which records each skill's source, category, purpose, credits, and companions; [sources.ts](../sources.ts) exposes the same records through typed interfaces.
+
+<!-- inventory:catalog -->
 
 ## Workflow
 
@@ -40,6 +42,8 @@ These folders contain the actual installable packages. [sources.json](../sources
 | [`/writing-unslop`](writing-unslop/SKILL.md) | `unslop` | Remove filler and common AI writing patterns. | [Lauren Tan · original](https://github.com/cursor/plugins/tree/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/unslop) |
 | [`/writing-i-have-adhd`](writing-i-have-adhd/SKILL.md) | `i-have-adhd` | Make answers direct, scannable, and easier to follow. | [Ayoub Ghriss · original](https://github.com/ayghri/i-have-adhd/tree/1ecea1993b7fce257ffbd686c070948b5e07eda6/skills/i-have-adhd) |
 | [`/writing-simple-english`](writing-simple-english/SKILL.md) | `simple-english` | Write clear instructions using simplified technical English. | [AminBlg · original](https://github.com/AminBlg/SimpleEnglish/tree/a6fcb4fde098b33617cc1578d151ebf58774b883/skills/simple-english) |
+
+<!-- /inventory:catalog -->
 
 ## Maintain the packages
 

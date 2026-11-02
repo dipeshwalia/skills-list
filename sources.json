@@ -1,63 +1,156 @@
 [
   {
     "source": "mattpocock/skills",
+    "author": "Matt Pocock",
+    "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Matt Pocock" },
+    "reviewed": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
     "category": "Workflow",
     "skills": [
-      "grill-with-docs",
-      "wayfinder",
-      "to-tickets",
-      "implement-spec",
-      "grill-me",
-      "grilling",
-      "handoff",
-      "to-questionnaire",
-      "writing-for-agents",
-      "teach",
-      "code-review",
-      "codebase-design",
-      "research",
-      "tdd",
-      "domain-modeling",
-      "to-spec",
-      "prototype",
-      "setup-matt-pocock-skills"
+      {
+        "name": "grill-with-docs",
+        "purpose": "Interview a design while building its domain documentation.",
+        "requires": ["grilling", "domain-modeling"]
+      },
+      {
+        "name": "wayfinder",
+        "purpose": "Plan a large effort through linked decision tickets.",
+        "requires": ["grilling", "domain-modeling", "research", "prototype", "setup-matt-pocock-skills"]
+      },
+      {
+        "name": "to-tickets",
+        "purpose": "Break a plan into implementation tickets and dependencies.",
+        "requires": ["setup-matt-pocock-skills"]
+      },
+      {
+        "name": "implement-spec",
+        "purpose": "Coordinate implementation of a specification and its tickets.",
+        "requires": ["tdd", "code-review", "setup-matt-pocock-skills"],
+        "recommends": ["to-spec", "to-tickets"]
+      },
+      {
+        "name": "grill-me",
+        "purpose": "Sharpen a plan or design through questions.",
+        "requires": ["grilling"]
+      },
+      { "name": "grilling", "purpose": "Work through decisions with focused questions." },
+      { "name": "handoff", "purpose": "Prepare context for another agent or session." },
+      { "name": "to-questionnaire", "purpose": "Turn open questions into an answerable questionnaire." },
+      { "name": "writing-for-agents", "purpose": "Write instructions and context for agent readers." },
+      { "name": "teach", "purpose": "Build a learning plan and track understanding." },
+      {
+        "name": "code-review",
+        "purpose": "Review an implementation for correctness and design.",
+        "requires": ["setup-matt-pocock-skills"]
+      },
+      { "name": "codebase-design", "purpose": "Design interfaces, boundaries, and test seams." },
+      { "name": "research", "purpose": "Investigate an unfamiliar topic or technical question." },
+      {
+        "name": "tdd",
+        "purpose": "Develop through tests and incremental implementation.",
+        "requires": ["codebase-design"]
+      },
+      {
+        "name": "domain-modeling",
+        "role": "supporting",
+        "purpose": "Support the design interviews in grill-with-docs and wayfinder."
+      },
+      {
+        "name": "to-spec",
+        "role": "supporting",
+        "purpose": "Write specifications consumed by implementation and ticket workflows.",
+        "requires": ["setup-matt-pocock-skills"]
+      },
+      {
+        "name": "prototype",
+        "role": "supporting",
+        "purpose": "Resolve uncertain design questions with a prototype."
+      },
+      {
+        "name": "setup-matt-pocock-skills",
+        "role": "supporting",
+        "purpose": "Configure a project’s tracker and documentation conventions."
+      }
     ]
   },
   {
-    "source": "cursor/plugins/pstack/skills/how",
-    "category": "Workflow"
-  },
-  {
-    "source": "cursor/plugins/pstack/skills/statechart",
-    "category": "Workflow",
-    "exclude": ["scripts/test"]
-  },
-  {
-    "source": "cursor/plugins/pstack/skills/technical-writing",
-    "category": "Writing"
-  },
-  {
-    "source": "cursor/plugins/pstack/skills/unslop",
-    "category": "Writing"
+    "source": "cursor/plugins/pstack",
+    "author": "Lauren Tan",
+    "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Lauren Tan" },
+    "reviewed": "ae5650febf4320793844c12c4adaa937f417f8da",
+    "skills": [
+      {
+        "name": "how",
+        "category": "Workflow",
+        "purpose": "Explain architecture, runtime flow, and ownership boundaries.",
+        "recommends": ["why"]
+      },
+      {
+        "name": "statechart",
+        "category": "Workflow",
+        "purpose": "Check TLA+ state models and produce Mermaid statecharts.",
+        "exclude": ["scripts/test"]
+      },
+      {
+        "name": "technical-writing",
+        "category": "Writing",
+        "purpose": "Write and review structured technical documentation.",
+        "requires": ["unslop"]
+      },
+      {
+        "name": "unslop",
+        "category": "Writing",
+        "purpose": "Remove filler and common AI writing patterns."
+      }
+    ]
   },
   {
     "source": "ayghri/i-have-adhd",
-    "category": "Writing"
+    "author": "Ayoub Ghriss",
+    "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Ayoub Ghriss" },
+    "reviewed": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+    "category": "Writing",
+    "skills": [
+      { "name": "i-have-adhd", "purpose": "Make answers direct, scannable, and easier to follow." }
+    ]
   },
   {
-    "source": "kucherenko/jscpd/skills/dry-refactoring",
-    "category": "Workflow"
-  },
-  {
-    "source": "kucherenko/jscpd/skills/jscpd",
-    "category": "Workflow"
+    "source": "kucherenko/jscpd",
+    "author": "Andrey Kucherenko",
+    "license": { "file": "LICENSE", "name": "MIT", "copyright": "2013-2024 Andrey Kucherenko" },
+    "reviewed": "0b519608c47d287f59018ce4ad7f9939ac93e0c8",
+    "category": "Workflow",
+    "skills": [
+      {
+        "name": "dry-refactoring",
+        "purpose": "Refactor confirmed duplication detected by jscpd.",
+        "requires": ["jscpd"]
+      },
+      {
+        "name": "jscpd",
+        "role": "supporting",
+        "purpose": "Detect duplication before dry-refactoring.",
+        "recommends": ["compare-codebases", "code-migration"]
+      }
+    ]
   },
   {
     "source": "AminBlg/SimpleEnglish",
-    "category": "Writing"
+    "author": "AminBlg",
+    "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 AminBlg" },
+    "reviewed": "a6fcb4fde098b33617cc1578d151ebf58774b883",
+    "category": "Writing",
+    "skills": [
+      { "name": "simple-english", "purpose": "Write clear instructions using simplified technical English." }
+    ]
   },
   {
     "source": "shadcn/improve",
-    "category": "Workflow"
+    "author": "shadcn",
+    "license": { "file": "LICENSE.md", "name": "MIT", "copyright": "2026 shadcn" },
+    "reviewed": "cac56e1ebd3c279aa9153616cfeac7b174ab90f9",
+    "category": "Workflow",
+    "skills": [
+      { "name": "improve", "purpose": "Audit a codebase and prepare plans for another agent to execute." }
+    ]
   }
 ]

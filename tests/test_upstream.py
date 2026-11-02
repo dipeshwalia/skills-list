@@ -185,39 +185,24 @@ class UpstreamSyncTests(unittest.TestCase):
         self.assertFalse(self.imported("alpha", "obsolete.md").exists())
         self.assertEqual(self.imported("alpha", "references/new.md").read_text(), "New upstream supporting resource.\n")
 
-    def test_sync_refreshes_packages_but_dry_run_does_not(self):
+    def test_sync_merges_and_reports_revisions_without_publishing(self):
         self.write(self.repo, "scripts/build-skills.py", (
             "from pathlib import Path\n"
-            "root = Path(__file__).resolve().parents[1]\n"
-            "(root / 'generated.txt').write_bytes((root / 'upstreams/alpha/SKILL.md').read_bytes())\n"
+            "(Path(__file__).resolve().parents[1] / 'published.txt').write_text('published\\n')\n"
         ))
         self.commit(self.repo, "Add package builder")
-        self.sync("alpha")
-        generated = self.repo / "generated.txt"
-        self.assertEqual(generated.read_bytes(), self.imported("alpha").read_bytes())
-        self.commit(self.repo, "Record initial generated package")
-        self.advance("alpha", "updated")
-        before = generated.read_bytes(), generated.stat().st_mtime_ns
-        self.sync("alpha", "--dry-run")
-        self.assertEqual((generated.read_bytes(), generated.stat().st_mtime_ns), before)
-        self.sync("alpha")
-        self.assertIn("upstream-value: updated", generated.read_text())
-        self.assertEqual(generated.read_bytes(), self.imported("alpha").read_bytes())
-
-    def test_package_failure_preserves_successful_upstream_import(self):
-        self.write(self.repo, "scripts/build-skills.py", "raise SystemExit(2)\n")
-        self.commit(self.repo, "Add failing package builder")
-        result = self.sync("alpha", check=False)
-        self.assertNotEqual(result.returncode, 0)
-        self.assertTrue(self.imported("alpha").exists())
-        self.assertIn("skill package generation failed", result.stdout)
-        self.assertIn("Updated: alpha", result.stdout)
-        self.assertIn("Upstream merges for alpha are committed", result.stdout)
-        self.assertEqual(self.git(self.repo, "status", "--porcelain").stdout, "")
-        unchanged = self.sync("alpha", check=False)
-        self.assertNotEqual(unchanged.returncode, 0)
-        self.assertIn("No upstream changes were merged", unchanged.stdout)
-        self.assertNotIn("are committed", unchanged.stdout)
+        self.assertNotIn("build-skills", self.sync("alpha", "--dry-run").stdout)
+        for value in (None, "updated"):
+            with self.subTest(update=value):
+                if value:
+                    self.advance("alpha", value)
+                result = self.sync("alpha")
+                revision = self.git(Path(self.sources["alpha"]["repository"]), "rev-parse", "HEAD").stdout.strip()
+                self.assertIn(f"Merged alpha at {revision}. Nothing was published.", result.stdout)
+                self.assertFalse((self.repo / "published.txt").exists())
+                self.assertEqual(self.git(self.repo, "status", "--porcelain").stdout, "")
+        unchanged = self.sync("alpha")
+        self.assertNotIn("Merged", unchanged.stdout)
 
     def test_configured_branch_and_pinned_tag_are_honored(self):
         alpha = Path(self.sources["alpha"]["repository"])
