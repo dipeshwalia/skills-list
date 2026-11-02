@@ -1,0 +1,31 @@
+.gitignore
+  s_2f75f3b4e8cc04::t_3995777f94559c 4
+AGENTS.md
+  s_2f75f3b4e8cc04::t_3995777f94559c 12-14,16
+.skillignore
+  s_2f75f3b4e8cc04::t_3995777f94559c 1-11
+README.md
+  s_2f75f3b4e8cc04::t_53c743d5abd511 26
+  s_2f75f3b4e8cc04::t_3995777f94559c 14-15,87-91
+skillshare.config.example.yaml
+  s_2f75f3b4e8cc04::t_3995777f94559c 1-20
+docs/skillshare.md
+  s_2f75f3b4e8cc04::t_e454c307a6064d 127-128
+  s_2f75f3b4e8cc04::t_3995777f94559c 1-126,129-134
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7e9427ab3e6b3eb0511609fb348fcf0092525c04",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}

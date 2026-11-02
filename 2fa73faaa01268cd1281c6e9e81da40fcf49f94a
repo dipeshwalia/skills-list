@@ -1,0 +1,21 @@
+skills/README.md
+  s_2f75f3b4e8cc04::t_996a84b5c042de 1-22
+README.md
+  s_2f75f3b4e8cc04::t_996a84b5c042de 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2fa73faaa01268cd1281c6e9e81da40fcf49f94a",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}

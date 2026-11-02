@@ -1,0 +1,31 @@
+scripts/upstream.py
+  s_2f75f3b4e8cc04::t_5c183205a32588 39-68,74-75,82,86-92,94-101,103-104,107-122,124-129
+scripts/sync-upstreams.sh
+  s_2f75f3b4e8cc04::t_5c183205a32588 1-5
+tests/test_upstream.py
+  s_2f75f3b4e8cc04::t_2185e75269e022 1-266
+README.md
+  s_2f75f3b4e8cc04::t_5c183205a32588 15,69-79,84,90-92
+  s_2f75f3b4e8cc04::t_5866bf954e8450 94-95
+  s_2f75f3b4e8cc04::t_c731b1432911d4 93
+AGENTS.md
+  s_2f75f3b4e8cc04::t_5c183205a32588 8
+docs/skillshare.md
+  s_2f75f3b4e8cc04::t_5c183205a32588 121-122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2e857018db18d6fad64bf2417d315ebfe42dd954",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
