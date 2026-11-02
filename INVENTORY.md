@@ -1,4 +1,4 @@
-# Skill inventory and original-source credits
+# Skills List — inventory and original-source credits
 
 This repository curates locally maintained copies. Original authors retain credit for their work. The four requested skills below and their eight supporting dependencies are selected in [`.skillignore`](.skillignore), ready for Skillshare to distribute after configuration. Selection here does not install them into an agent.
 

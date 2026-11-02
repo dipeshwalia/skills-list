@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Skills List mark</title>
+  <desc id="desc">A pair of tabbed inventory cards, drawn in near-black ink on warm ivory, with a vermilion tab and list markers.</desc>
+  <rect width="512" height="512" fill="#F2EDE3"/>
+  <g transform="translate(16 8) scale(2)">
+    <path d="M54 38H128L146 56H210V208H188" fill="none" stroke="#222421" stroke-width="7"/>
+    <path d="M28 74H98V56H162V74H188V224H28Z" fill="#F2EDE3" stroke="#222421" stroke-width="7"/>
+    <path d="M102 60H158V74H102Z" fill="#E34A2C"/>
+    <g fill="#E34A2C">
+      <rect x="50" y="106" width="11" height="11"/>
+      <rect x="50" y="143" width="11" height="11"/>
+      <rect x="50" y="180" width="11" height="11"/>
+    </g>
+    <g stroke="#222421" stroke-width="7">
+      <path d="M76 112H165"/>
+      <path d="M76 149H165"/>
+      <path d="M76 186H137"/>
+    </g>
+  </g>
+</svg>

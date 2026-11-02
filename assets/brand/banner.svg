@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">Skills List — Engineering skills, made personal.</title>
+  <desc id="desc">An editorial-style banner for Dipesh Walia's personal skill inventory. Warm ivory paper, near-black lettering, a vermilion accent, and an outlined tabbed-card mark.</desc>
+  <rect width="1280" height="360" fill="#F2EDE3"/>
+  <rect width="12" height="360" fill="#E34A2C"/>
+  <text x="57" y="58" fill="#222421" font-family="'Courier New', Courier, monospace" font-size="15" font-weight="700" letter-spacing="2.4">A PERSONAL SKILL INVENTORY</text>
+  <text x="51" y="182" fill="#222421" font-family="Georgia, 'Times New Roman', serif" font-size="114" letter-spacing="-5">Skills List</text>
+  <text x="57" y="238" fill="#222421" font-family="Georgia, 'Times New Roman', serif" font-size="30">Engineering skills, made personal.</text>
+  <path d="M57 283H865" stroke="#B9B3A8" stroke-width="1"/>
+  <text x="57" y="321" fill="#222421" font-family="'Courier New', Courier, monospace" font-size="14" font-weight="700" letter-spacing="1.6">CURATED BY DIPESH WALIA</text>
+  <text x="865" y="321" fill="#6B6A60" font-family="'Courier New', Courier, monospace" font-size="13" letter-spacing="1.1" text-anchor="end">PLAN / BUILD / REVIEW</text>
+  <path d="M924 40V320" stroke="#B9B3A8" stroke-width="1"/>
+  <g transform="translate(973 31) scale(1.24)">
+    <path d="M54 38H128L146 56H210V208H188" fill="none" stroke="#222421" stroke-width="7"/>
+    <path d="M28 74H98V56H162V74H188V224H28Z" fill="#F2EDE3" stroke="#222421" stroke-width="7"/>
+    <path d="M102 60H158V74H102Z" fill="#E34A2C"/>
+    <g fill="#E34A2C">
+      <rect x="50" y="106" width="11" height="11"/>
+      <rect x="50" y="143" width="11" height="11"/>
+      <rect x="50" y="180" width="11" height="11"/>
+    </g>
+    <g stroke="#222421" stroke-width="7">
+      <path d="M76 112H165"/>
+      <path d="M76 149H165"/>
+      <path d="M76 186H137"/>
+    </g>
+  </g>
+</svg>

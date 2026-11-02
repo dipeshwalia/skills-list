@@ -1,108 +1,75 @@
-# Personal LLM skills
+<p align="center">
+  <img src="assets/brand/banner.svg" alt="Skills List — Engineering skills, made personal. Curated by Dipesh Walia." width="1280" />
+</p>
 
-Keep your original skills and customized skills from multiple authors in one Git repository. Each upstream has an independent Git subtree, so your edits and upstream changes can be merged using normal Git conflict resolution.
+<p align="center">
+  <a href="INVENTORY.md">Inventory & credits</a> ·
+  <a href="docs/skillshare.md">Skillshare setup</a> ·
+  <a href="docs/upstreams.md">Upstream workflow</a>
+</p>
 
-```text
-skills/
-  my-skill/SKILL.md              # Your original skills
-upstreams/                      # Created when you import a source
-  mattpocock/                    # Your editable copy of this repository
-    skills/engineering/...
-  another-author/...
-upstreams.json                  # Source repositories and tracked refs
-INVENTORY.md                     # Selected skills, dependencies, and original credits
-scripts/upstream.py             # Small wrapper around Git subtree
-scripts/sync-upstreams.sh       # Update imported parent repositories
-.skillignore                    # Which skills Skillshare can discover
-skillshare.config.example.yaml   # Global Skillshare config example
-```
+**A personal collection of AI agent skills for planning, building, and reviewing software.** Curated by [Dipesh Walia](https://github.com/dipeshwalia), with editable upstream copies, traceable updates, and credit to every original source.
 
-The [inventory](INVENTORY.md) includes Matt Pocock's `grill-with-docs`, `wayfinder`, `to-tickets`, and `implement-spec`, plus eight supporting skills their workflows use. His repository is imported with its original MIT license; each selected skill carries portable source attribution and license files. The selection is ready for Skillshare; live agent installation is separate.
+Keep the skills that fit your work. Adapt them in place. Bring in improvements from their original repositories with Git subtrees, then use [Skillshare](https://github.com/runkids/skillshare) to make your selected copies available to your AI tools.
 
-## Start
+## In the collection
 
-Requires Python 3 and Git with `git subtree`. This repository is already initialized and includes its upstream import history. Use a Git clone when moving it to another machine so that history, including the subtree merge baselines, travels with the files. Commit or stash changes before importing or updating a source.
+The starting collection features four workflows by **[Matt Pocock](https://github.com/mattpocock/skills)**:
 
-Your eventual `origin` remote is your personal repository. Upstream sources are configured separately and do not need to be added as Git remotes.
+| Skill | What it helps you do | Original source |
+| --- | --- | --- |
+| [grill-with-docs](upstreams/mattpocock/skills/engineering/grill-with-docs/SKILL.md) | Sharpen a design through questions while building its documentation. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs) |
+| [wayfinder](upstreams/mattpocock/skills/engineering/wayfinder/SKILL.md) | Map a large effort into decisions and work through the unknowns. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/wayfinder) |
+| [to-tickets](upstreams/mattpocock/skills/engineering/to-tickets/SKILL.md) | Turn a plan into implementation tickets with clear dependencies. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-tickets) |
+| [implement-spec](upstreams/mattpocock/skills/engineering/implement-spec/SKILL.md) | Coordinate implementation of a specification and its ticket graph. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/implement-spec) |
 
-## Import and customize
+Eight supporting skills complete these workflows. The [full inventory](INVENTORY.md) records their roles, original authors, licenses, and exact upstream revisions. The original instructions and invocation settings are preserved.
+
+## Get started
+
+Requires Python 3 and Git with `git subtree`. Clone with Git so the upstream merge history comes with the files:
 
 ```sh
+git clone https://github.com/dipeshwalia/skills-list.git
+cd skills-list
 python3 scripts/upstream.py list
-python3 scripts/upstream.py sync mattpocock --dry-run
-python3 scripts/upstream.py sync mattpocock
 ```
 
-The first sync imports the **whole upstream repository**, including its license and supporting files, into `upstreams/mattpocock/`. Later syncs merge updates into that directory. Imports and updates with upstream changes create local Git commits; they do not publish them. An already-current source needs no new commit. `--squash` keeps upstream history compact while retaining the baseline needed for subsequent merges.
+To use the skills in an agent, follow the [Skillshare setup guide](docs/skillshare.md). Adapt [the configuration example](skillshare.config.example.yaml) so `sources.skills` points to **your checkout's root**, covering both `skills/` and `upstreams/`.
 
-Edit the imported skill in place, for example:
+The root [`.skillignore`](.skillignore) selects the four workflows and their eight supporting skills. Other imported skills remain available to review and select later. Preview your configured targets with `skillshare sync -g --dry-run` before syncing.
 
-```text
-upstreams/mattpocock/skills/engineering/tdd/SKILL.md
-```
+## Keep your copies current
 
-Then commit your customization normally. Keep the imported directory at the same path. Original skills go in `skills/<skill-name>/`, with a `SKILL.md` containing `name` and `description` frontmatter.
-
-## Add more upstreams
-
-Add another named entry to `upstreams.json`:
-
-```json
-{
-  "mattpocock": {
-    "repository": "https://github.com/mattpocock/skills.git",
-    "ref": "main"
-  },
-  "another-author": {
-    "repository": "https://github.com/OWNER/REPOSITORY.git",
-    "ref": "main"
-  }
-}
-```
-
-Replace the example URL and ref with the actual source. Commit the configuration, then run `python3 scripts/upstream.py sync another-author`. Each name maps to `upstreams/<name>/`. Use a source's existing branch, tag, or a commit fetchable from that repository as its ref. Treat source names as permanent after import.
-
-The configuration records where updates come from; subtree commits record the exact upstream revisions already imported. A source stays at its imported version until you explicitly sync it.
-
-## Merge upstream updates
-
-Update every imported parent repository from its configured ref:
+Commit your local work, then preview and merge updates from the configured parent repositories:
 
 ```sh
 ./scripts/sync-upstreams.sh --dry-run
 ./scripts/sync-upstreams.sh
 ```
 
-The script works from any working directory when invoked by its path. It reads `upstreams.json`; `origin`, when configured, is your personal repository, not these original sources. For Matt Pocock's source, the configured ref is `main`, so sync fetches its latest commit. Pinned tags or commits stay pinned.
+Pass a source name, such as `mattpocock`, to update it individually. Sync preserves local customizations through normal Git merges and stops on conflicts. Review changed instructions, dependencies, and source credits before using an update.
 
-To choose sources, run `./scripts/sync-upstreams.sh mattpocock` or pass several source names. With no names (or with `--all`), only already-imported sources are updated; configured sources that are not imported are skipped. Name a source explicitly to import it. The equivalent Python command is `python3 scripts/upstream.py sync --all`.
+See [the upstream workflow](docs/upstreams.md) for adding sources, customizing skills, resolving conflicts, and preserving attribution. `origin` is this repository; original parent sources live in [`upstreams.json`](upstreams.json).
 
-Commit your current work first, including any new files. Use a branch to review an update:
+## Repository map
 
-```sh
-git switch -c update-mattpocock
-./scripts/sync-upstreams.sh mattpocock
-git diff main...HEAD -- upstreams/mattpocock
+```text
+skills/                         Your original skills
+upstreams/<source>/             Editable copies of original repositories
+INVENTORY.md                    Selected skills and original-source credits
+upstreams.json                  Parent repository URLs and refs
+.skillignore                    Skills selected for Skillshare
+skillshare.config.example.yaml  Agent distribution settings
+scripts/sync-upstreams.sh       Update imported parents
+docs/                          Setup and maintenance guides
+assets/brand/                   Repository identity and preview artwork
 ```
 
-If both sides edit the same content, Git leaves a normal merge conflict. Inspect `git status`, resolve the affected files, stage those files, and run `git commit` to complete the merge. Then review the skill instructions, resource links, and any scripts before using the updated skills. A clean textual merge can still change a skill's behavior.
+Run the sync helper's checks with `python3 -m unittest discover -s tests -v`. They use temporary local Git repositories and require no network access.
 
-Sources sync sequentially. A failure stops the remaining updates; earlier successful sources remain committed. The script refuses a dirty working tree or an unfinished Git operation. `--dry-run` prints the planned commands without fetching or changing files.
+## Credit stays with the work
 
-Attribution and license files remain part of the normal Git merge. After reviewing an update, refresh [the inventory](INVENTORY.md), each selected skill's `UPSTREAM.md`, and its `LICENSE.upstream` if the applicable license changed. Sync does not automatically mark new content as reviewed, enable new skills, push commits, or run Skillshare.
+This collection's curation and maintenance are by [Dipesh Walia](https://github.com/dipeshwalia). Imported skills retain their original authorship and applicable licenses. The initial collection is from [Matt Pocock](https://github.com/mattpocock/skills), under his repository's [MIT license](upstreams/mattpocock/LICENSE).
 
-Run `python3 -m unittest discover -s tests -v` to verify the helper against temporary local Git repositories; the tests need no network access.
-
-Use a normal merge when bringing the update branch back into your main branch. Preserve the subtree-generated commits and their metadata; squash-merging or rewriting them can lose the information needed for later subtree updates.
-
-## Use the skills
-
-Use [Skillshare](https://github.com/runkids/skillshare) to distribute this repository's edited skills to your AI tools. The existing directory layout works: configure the **repository root** as `sources.skills`, use `mode: merge` for per-skill links, and `target_naming: standard` for names such as `tdd`.
-
-The [config example](skillshare.config.example.yaml) is ready to adapt for your machine. The root [`.skillignore`](.skillignore) enables original skills and the curated inventory; other imported skills remain opt-in. After importing another upstream, credit its author and source in the inventory, then enable the desired skill directories and their dependencies.
-
-See [Skillshare setup and skill requirements](docs/skillshare.md) for configuration, naming rules, selection examples, and preview commands. Keep using the subtree helper to merge upstream changes; Skillshare handles discovery and target links.
-
-Keep upstream license and attribution files when sharing adapted material. Avoid installing an upstream-managed copy and your customized copy under the same skill name.
-
-References: [Git subtree documentation](https://github.com/git/git/blob/master/contrib/subtree/git-subtree.adoc), [Matt Pocock's engineering collection](https://github.com/mattpocock/skills/tree/main/skills/engineering).
+Each selected imported skill includes `UPSTREAM.md` and `LICENSE.upstream`, so source links, revision details, and license notices travel with individual copies. Existing inline acknowledgements and upstream notices remain intact. See [the inventory and attribution policy](INVENTORY.md) for every source.

@@ -1,6 +1,6 @@
-# Personal skills repository
+# Skills List
 
-This repository holds original skills and editable copies from multiple upstreams.
+Skills List is Dipesh Walia's personal inventory of original skills and editable copies from multiple upstreams. Its GitHub repository is `dipeshwalia/skills-list`. Brand the collection as curation and maintenance; preserve original-source authorship.
 
 - Author original skills in `skills/<skill-name>/SKILL.md` with `name` and `description` frontmatter. Keep supporting files beside the skill.
 - Configure external repositories in `upstreams.json`. Each source is imported into `upstreams/<source-name>/` with Git subtree; these are normal tracked files that can be customized directly.
@@ -16,4 +16,4 @@ This repository holds original skills and editable copies from multiple upstream
 - The Skillshare config example uses `mode: merge` and `target_naming: standard`. Keep each enabled skill's name unique and equal to its immediate folder name, using at most 64 lowercase letters, digits, and single hyphens. Include a meaningful description and instructions.
 - Use the subtree helper for upstream updates, then `skillshare sync -g` to refresh target links. Skillshare's `update` command does not consume `upstreams.json` or merge these subtrees. Its `merge` sync mode means per-skill links, not Git content merging.
 
-See `INVENTORY.md` for the selected skills and credits, `README.md` for the update workflow, and `docs/skillshare.md` for the Skillshare configuration and format requirements.
+See `README.md` for the public overview, `INVENTORY.md` for the selected skills and credits, `docs/upstreams.md` for the update workflow, and `docs/skillshare.md` for the Skillshare configuration and format requirements.
