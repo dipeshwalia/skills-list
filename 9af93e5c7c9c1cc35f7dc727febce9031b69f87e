@@ -1,0 +1,1257 @@
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/CounterOrder.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterAction/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterView/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-23
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-how/references/explorer-prompt.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-35
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-72
+skills/workflow-statechart/scripts/test/corpus/CounterStart/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-18
+skills/workflow-statechart/scripts/test/corpus/CounterJump/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/CounterStop/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-7
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-6.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-49
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-75
+skills/workflow-research/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_b7f3488cbda3e2 13-16
+skills/workflow-writing-for-agents/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-domain-modeling/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/FirstRule/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-22
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-58
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/package.json
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/Counter/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-9
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/CounterTieInGraph.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+skills/workflow-statechart/scripts/test/corpus/CounterView/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-61
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-teach/GLOSSARY-FORMAT.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-35
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-dry-refactoring/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterRules/CounterRules.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-24
+tests/test_upstream.py
+  s_2f75f3b4e8cc04::t_81522226e920b9 188-215
+skills/workflow-statechart/scripts/test/corpus/Login/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-40
+skills/workflow-to-tickets/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/PickWorker/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/CounterRules/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/tlc.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-158
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-33
+skills/workflow-statechart/scripts/test/corpus/CounterRules/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-22
+skills/writing-i-have-adhd/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-7
+upstreams/mattpocock/skills/productivity/grill-me/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterRules/verdict-3.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-74
+skills/workflow-statechart/scripts/test/corpus/CounterRules/verdict-4.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-prototype/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterAction/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-82
+skills/workflow-statechart/scripts/test/corpus/CounterStart/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-13
+skills/workflow-statechart/scripts/test/corpus/CounterView/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-29
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-handoff/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-18
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/UserNoDeadlock.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/FirstRule/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-16
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/test/corpus/CounterFan/CounterFan.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/Shadow/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-61
+skills/workflow-statechart/scripts/pipeline.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-76
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-setup-matt-pocock-skills/issue-tracker-gitlab.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-46
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/MediaPlayerFixed.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-100
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-47
+skills/workflow-statechart/scripts/run.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-481
+skills/workflow-statechart/scripts/test/corpus/CounterAction/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/frontends/value.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-166
+skills/workflow-statechart/scripts/test/corpus/CounterJump/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/ChartRun.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/Counter/Counter.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-grilling/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-32
+skills/workflow-statechart/scripts/statechart.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-164
+skills/workflow-statechart/scripts/test/corpus/CounterRules/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-setup-matt-pocock-skills/domain.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-51
+skills/workflow-statechart/scripts/test/corpus/CounterView/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterStop/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-49
+skills/workflow-statechart/scripts/test/corpus/DieHard/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-14
+skills/writing-unslop/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/CounterTieInGraph.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterView/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-19
+skills/workflow-wayfinder/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-130
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/Shadow/ShadowSub.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/CounterTie/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/passes/annotate.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-128
+skills/workflow-statechart/scripts/test/corpus/CounterAction/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-26
+skills/workflow-statechart/scripts/test/corpus/CounterAction/verdict-3.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-4.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+INVENTORY.md
+  s_2f75f3b4e8cc04::t_32367a4f33498f 3,7,9-14,16,20-43,47,49-55,57,59-66,68,70,72
+upstreams/mattpocock/skills/productivity/writing-for-agents/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/charts/Braces.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-7
+skills/workflow-statechart/scripts/test/corpus/CounterAction/CounterAction.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-4
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-60
+skills/workflow-codebase-design/DEEPENING.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/frontends/config.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-276
+skills/workflow-improve/references/plan-template.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-197
+skills/workflow-statechart/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-84
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-75
+skills/workflow-statechart/scripts/test/corpus/CounterView/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-statechart/scripts/test/corpus/CounterAction/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/DieHard/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-54
+skills/workflow-statechart/scripts/test/corpus/CounterStart/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-58
+upstreams/jscpd/skills/jscpd/SKILL.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 238
+upstreams/mattpocock/skills/productivity/writing-for-agents/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-prototype/UI.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-112
+skills/workflow-statechart/scripts/test/charts/Escapes.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-60
+skills/workflow-statechart/scripts/test/corpus/CounterFan/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-grill-with-docs/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-10
+skills/workflow-statechart/scripts/test/corpus/CounterTie/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-27
+upstreams/mattpocock/skills/engineering/to-spec/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-12
+skills/workflow-statechart/scripts/test/corpus/CounterJump/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-26
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-domain-modeling/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_5c560e7bab8da8 13-16
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-75
+skills/workflow-code-review/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_3dda441e3e47b1 13-16
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/CounterAction/CounterAction.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-22
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+upstreams/improve/skills/improve/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+skills/writing-simple-english/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-grill-me/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterStart/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-23
+skills/workflow-statechart/scripts/test/corpus/Login/Login.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-to-questionnaire/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/writing-i-have-adhd/agents/gemini.toml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-24
+skills/workflow-how/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-wayfinder/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-17
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-46
+skills/workflow-statechart/scripts/test/corpus/CounterFan/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-85
+skills/workflow-statechart/scripts/frontends/view.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-119
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-7
+skills/workflow-statechart/scripts/test/tlc-out.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-90
+skills/workflow-teach/RESOURCES-FORMAT.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-32
+skills/workflow-statechart/scripts/backends/mermaid.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-201
+skills/writing-technical-writing/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_cf8f14dbf71f23 13-16
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-42
+skills/workflow-statechart/scripts/worker.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-35
+skills/workflow-statechart/scripts/test/corpus/CounterJump/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-22
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/render.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-81
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-65
+skills/workflow-statechart/scripts/test/plain-tlc.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-255
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-28
+skills/workflow-grilling/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_bc5e7709c12d2c 13-16
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-44
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterView/verdict-3.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-87
+docs/skillshare.md
+  s_2f75f3b4e8cc04::t_65abaa77d1f4ac 78
+  s_2f75f3b4e8cc04::t_32367a4f33498f 3,5,7,10-12,14-17,20,24,33,35,37,39,41-46,49,51,53,55-57,60,62,64,66,74-76,80-82,85-87,91,93,95
+  s_2f75f3b4e8cc04::t_d68d558d982c2e 77
+skills/workflow-teach/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/MediaPlayer.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-to-tickets/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+upstreams/mattpocock/skills/productivity/to-questionnaire/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterStop/CounterStop.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/CounterDeadlock.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/Shadow/Shadow.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-4
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-60
+skills/workflow-statechart/scripts/test/corpus/CounterJump/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+skills/workflow-domain-modeling/ADR-FORMAT.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-47
+upstreams/jscpd/skills/dry-refactoring/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/scripts/frontends/marks.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-93
+skills/workflow-to-spec/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-teach/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/writing-technical-writing/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-jscpd/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-278
+skills/workflow-statechart/scripts/frontends/dot.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-74
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/Shadow/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-4
+upstreams/jscpd/skills/jscpd/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/scripts/statechart
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-29
+skills/workflow-setup-matt-pocock-skills/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_0f51d15fea9539 13-16
+skills/workflow-statechart/scripts/test/corpus/Login/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-47
+skills/workflow-statechart/scripts/ir.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-547
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-22
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/FirstRule/FirstRule.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/grid/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-77
+skills/workflow-statechart/scripts/test/corpus/CounterStop/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-statechart/scripts/test/corpus/DieHard/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-grill-with-docs/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-grilling/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/MediaPlayerProps.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-statechart/scripts/test/corpus/CounterRules/Moves.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-83
+skills/workflow-teach/LEARNING-RECORD-FORMAT.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-46
+skills/writing-unslop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_4a769e91438aa6 13-16
+skills/workflow-code-review/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/Login/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-code-review/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/config-fuzz.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-263
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/TwoPhase.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-75
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-17
+skills/workflow-statechart/scripts/test/java.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-63
+skills/workflow-to-tickets/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_900a1680cfcbee 13-16
+skills/workflow-statechart/scripts/frontends/trace.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-24
+skills/workflow-statechart/scripts/test/corpus/CounterAction/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/test/corpus/Shadow/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-65
+skills/workflow-jscpd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_6d7533f94b3dba 12-15
+skills/workflow-improve/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_f1bb4010e221d3 12-15
+skills/workflow-grill-me/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-implement-spec/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/FirstRule/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-25
+skills/workflow-statechart/scripts/test/corpus/PickWorker/PickWorker.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-prototype/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-28
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-60
+skills/workflow-grill-with-docs/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/CounterStart/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-33
+skills/workflow-statechart/scripts/test/corpus/CounterTie/verdict-3.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/charts/Phases.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-29
+skills/workflow-writing-for-agents/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/MediaPlayerFixed.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/CounterGuard.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-13
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/UserNoDeadlock.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-8
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/TypeGuard.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/SpacedNames.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-67
+skills/workflow-tdd/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/frontends/spec.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-114
+skills/workflow-statechart/scripts/test/corpus/CounterStop/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/passes/lift.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-85
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/TypeGuard.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/Login/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/CounterGuard.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-14
+skills/workflow-wayfinder/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/SpacedNames.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-9
+skills/workflow-how/references/explainer-prompt.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-55
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/CounterLoop.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-69
+skills/workflow-to-spec/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/MediaPlayer.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-103
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/CounterInitPastHolds.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-4.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-77
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/CounterSteps.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-statechart/scripts/test/corpus/PickWorker/PickWorker.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/CounterInitPastHolds.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-10
+skills/workflow-statechart/scripts/test/corpus/CounterTie/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-61
+upstreams/mattpocock/skills/productivity/handoff/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-61
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-22
+skills/workflow-dry-refactoring/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+upstreams/mattpocock/skills/productivity/teach/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-statechart/scripts/test/labels.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-643
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/HiddenClock.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-4
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-95
+skills/workflow-statechart/scripts/test/grid/Grid.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-9
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterView/CounterView.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-14
+skills/workflow-statechart/scripts/passes/loop-check.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-68
+skills/workflow-codebase-design/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterAction/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-19
+skills/workflow-research/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-72
+skills/workflow-statechart/scripts/test/corpus/Login/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-27
+skills/workflow-statechart/scripts/test/ConfigOracle.java
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-63
+README.md
+  s_2f75f3b4e8cc04::t_32367a4f33498f 12,14,16,18,20-21,23,27,32,35-41,43-48,52,59,61,66-70,72-75,77,80,84
+skills/workflow-setup-matt-pocock-skills/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/Login/Login.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-62
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/writing-simple-english/references/rule-catalog.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-164
+scripts/build-skills.py
+  s_2f75f3b4e8cc04::t_bee2fb03805100 155-162
+  s_2f75f3b4e8cc04::t_6169b899fcdf49 122-126
+  s_2f75f3b4e8cc04::t_ec4f1e7ba741a3 1-121,127-154,163-267
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-31
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-20
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-47
+skills/workflow-statechart/scripts/passes/paths.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-60
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/LoginParallel.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterStart/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-93
+skills/workflow-statechart/scripts/test/corpus/CounterStart/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/MediaPlayerProps.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/PickWorker/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-7
+upstreams/simple-english/skills/simple-english/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+upstreams/improve/skills/improve/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_8d299c3d4eb1cc 13-16
+skills/workflow-to-questionnaire/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/README.md
+  s_2f75f3b4e8cc04::t_32367a4f33498f 3-48
+skills/workflow-statechart/scripts/test/corpus/CounterFan/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-implement-spec/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-14
+skills/workflow-statechart/scripts/test/corpus/CounterView/verdict-4.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/FirstRule/FirstRule.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-5.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-58
+skills/workflow-statechart/scripts/test/corpus/PickWorker/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-8
+skills/workflow-implement-spec/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_58519f63d06b62 13-16
+skills/workflow-statechart/scripts/test/corpus/CounterStop/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/Login/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-7
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-16
+skills/workflow-statechart/scripts/test/corpus/CounterView/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterRules/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-58
+skills/workflow-grill-me/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-9
+skills/workflow-statechart/scripts/test/corpus/CounterRules/CounterRules.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+upstreams/mattpocock/skills/productivity/teach/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/LoginGuarded.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-domain-modeling/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterView/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-27
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/Shadow/ShadowLib.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-codebase-design/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-116
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/CounterInitPast.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-to-spec/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_d07b138665f231 13-16
+skills/workflow-teach/MISSION-FORMAT.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-31
+skills/workflow-research/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/CounterStop/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-13
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-3.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-grill-me/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_145c6f0cc469d0 12-15
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterRules/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-10
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/ChartRun.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-77
+skills/workflow-statechart/scripts/test/differential.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-565
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-17
+skills/workflow-statechart/scripts/test/corpus/CounterFan/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-69
+skills/workflow-statechart/scripts/test/corpus/Shadow/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-16
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/MediaPlayer.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-103
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/HiddenClock.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+upstreams/i-have-adhd/skills/i-have-adhd/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-handoff/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-improve/references/audit-playbook.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-130
+skills/workflow-statechart/scripts/test/corpus/Shadow/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-8
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-18
+skills/workflow-statechart/scripts/tsconfig.json
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/frontends/verdict.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-40
+skills/workflow-wayfinder/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_5d0fd0443d97c3 13-16
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-writing-for-agents/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_60da22fd7195f0 12-15
+skills/workflow-statechart/scripts/test/corpus/CounterRules/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-66
+skills/workflow-wayfinder/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+upstreams/jscpd/skills/jscpd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-statechart/scripts/test/corpus/CounterFan/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-70
+skills/workflow-statechart/scripts/test/corpus.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-403
+skills/workflow-statechart/scripts/test/corpus/DieHard/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/PickWorker/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/Counter/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/writing-simple-english/references/strict-vocabulary.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-77
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-78
+skills/workflow-handoff/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+sources.json
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-62
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-85
+skills/workflow-implement-spec/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-grill-me/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-grill-with-docs/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-9
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-16
+skills/workflow-statechart/scripts/test/corpus/CounterTie/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-47
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/Counter/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-7
+skills/workflow-to-tickets/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/writing-simple-english/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_33ffe65c6ae5e0 12-15
+skills/workflow-domain-modeling/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-76
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-dry-refactoring/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-117
+skills/writing-unslop/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skillshare.config.example.yaml
+  s_2f75f3b4e8cc04::t_32367a4f33498f 2,4-5,9
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-297
+skills/workflow-teach/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/CounterInitPast.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-10
+skills/workflow-statechart/scripts/test/corpus/CounterTie/verdict-4.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/writing-i-have-adhd/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-144
+skills/workflow-setup-matt-pocock-skills/issue-tracker-github.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-50
+upstreams/i-have-adhd/skills/i-have-adhd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-statechart/scripts/backends/cfg.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-33
+skills/workflow-statechart/scripts/test/corpus/CounterRules/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+skills/workflow-statechart/scripts/backends/report.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-177
+skills/workflow-statechart/scripts/passes/regions.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-295
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/CounterInstance.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-10
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/TwoPhaseFixed.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-75
+skills/workflow-writing-for-agents/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/writing-simple-english/references/use-cases.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-65
+skills/workflow-dry-refactoring/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_7cee0ce92455c7 12-15
+skills/workflow-improve/references/closing-the-loop.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-96
+skills/workflow-statechart/scripts/test/corpus/Counter/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-49
+scripts/upstream.py
+  s_2f75f3b4e8cc04::t_81522226e920b9 105-106,126-134
+  s_3b6f959956be33::t_d644f033717d74 135
+skills/workflow-statechart/scripts/test/corpus/CounterTie/verdict-3.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-87
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-3.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-61
+skills/writing-unslop/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterAction/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-60
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-19
+skills/workflow-statechart/scripts/test/corpus/CounterJump/CounterJump.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-19
+skills/workflow-statechart/scripts/test/corpus/CounterRules/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-23
+skills/workflow-statechart/scripts/test/corpus/CounterStart/CounterStart.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-how/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-38
+skills/workflow-jscpd/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+upstreams/mattpocock/skills/productivity/to-questionnaire/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-statechart/scripts/test/corpus/CounterFan/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-setup-matt-pocock-skills/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-improve/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterJump/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-58
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/CounterOrder.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/CounterTie/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-30
+skills/workflow-statechart/scripts/test/corpus/CounterTie/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-domain-modeling/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterTie/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-19
+upstreams/simple-english/skills/simple-english/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-improve/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/Counter/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-16
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/CounterDeadlock.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterTieInGraph/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/test/corpus/CounterView/verdict-3.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/writing-i-have-adhd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_1ac021c330ea7a 12-15
+skills/workflow-statechart/scripts/test/corpus/Login/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/CounterStop/CounterStop.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-statechart/scripts/test/corpus/CounterView/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/test/corpus/CounterStart/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-57
+skills/workflow-statechart/scripts/test/corpus/CounterView/CounterView.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-4
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-58
+skills/writing-simple-english/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-95
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-jscpd/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-4.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-66
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/writing-simple-english/references/word-swaps.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-58
+skills/workflow-setup-matt-pocock-skills/triage-labels.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-statechart/scripts/test/corpus/CounterJump/CounterJump.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+sources.ts
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-13
+skills/workflow-code-review/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/writing-i-have-adhd/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+upstreams/mattpocock/skills/engineering/to-spec/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-domain-modeling/GLOSSARY-FORMAT.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-60
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-43
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/CounterTie/CounterTie.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-4
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-19
+skills/workflow-statechart/scripts/test/chart.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-1210
+skills/workflow-statechart/scripts/passes/region-check.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-97
+skills/workflow-codebase-design/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterRules/verdict-3.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/passes/reach.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-135
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/CounterLoop.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-to-tickets/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-107
+skills/workflow-statechart/scripts/test/pipeline.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-270
+skills/workflow-implement-spec/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-44
+skills/writing-simple-english/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterRules/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-62
+skills/workflow-to-questionnaire/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_5561044186f947 12-15
+skills/workflow-statechart/scripts/test/corpus/CounterDeadlock/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/CounterTie/CounterTie.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-14
+skills/workflow-statechart/scripts/test/corpus/FirstRule/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-61
+skills/workflow-to-questionnaire/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-setup-matt-pocock-skills/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-statechart/scripts/test/corpus/DieHard/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-126
+skills/workflow-statechart/scripts/test/corpus/CounterFan/CounterFan.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/CounterInitPastHolds/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-6
+skills/workflow-statechart/references/render.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-93
+skills/workflow-statechart/scripts/test/corpus/CounterView/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-23
+skills/workflow-handoff/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/DieHard/DieHard.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-38
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/Counter/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-statechart/scripts/test/corpus/HiddenClock/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-13
+skills/workflow-teach/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-142
+skills/workflow-statechart/scripts/backends/plain-text.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-72
+skills/workflow-how/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/passes/label.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-269
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/PickWorker/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-70
+skills/workflow-codebase-design/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-55
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterStart/CounterStart.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-teach/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_11b9c4cea2337f 12-15
+skills/workflow-to-spec/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/DieHard/DieHard.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-4
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-14
+skills/workflow-tdd/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-grilling/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-prototype/LOGIC.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-67
+skills/workflow-statechart/scripts/test/corpus/PickWorker/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-tdd/mocking.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-writing-for-agents/SKILL-MECHANICS.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-22
+skills/workflow-statechart/scripts/test/grid/Grid.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-tdd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_b7cb00eab4444b 13-16
+skills/workflow-prototype/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_54db697d2082ec 13-16
+skills/workflow-code-review/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-91
+skills/workflow-statechart/scripts/frontends/messages.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-52
+upstreams/jscpd/skills/dry-refactoring/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/workflow-research/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-14
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-17
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-19
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-handoff/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+  s_2f75f3b4e8cc04::t_997b482bd6c1f4 12-15
+skills/workflow-statechart/scripts/test/corpus/CounterLoop/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-76
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/CounterAction/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-20
+skills/workflow-to-questionnaire/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-5
+skills/workflow-improve/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-124
+skills/workflow-codebase-design/DESIGN-IT-TWICE.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-44
+skills/workflow-prototype/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterFan/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+skills/workflow-statechart/scripts/test/corpus/CounterInitPast/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-54
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-statechart/scripts/test/messages.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-212
+.skillignore
+  s_2f75f3b4e8cc04::t_32367a4f33498f 1-3
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/Counter/Counter.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-10
+skills/workflow-statechart/scripts/test/corpus/DieHard/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-91
+AGENTS.md
+  s_2f75f3b4e8cc04::t_da28c78e133ead 5,10,15-19,21
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/UserNoDeadlock/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-77
+docs/upstreams.md
+  s_2f75f3b4e8cc04::t_da28c78e133ead 27-38,59-63,88-92,94
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/verdict-2.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/DieHard/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-17
+skills/workflow-research/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/verdict-5.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-setup-matt-pocock-skills/issue-tracker-local.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-30
+skills/workflow-statechart/scripts/test/corpus/CounterJump/verdict-1.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-statechart/scripts/test/corpus/Shadow/Shadow.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-11
+skills/workflow-tdd/tests.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-77
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/FirstRule/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/writing-i-have-adhd/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+tests/test_build_skills.py
+  s_2f75f3b4e8cc04::t_1c8bac6f6d8a14 1-48,50-104,107-109,111-218
+  s_2f75f3b4e8cc04::t_6169b899fcdf49 49,105-106
+  s_2f75f3b4e8cc04::t_bee2fb03805100 110
+skills/workflow-statechart/scripts/test/corpus/LoginParallel/LoginParallel.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-4.exit
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1
+skills/workflow-grilling/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-how/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_a6bdd3fee24e50 13-16
+skills/workflow-statechart/scripts/test/corpus/CounterInstance/CounterInstance.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-59
+skills/workflow-statechart/scripts/test/corpus/TypeGuard/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-statechart/scripts/test/corpus/CounterJump/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-prototype/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/FirstRule/verdict-3.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-15
+skills/workflow-statechart/scripts/test/corpus/CounterTie/sany.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-2
+skills/workflow-statechart/scripts/test/corpus/TwoPhase/TwoPhase.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-223
+upstreams/mattpocock/skills/productivity/handoff/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-21
+skills/workflow-statechart/scripts/test/corpus/TwoPhaseFixed/TwoPhaseFixed.cfg
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-grill-with-docs/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_7fd9d7841fa090 13-16
+skills/workflow-statechart/COLLECTION.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-37
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-10
+skills/workflow-statechart/scripts/test/corpus/CounterFan/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-67
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerFixed/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-9
+skills/writing-technical-writing/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-108
+skills/workflow-tdd/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-40
+skills/workflow-tdd/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/report.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-31
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+skills/workflow-statechart/scripts/test/corpus/CounterOrder/verdict-1.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-56
+skills/workflow-statechart/scripts/test/corpus/CounterTie/verdict-2.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-statechart/scripts/test/corpus/LoginGuarded/LoginGuarded.tla
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-64
+skills/workflow-codebase-design/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-12
+  s_2f75f3b4e8cc04::t_d3c5be11882767 13-16
+skills/workflow-statechart/scripts/test/corpus/Shadow/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-9
+skills/writing-technical-writing/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-21
+skills/workflow-statechart/scripts/test/corpus/CounterGuard/ChartRun.out
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-85
+skills/workflow-statechart/scripts/test/corpus/SpacedNames/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-17
+skills/workflow-statechart/scripts/test/corpus/DieHard/chart.mmd
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-92
+skills/workflow-statechart/scripts/test/corpus/MediaPlayerProps/graph.dot
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-93
+skills/workflow-statechart/scripts/test/cli.test.ts
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-1314
+skills/workflow-to-spec/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-77
+skills/workflow-setup-matt-pocock-skills/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-122
+skills/workflow-writing-for-agents/SKILL.md
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-83
+skills/workflow-statechart/scripts/test/corpus/MediaPlayer/view.mjs
+  s_2f75f3b4e8cc04::t_5469eacd0d45bf 1-3
+upstreams/mattpocock/skills/productivity/grill-me/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6818839eb30392 1-11
+skills/.generated.json
+  s_2f75f3b4e8cc04::t_f0760284482b96 1-2278
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9af93e5c7c9c1cc35f7dc727febce9031b69f87e",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    },
+    "s_3b6f959956be33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a09e81a1-4e33-4660-8324-4d0f74bd090b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}

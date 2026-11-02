@@ -1,0 +1,50 @@
+upstreams/cursor-plugins/pstack/skills/how/SKILL.md
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 11
+upstreams/cursor-plugins/pstack/skills/technical-writing/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_53d7f6c4b14a8d 3
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-2,4-12
+upstreams/cursor-plugins/pstack/skills/unslop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-2,4-12
+  s_2f75f3b4e8cc04::t_53d7f6c4b14a8d 3
+README.md
+  s_2f75f3b4e8cc04::t_87ce61bc33910a 18,26-28,30,44,62,77
+INVENTORY.md
+  s_2f75f3b4e8cc04::t_53d7f6c4b14a8d 47
+  s_2f75f3b4e8cc04::t_87ce61bc33910a 3,5,10,12-14,24-26,42-46,48
+upstreams/cursor-plugins/pstack/skills/technical-writing/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-21
+upstreams/cursor-plugins/pstack/skills/statechart/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-2,4-12
+  s_2f75f3b4e8cc04::t_53d7f6c4b14a8d 3
+upstreams/cursor-plugins/pstack/skills/how/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-21
+upstreams/cursor-plugins/pstack/skills/unslop/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-21
+docs/skillshare.md
+  s_2f75f3b4e8cc04::t_87ce61bc33910a 84
+upstreams/cursor-plugins/pstack/skills/statechart/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-21
+skills/README.md
+  s_2f75f3b4e8cc04::t_87ce61bc33910a 13-17
+upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_6d3c9a60248a03 1-2,4-12
+  s_2f75f3b4e8cc04::t_53d7f6c4b14a8d 3
+.skillignore
+  s_2f75f3b4e8cc04::t_87ce61bc33910a 21-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "877efe9d52d602519829b3f1035e93fa921b9b7c",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
