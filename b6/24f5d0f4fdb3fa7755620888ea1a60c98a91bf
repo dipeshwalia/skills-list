@@ -1,0 +1,76 @@
+.skillignore
+  s_2f75f3b4e8cc04::t_f43528cb2f8794 2,6-20
+upstreams/mattpocock/skills/engineering/prototype/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/setup-matt-pocock-skills/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/codebase-design/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/wayfinder/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/codebase-design/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/grill-with-docs/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/implement-spec/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/productivity/grilling/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/to-tickets/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/implement-spec/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+AGENTS.md
+  s_2f75f3b4e8cc04::t_f43528cb2f8794 11-12,18
+upstreams/mattpocock/skills/engineering/tdd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/domain-modeling/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/prototype/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/productivity/grilling/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/to-tickets/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/wayfinder/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/research/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/setup-matt-pocock-skills/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/domain-modeling/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+docs/skillshare.md
+  s_2f75f3b4e8cc04::t_f43528cb2f8794 84,123
+README.md
+  s_2f75f3b4e8cc04::t_585f0905ec74c1 23
+  s_2f75f3b4e8cc04::t_f43528cb2f8794 13,19,84
+upstreams/mattpocock/skills/engineering/grill-with-docs/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/research/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+upstreams/mattpocock/skills/engineering/tdd/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+INVENTORY.md
+  s_2f75f3b4e8cc04::t_f43528cb2f8794 1-46
+upstreams/mattpocock/skills/engineering/code-review/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-21
+upstreams/mattpocock/skills/engineering/code-review/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_25d444a01946df 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b624f5d0f4fdb3fa7755620888ea1a60c98a91bf",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
