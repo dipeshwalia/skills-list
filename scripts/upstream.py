@@ -102,6 +102,8 @@ def main():
     if args.dry_run:
         for name in names:
             print(shlex.join(["git", *subtree_command(name, sources[name])]))
+        if (ROOT / "scripts/build-skills.py").is_file():
+            print(shlex.join([sys.executable, str(ROOT / "scripts/build-skills.py")]))
         return
 
     require_clean_repository(names)
@@ -120,6 +122,16 @@ def main():
         if git("rev-parse", "HEAD", capture=True).stdout.strip() != before:
             changed.append(name)
         print(f"Finished {name}. Upstream revision is recorded in Git subtree history.")
+
+    builder = ROOT / "scripts/build-skills.py"
+    if builder.is_file():
+        result = subprocess.run([sys.executable, str(builder)], cwd=ROOT)
+        if result.returncode:
+            raise ValueError(
+                "Upstream merges are committed, but skill package generation failed. "
+                "Fix the reported source or package issue and run python3 scripts/build-skills.py."
+            )
+        print("Skill packages refreshed. Review and commit any generated changes.")
 
     if changed:
         print(

@@ -1,40 +1,27 @@
 # Skillshare integration
 
-This repository is the editable source of truth. Git subtrees merge changes from multiple upstream authors; Skillshare discovers the selected skills and links them into your AI tools.
+Git subtrees maintain editable copies of the original repositories. The package builder gives selected skills category-prefixed names. Skillshare distributes those generated packages to your AI tools.
 
-The layout works without moving files into `.skillshare/skills/`. That location is the default for Skillshare's project mode; this personal collection uses global mode with a custom source path.
+## Configure the source
 
-## Source and configuration
-
-Use the repository root, `/Users/dipeshwalia/personal/skills`, as `sources.skills`. Pointing at its `skills/` child would omit every imported repository under `upstreams/`.
+Use your checkout's root as `sources.skills`. The root `.skillignore` includes only skill directories under `skills/`; canonical copies under `upstreams/` are excluded so the same skill is not exposed twice.
 
 ```text
-personal/skills/                          # sources.skills
-├── .skillignore                          # Shared selection rules
-├── .skillignore.local                    # Optional machine-only overrides
-├── skillshare.config.example.yaml        # Example, not auto-loaded
+skills-list/                         # sources.skills
+├── .skillignore
+├── sources.json                     # Source selections and categories
 ├── skills/
-│   └── my-workflow/
-│       ├── SKILL.md
-│       ├── references/                   # Optional
-│       ├── scripts/                      # Optional
-│       └── assets/                       # Optional
-└── upstreams/
-    ├── mattpocock/
-    │   ├── LICENSE
-    │   └── skills/engineering/tdd/SKILL.md
-    └── another-author/...
+│   ├── workflow-improve/SKILL.md
+│   ├── writing-unslop/SKILL.md
+│   └── ...
+└── upstreams/                       # Editable canonical copies
 ```
 
-Skillshare recursively discovers folders containing `SKILL.md`; intermediate folders need no skill file. There is one skills-source root, which can contain as many upstream directories as needed. Git subtrees contain ordinary files, so no symlink-following setting is needed for discovery.
-
-Skillshare's global config normally lives at `~/.config/skillshare/config.yaml`. Use [the example](../skillshare.config.example.yaml) there, adjusting the source and targets for your machine. Merge settings into any existing config. The example selects Codex; add other targets only when you want to use them.
-
-The relevant settings are:
+Merge [the configuration example](../skillshare.config.example.yaml) into `~/.config/skillshare/config.yaml`, adjusting paths for your machine:
 
 ```yaml
 sources:
-  skills: ~/personal/skills
+  skills: ~/skills-list
 mode: merge
 target_naming: standard
 targets:
@@ -43,94 +30,71 @@ targets:
       path: ~/.codex/skills
 ```
 
-`sources.skills` is the current schema field; legacy `source` is also accepted. `mode: merge` links each skill separately and preserves unrelated skills in the target. It does not perform Git merges. Changes to an already-linked skill are visible immediately; run `sync` to add or remove links. Use `copy` mode for a target that requires real files, and sync again after editing those files at the source.
+`mode: merge` creates a link for each enabled skill and preserves unrelated target skills. It does not perform Git merges. `target_naming: standard` uses the package's `name`, such as `workflow-improve`; it avoids flattened names such as `skills__workflow-improve`.
 
-The whole-directory `symlink` mode is unsuitable for this mixed repository root. Keep the example's per-skill `merge` mode.
+The example is not loaded automatically. Adding packages here does not change global configuration, install a CLI, or update your agent directories.
 
-## Skill format
+## Select skills and categories
 
-Each skill needs a `SKILL.md` with YAML frontmatter and Markdown instructions:
+Edit [sources.json](../sources.json). Each entry contains `source`, `category`, and optionally `skills`:
 
-```markdown
----
-name: my-workflow
-description: Review a proposed implementation against my project's conventions.
----
-
-# My workflow
-
-Describe the specific decisions and actions this skill should guide.
+```json
+{
+  "source": "mattpocock/skills",
+  "category": "Workflow",
+  "skills": ["grill-me", "tdd"]
+}
 ```
 
-For the selected `standard` naming mode:
+The category becomes a lowercase invocation prefix: `Workflow` plus `tdd` produces `workflow-tdd`. The original name is the domain within the category. The [TypeScript interface](../sources.ts) exposes the same manifest to code consumers.
 
-- Match `name` to the immediate containing folder, such as `my-workflow/`.
-- Use at most 64 lowercase letters, digits, and single hyphens; no leading, trailing, or consecutive hyphens.
-- Include a useful `description` and nonempty instructions. The prose format guide calls description optional, but Skillshare's current lint rules flag its absence as an error.
-- Keep supporting files with the skill and use working relative links. Preserve any agent-specific metadata, including `agents/openai.yaml` when present.
-- Give enabled skills unique names. Two authors can both provide `tdd`, but select one version for each target or deliberately rename your customized skill and its folder. Renaming inside a subtree also requires care during future upstream merges.
+A source can name a whole repository or a skill subdirectory. With no `skills` list, the builder includes every canonical skill under that source. Review additions and their dependencies before broadening a selection.
 
-With `target_naming: standard`, the example upstream skill becomes `tdd` in the target. Default `flat` naming would make it `upstreams__mattpocock__skills__engineering__tdd`. Skillshare warns about invalid names and collisions and skips affected skills.
-
-## Select skills
-
-The root [`.skillignore`](../.skillignore) starts with:
-
-```gitignore
-*
-!/skills/**
-```
-
-These first rules enable your originals. The file also contains exact selections for the requested Matt Pocock and pstack skills and their supporting dependencies, documented with original-source credits in [the inventory](../INVENTORY.md). Other imported skills remain unselected. After importing and reviewing more skills, append exact directory selections, for example:
-
-```gitignore
-!/upstreams/mattpocock/skills/engineering/tdd
-!/upstreams/mattpocock/skills/engineering/codebase-design
-!/upstreams/mattpocock/skills/engineering/code-review
-```
-
-Check the imported instructions for their current sibling-skill dependencies. To select a collection, use `!/upstreams/mattpocock/skills/engineering/**` after reviewing what that includes.
-
-These patterns match **skill-directory paths relative to the source root**, not `SKILL.md` filenames or individual resource files. Exact selections avoid accidentally enabling test and example skills shipped elsewhere in an upstream repository.
-
-Skillshare does not automatically apply nested `.skillignore` files inside these ordinary Git subtrees. Maintain selections in this root file. Machine-specific overrides can go in `.skillignore.local`, which is Git-ignored and evaluated after the shared rules.
-
-For different selections per tool, use target `include`/`exclude` filters. These match flattened names such as `upstreams__mattpocock__skills__engineering__tdd` even when `target_naming: standard` is enabled. They further restrict the skills allowed by `.skillignore`.
-
-## Preview and use
-
-After installing Skillshare and configuring its global config:
+Generate and check the packages after changing the manifest or a canonical skill:
 
 ```sh
-skillshare version
+python3 scripts/build-skills.py
+python3 scripts/build-skills.py --check
+```
+
+The builder requires source attribution and license files. It retains resources and invocation metadata, prefixes names, and updates selected sibling links. Each package includes `COLLECTION.md` so references to original skill names can be resolved to the collection's invocation names.
+
+Edit imported instructions under `upstreams/`. Generated packages are checked against their saved hashes before replacement. If you edited a generated package, move the change to its canonical source, preserve any work you need, restore the generated copy from Git, then rebuild.
+
+## Preview and sync
+
+After installing Skillshare and configuring its global source and targets:
+
+```sh
 skillshare list -g
 skillshare sync -g --dry-run
 skillshare sync -g
 ```
 
-Use `-g` explicitly to select global mode even when running from another project that has its own `.skillshare/` configuration. Review the dry run for collisions with existing installed skills before syncing.
+Use `-g` explicitly when another project has its own `.skillshare/` configuration. Review the dry run for name collisions before syncing. Hosts may expose slash commands or another invocation syntax; the selected package names are prefixed in either case.
 
-To update one customized upstream, follow the repository's Git review workflow, then refresh Skillshare's target links:
+Existing links reflect source-file edits immediately. Run sync to add or remove links after the package set changes. A target using `copy` mode needs another sync after package content changes.
+
+When migrating from the old unprefixed names, existing target links can remain after sync. After previewing and syncing the prefixed packages, remove only obsolete target symlinks that resolve inside this checkout's `upstreams/` directory. Leave canonical source files and unrelated target files untouched.
+
+For per-tool selection, use target `include`/`exclude` filters. These match flattened discovery names such as `skills__workflow-improve`, even with `target_naming: standard`. Machine-only exclusions can also go in `.skillignore.local`, which is Git-ignored.
+
+## Upstream updates
 
 ```sh
-python3 scripts/upstream.py sync mattpocock
+./scripts/sync-upstreams.sh --dry-run
+./scripts/sync-upstreams.sh
+python3 scripts/build-skills.py --check
 skillshare sync -g --dry-run
-skillshare sync -g
 ```
 
-Use `./scripts/sync-upstreams.sh` to update all imported parents, or add `--dry-run` to preview. Review the resulting changes and refresh source credits and license copies before distributing the update. The script preserves the existing skill selection and does not run Skillshare itself.
+Review upstream changes and refresh provenance before distributing them. The subtree helper rebuilds packages after successful merges, but it does not run Skillshare. Its Git merge workflow is separate from Skillshare's `update` command and `install --track` clones.
 
-Skillshare does not read `upstreams.json`. Its `install --track` mechanism creates separate Git clones, while regular installs copy skill files and updates reinstall them. The subtree helper remains responsible for merging this repository's upstreams. Avoid registering those same upstreams a second time through Skillshare.
+See [the upstream workflow](upstreams.md) for customization and conflict resolution, and [the inventory](../INVENTORY.md) for credits and usage-time prerequisites.
 
-Skillshare configuration examples and selection rules do not install the CLI, configure your global targets, or publish this repository. Imported source content and enabled skill selections are recorded separately in [the inventory](../INVENTORY.md).
-
-## Checked against
-
-Validated with the official Skillshare v0.28.0 CLI in temporary source, config, and target directories. Checks covered nested discovery, the default exclusions, selecting one upstream skill with its resources, standard target names, preserving unrelated target skills, and resolving duplicate-name selection with target filters. No real agent directories were changed.
+## References
 
 - [Skillshare configuration schema](https://github.com/runkids/skillshare/blob/51d299ff07ba4eeaff1b8929aa803c826d0a9ae1/schemas/config.schema.json)
 - [Organizing skills](https://skillshare.runkids.cc/docs/how-to/daily-tasks/organizing-skills/)
 - [Sync modes and naming](https://skillshare.runkids.cc/docs/understand/sync-modes/)
 - [Filtering](https://skillshare.runkids.cc/docs/reference/filtering/)
-- [Skill format lint rules](https://github.com/runkids/skillshare/blob/51d299ff07ba4eeaff1b8929aa803c826d0a9ae1/internal/sync/lint_rules.yaml)
-- [Update behavior](https://skillshare.runkids.cc/docs/reference/commands/update/)

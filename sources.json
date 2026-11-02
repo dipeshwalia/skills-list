@@ -1,0 +1,62 @@
+[
+  {
+    "source": "mattpocock/skills",
+    "category": "Workflow",
+    "skills": [
+      "grill-with-docs",
+      "wayfinder",
+      "to-tickets",
+      "implement-spec",
+      "grill-me",
+      "grilling",
+      "handoff",
+      "to-questionnaire",
+      "writing-for-agents",
+      "teach",
+      "code-review",
+      "codebase-design",
+      "research",
+      "tdd",
+      "domain-modeling",
+      "to-spec",
+      "prototype",
+      "setup-matt-pocock-skills"
+    ]
+  },
+  {
+    "source": "cursor/plugins/pstack/skills/how",
+    "category": "Workflow"
+  },
+  {
+    "source": "cursor/plugins/pstack/skills/statechart",
+    "category": "Workflow"
+  },
+  {
+    "source": "cursor/plugins/pstack/skills/technical-writing",
+    "category": "Writing"
+  },
+  {
+    "source": "cursor/plugins/pstack/skills/unslop",
+    "category": "Writing"
+  },
+  {
+    "source": "ayghri/i-have-adhd",
+    "category": "Writing"
+  },
+  {
+    "source": "kucherenko/jscpd/skills/dry-refactoring",
+    "category": "Workflow"
+  },
+  {
+    "source": "kucherenko/jscpd/skills/jscpd",
+    "category": "Workflow"
+  },
+  {
+    "source": "AminBlg/SimpleEnglish",
+    "category": "Writing"
+  },
+  {
+    "source": "shadcn/improve",
+    "category": "Workflow"
+  }
+]

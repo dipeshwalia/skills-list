@@ -1,13 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
-# Use these settings in ~/.config/skillshare/config.yaml.
-# For an existing config, merge the settings instead of replacing the file.
+# Merge these settings into ~/.config/skillshare/config.yaml.
 sources:
-  # Point at the repository root to discover both skills/ and upstreams/.
-  skills: ~/personal/skills
+  # Use your checkout's root; its .skillignore selects only skills/ packages.
+  skills: ~/skills-list
 
 # Create one link per enabled skill, preserving unrelated target skills.
 mode: merge
-# Use SKILL.md's name, rather than flattening the entire source path.
+# Use names such as workflow-improve and writing-unslop.
 target_naming: standard
 
 targets:

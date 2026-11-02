@@ -9,71 +9,76 @@
   <a href="docs/upstreams.md">Upstream workflow</a>
 </p>
 
-**A personal collection of AI agent skills for planning, building, and reviewing software.** Curated by [Dipesh Walia](https://github.com/dipeshwalia), with editable upstream copies, traceable updates, and credit to every original source.
+**A personal collection of AI agent skills for planning, building, reviewing, and writing.** Curated by [Dipesh Walia](https://github.com/dipeshwalia), with editable upstream copies, mergeable updates, and credit to every original source.
 
-Keep the skills that fit your work. Adapt them in place. Bring in improvements from their original repositories with Git subtrees, then use [Skillshare](https://github.com/runkids/skillshare) to make your selected copies available to your AI tools.
+## Invoke by category
 
-## In the collection
+Category names become invocation prefixes. The skill's original name identifies its domain within the category:
 
-The collection includes workflows by **[Matt Pocock](https://github.com/mattpocock/skills)** and **[Lauren Tan](https://github.com/cursor/plugins/tree/main/pstack)**:
-
-| Skill | What it helps you do | Original source |
+| Category | Examples | Browse |
 | --- | --- | --- |
-| [grill-with-docs](upstreams/mattpocock/skills/engineering/grill-with-docs/SKILL.md) | Sharpen a design through questions while building its documentation. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs) |
-| [wayfinder](upstreams/mattpocock/skills/engineering/wayfinder/SKILL.md) | Map a large effort into decisions and work through the unknowns. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/wayfinder) |
-| [to-tickets](upstreams/mattpocock/skills/engineering/to-tickets/SKILL.md) | Turn a plan into implementation tickets with clear dependencies. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-tickets) |
-| [implement-spec](upstreams/mattpocock/skills/engineering/implement-spec/SKILL.md) | Coordinate implementation of a specification and its ticket graph. | [Matt Pocock](https://github.com/mattpocock/skills/tree/main/skills/engineering/implement-spec) |
-| [how](upstreams/cursor-plugins/pstack/skills/how/SKILL.md) | Explain a codebase’s architecture, runtime flow, and ownership boundaries. | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/how) |
-| [technical-writing](upstreams/cursor-plugins/pstack/skills/technical-writing/SKILL.md) | Write and review technical documentation with clear structure and plain language. | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/technical-writing) |
-| [statechart](upstreams/cursor-plugins/pstack/skills/statechart/SKILL.md) | Model state transitions in TLA+, check invariants, and produce Mermaid statecharts. | [Lauren Tan · pstack](https://github.com/cursor/plugins/tree/main/pstack/skills/statechart) |
+| Workflow | `/workflow-improve`, `/workflow-grill-me`, `/workflow-tdd`, `/workflow-dry-refactoring` | [Workflow skills](skills/README.md#workflow) |
+| Writing | `/writing-unslop`, `/writing-technical-writing`, `/writing-i-have-adhd`, `/writing-simple-english` | [Writing skills](skills/README.md#writing) |
 
-Supporting skills complete these workflows, including `unslop` for `technical-writing`. The [full inventory](INVENTORY.md) records their roles, original authors, licenses, and exact upstream revisions. Original invocation settings are preserved. The local `how` copy adapts delegation to the host agent, as recorded in its [provenance](upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md).
+The [skills directory](skills/) contains real packages named `workflow-improve`, `writing-unslop`, and so on. Hosts may expose their own invocation syntax; these are the installed skill names. The [full inventory](INVENTORY.md) records every selected skill, supporting dependency, original author, license, and reviewed revision.
 
 ## Get started
 
-Requires Python 3 and Git with `git subtree`. Clone with Git so the upstream merge history comes with the files:
+Requires Python 3 and Git with `git subtree`. Clone with Git so the upstream merge history travels with the files:
 
 ```sh
 git clone https://github.com/dipeshwalia/skills-list.git
 cd skills-list
-python3 scripts/upstream.py list
+python3 scripts/build-skills.py --check
 ```
 
-To use the skills in an agent, follow the [Skillshare setup guide](docs/skillshare.md). Adapt [the configuration example](skillshare.config.example.yaml) so `sources.skills` points to **your checkout's root**, covering both `skills/` and `upstreams/`.
+To distribute the packages, follow the [Skillshare setup guide](docs/skillshare.md). Adapt [the configuration example](skillshare.config.example.yaml) so `sources.skills` points at your checkout's root. The root [`.skillignore`](.skillignore) selects only `skills/`, and `target_naming: standard` preserves the category-prefixed names.
 
-The root [`.skillignore`](.skillignore) selects the requested workflows and their supporting skills. Other imported skills remain available to review and select later. Preview your configured targets with `skillshare sync -g --dry-run` before syncing.
+## Select and customize
+
+Edit [sources.json](sources.json) to choose a source, category, and optional list of skill names. [sources.ts](sources.ts) exports the same data through the `Source` interface. Omitting `skills` selects every canonical skill in that source.
+
+Edit the canonical copies under `upstreams/`, then generate the packages:
+
+```sh
+python3 scripts/build-skills.py
+python3 scripts/build-skills.py --check
+```
+
+The builder keeps references, scripts, invocation metadata, credits, and licenses. It updates package names and selected sibling links. It refuses to overwrite manual edits in generated packages; make customizations in the canonical source instead.
 
 ## Keep your copies current
 
-Commit your local work, then preview and merge updates from the configured parent repositories:
+Commit local work, then preview and merge updates from the configured parent repositories:
 
 ```sh
 ./scripts/sync-upstreams.sh --dry-run
 ./scripts/sync-upstreams.sh
 ```
 
-Pass a source name, such as `mattpocock`, to update it individually. Sync preserves local customizations through normal Git merges and stops on conflicts. Review changed instructions, dependencies, and source credits before using an update.
+Pass source names to update individual parents. Successful syncs rebuild the category packages for review. Inspect the changes, refresh reviewed attribution where needed, rebuild again, and commit the results before running `skillshare sync -g`.
 
-See [the upstream workflow](docs/upstreams.md) for adding sources, customizing skills, resolving conflicts, and preserving attribution. `origin` is this repository; original parent sources live in [`upstreams.json`](upstreams.json).
+See [the upstream workflow](docs/upstreams.md) for adding sources and resolving conflicts. `origin` is this repository; original parent sources live in [upstreams.json](upstreams.json).
 
 ## Repository map
 
 ```text
-skills/                         Skill catalog and your original skills
-upstreams/<source>/             Editable copies of original repositories
-INVENTORY.md                    Selected skills and original-source credits
+sources.json                    Source selections and invocation categories
+sources.ts                      Typed Source interface and manifest export
+skills/<category>-<name>/       Generated installable packages
+skills/README.md                Categorized catalog
+upstreams/<source>/             Editable canonical copies and merge history
 upstreams.json                  Parent repository URLs and refs
-.skillignore                    Skills selected for Skillshare
-skillshare.config.example.yaml  Agent distribution settings
-scripts/sync-upstreams.sh       Update imported parents
+INVENTORY.md                    Original-source credits and reviewed revisions
+scripts/build-skills.py         Build or check category packages
+scripts/sync-upstreams.sh       Merge original parent updates
+skillshare.config.example.yaml Agent distribution settings
 docs/                          Setup and maintenance guides
-assets/brand/                   Repository identity and preview artwork
+assets/brand/                  Repository identity and preview artwork
 ```
 
-Run the sync helper's checks with `python3 -m unittest discover -s tests -v`. They use temporary local Git repositories and require no network access.
+Run `python3 -m unittest discover -s tests -v` for the local fixture checks.
 
 ## Credit stays with the work
 
-This collection's curation and maintenance are by [Dipesh Walia](https://github.com/dipeshwalia). Imported skills retain their original authorship and applicable licenses. Matt Pocock’s skills retain his [MIT license](upstreams/mattpocock/LICENSE). Lauren Tan’s pstack skills retain the [pstack MIT license](upstreams/cursor-plugins/pstack/LICENSE).
-
-Each selected imported skill includes `UPSTREAM.md` and `LICENSE.upstream`, so source links, revision details, and license notices travel with individual copies. Existing inline acknowledgements and upstream notices remain intact. See [the inventory and attribution policy](INVENTORY.md) for every source.
+Curation and maintenance are by Dipesh Walia. Imported work retains its original authorship: Matt Pocock, Lauren Tan, Ayoub Ghriss, AminBlg, Andrey Kucherenko, and shadcn. Each selected package carries its original license and provenance. See [the inventory](INVENTORY.md) for source links, license notices, and the precise local adaptations.

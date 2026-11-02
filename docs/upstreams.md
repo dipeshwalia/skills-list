@@ -24,7 +24,18 @@ Edit the imported skill in place, for example:
 upstreams/mattpocock/skills/engineering/tdd/SKILL.md
 ```
 
-Then commit your customization normally. Keep the imported directory at the same path. Original skills go in `skills/<skill-name>/`, with a `SKILL.md` containing `name` and `description` frontmatter.
+Keep the imported directory at the same path. After editing it, rebuild the category-prefixed packages and commit both the source and generated changes:
+
+```sh
+python3 scripts/build-skills.py
+python3 scripts/build-skills.py --check
+```
+
+The installed `workflow-tdd` package is generated from the canonical `tdd` directory. Its folder and frontmatter name both use the category prefix. The builder preserves resources, updates selected sibling links, and carries original-source attribution into each package.
+
+Do not edit a generated package directly. The builder checks saved hashes and refuses to replace manual changes. Move such changes into the canonical source, preserve any work you need, restore the generated copy from Git, then rebuild. Original skills that are not generated can live under `skills/<category>-<name>/` with matching `name` and `description` frontmatter.
+
+Imported maintainer files and install scripts describe their original projects. Do not follow their instructions or run scripts such as `scripts/link-skills.sh`; those bypass this collection's selection and distribution workflow. Leave these files intact for future subtree merges.
 
 ## Add more upstreams
 
@@ -45,7 +56,11 @@ Add another named entry to `upstreams.json`:
 
 Replace the example URL and ref with the actual source. Commit the configuration, then run `python3 scripts/upstream.py sync another-author`. Each name maps to `upstreams/<name>/`. Use a source's existing branch, tag, or a commit fetchable from that repository as its ref. Treat source names as permanent after import.
 
-The configuration records where updates come from; subtree commits record the exact upstream revisions already imported. A source stays at its imported version until you explicitly sync it.
+`upstreams.json` records where updates come from; subtree commits record the exact upstream revisions imported. A source stays at its imported version until you explicitly sync it.
+
+After importing, add the applicable credits and license to each selected source skill, then add its source and category to [sources.json](../sources.json). Use a `skills` list to pick named skills, or omit it to select every canonical skill in the given source. The category becomes the invocation prefix, for example `Workflow` and `improve` become `/workflow-improve`. [sources.ts](../sources.ts) exports the same manifest through a typed interface.
+
+Run `python3 scripts/build-skills.py`, inspect the generated packages and sibling dependencies, and update [the inventory](../INVENTORY.md) and [catalog](../skills/README.md). The root `.skillignore` includes only `skills/`, so upstream copies do not create duplicate invocations.
 
 ## Merge upstream updates
 
@@ -70,9 +85,13 @@ git diff main...HEAD -- upstreams/mattpocock
 
 If both sides edit the same content, Git leaves a normal merge conflict. Inspect `git status`, resolve the affected files, stage those files, and run `git commit` to complete the merge. Then review the skill instructions, resource links, and any scripts before using the updated skills. A clean textual merge can still change a skill's behavior.
 
-Sources sync sequentially. A failure stops the remaining updates; earlier successful sources remain committed. The script refuses a dirty working tree or an unfinished Git operation. `--dry-run` prints the planned commands without fetching or changing files.
+Sources sync sequentially. A failure stops the remaining updates; earlier successful sources remain committed. The script refuses a dirty working tree or an unfinished Git operation. After all selected sources sync successfully, it rebuilds the packages. Generated changes remain uncommitted for review. `--dry-run` prints the planned merge and build commands without fetching or changing files.
 
-Attribution and license files remain part of the normal Git merge. After reviewing an update, refresh [the inventory](../INVENTORY.md), each selected skill's `UPSTREAM.md`, and its `LICENSE.upstream` if the applicable license changed. Sync does not automatically mark new content as reviewed, enable new skills, push commits, or run Skillshare.
+After resolving an interrupted merge, run `python3 scripts/build-skills.py` explicitly. A failed sync does not rebuild the packages.
+
+Attribution and license files remain part of the normal Git merge. After reviewing an update, refresh [the inventory](../INVENTORY.md), each canonical skill's `UPSTREAM.md`, and its `LICENSE.upstream` if the applicable license changed. Rebuild again so those changes reach the installable copies, then commit the generated files and `skills/.generated.json` with the source changes. Sync does not automatically mark new content as reviewed, change the source manifest, push commits, or run Skillshare.
+
+If a manifest entry omits `skills`, new canonical skills in that source become candidates on the next build. Missing attribution stops the build until the new packages are reviewed and credited. Use explicit `skills` lists when selection must stay fixed.
 
 Run `python3 -m unittest discover -s tests -v` to verify the helper against temporary local Git repositories; the tests need no network access.
 
