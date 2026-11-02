@@ -79,6 +79,23 @@ assets/brand/                  Repository identity and preview artwork
 
 Run `python3 -m unittest discover -s tests -v` for the local fixture checks.
 
-## Credit stays with the work
+## Attribution
 
-Curation and maintenance are by Dipesh Walia. Imported work retains its original authorship: Matt Pocock, Lauren Tan, Ayoub Ghriss, AminBlg, Andrey Kucherenko, and shadcn. Each selected package carries its original license and provenance. See [the inventory](INVENTORY.md) for source links, license notices, and the precise local adaptations.
+Curation, category naming, and local maintenance are by [Dipesh Walia](https://github.com/dipeshwalia). Original skill authorship remains with the people and projects below.
+
+Every selected skill is listed here, including supporting dependencies. Names use the upstream originals; links open this collection's category-prefixed copies.
+
+| Original author | Original project | Included skills | License |
+| --- | --- | --- | --- |
+| Matt Pocock | [mattpocock/skills](https://github.com/mattpocock/skills) | [code-review](skills/workflow-code-review/SKILL.md), [codebase-design](skills/workflow-codebase-design/SKILL.md), [domain-modeling](skills/workflow-domain-modeling/SKILL.md), [grill-me](skills/workflow-grill-me/SKILL.md), [grill-with-docs](skills/workflow-grill-with-docs/SKILL.md), [grilling](skills/workflow-grilling/SKILL.md), [handoff](skills/workflow-handoff/SKILL.md), [implement-spec](skills/workflow-implement-spec/SKILL.md), [prototype](skills/workflow-prototype/SKILL.md), [research](skills/workflow-research/SKILL.md), [setup-matt-pocock-skills](skills/workflow-setup-matt-pocock-skills/SKILL.md), [tdd](skills/workflow-tdd/SKILL.md), [teach](skills/workflow-teach/SKILL.md), [to-questionnaire](skills/workflow-to-questionnaire/SKILL.md), [to-spec](skills/workflow-to-spec/SKILL.md), [to-tickets](skills/workflow-to-tickets/SKILL.md), [wayfinder](skills/workflow-wayfinder/SKILL.md), [writing-for-agents](skills/workflow-writing-for-agents/SKILL.md) | [MIT](upstreams/mattpocock/LICENSE) |
+| Lauren Tan | [pstack in cursor/plugins](https://github.com/cursor/plugins/tree/main/pstack) | [how](skills/workflow-how/SKILL.md), [statechart](skills/workflow-statechart/SKILL.md), [technical-writing](skills/writing-technical-writing/SKILL.md), [unslop](skills/writing-unslop/SKILL.md) | [MIT](upstreams/cursor-plugins/pstack/LICENSE) |
+| Ayoub Ghriss | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | [i-have-adhd](skills/writing-i-have-adhd/SKILL.md) | [MIT](upstreams/i-have-adhd/LICENSE) |
+| Andrey Kucherenko | [kucherenko/jscpd](https://github.com/kucherenko/jscpd) | [dry-refactoring](skills/workflow-dry-refactoring/SKILL.md), [jscpd](skills/workflow-jscpd/SKILL.md) | [MIT](upstreams/jscpd/LICENSE) |
+| AminBlg | [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish) | [simple-english](skills/writing-simple-english/SKILL.md) | [MIT](upstreams/simple-english/LICENSE) |
+| shadcn | [shadcn/improve](https://github.com/shadcn/improve) | [improve](skills/workflow-improve/SKILL.md) | [MIT](upstreams/improve/LICENSE.md) |
+
+The pstack license covers pstack; other plugins retained in the Cursor upstream keep their own authorship and notices. Existing inline acknowledgements and additional upstream notices remain with their files.
+
+Each selected skill carries `UPSTREAM.md` and the complete original `LICENSE.upstream`. The [inventory](INVENTORY.md) records reviewed revisions and local adaptations; the [catalog](skills/README.md) shows categories and invocation names.
+
+Skill distribution uses [Skillshare](https://github.com/runkids/skillshare), maintained by runkids and its contributors.
