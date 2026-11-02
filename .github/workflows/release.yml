@@ -1,0 +1,691 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # ─── Detect changed paths & pending releases ──────────────────────────
+  detect:
+    name: detect changed paths
+    runs-on: ubuntu-latest
+    outputs:
+      rust_changed: ${{ steps.detect.outputs.rust_changed }}
+      rust_version: ${{ steps.detect.outputs.rust_version }}
+      crates_needs_publish: ${{ steps.detect.outputs.crates_needs_publish }}
+      cpd_needs_publish: ${{ steps.detect.outputs.cpd_needs_publish }}
+      npm_needs_publish: ${{ steps.detect.outputs.npm_needs_publish }}
+      pypi_needs_publish: ${{ steps.detect.outputs.pypi_needs_publish }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+          package-manager-cache: false
+
+      - name: Sync versions from package.json
+        working-directory: rust
+        run: node scripts/sync-version.mjs
+
+      - name: Detect changed paths & pending releases
+        id: detect
+        working-directory: rust
+        run: |
+          changed_files=$(git -C .. diff --name-only HEAD~1 HEAD)
+          rust_changed=false
+
+          # ── File-change detection ──
+          if echo "$changed_files" | grep -q '^rust/'; then
+            rust_changed=true
+          fi
+
+          # ── Registry-based release detection (Rust) ──
+          # If local version is not yet on crates.io or npm, we need a release
+          rust_version=$(node -p "require('./package.json').version")
+          crates_needs_publish=false
+          # `crates_needs_publish` above is intentionally broad — it also
+          # covers `basta`, which jscpd depends on but releases from its own
+          # repo (github.com/kucherenko/basta) on its own `v*` tag. That is
+          # correct for publish-crates.yml, whose job is exactly "backfill
+          # whatever this workspace needs on crates.io" and already no-ops
+          # per crate that is already published. But a GitHub release under
+          # jscpd's own tag (`vX.Y.Z`) must fire only when the jscpd crate
+          # itself is what changed — otherwise a lone basta version bump
+          # makes this job try to recreate the still-current jscpd release
+          # and fail with "Release.tag_name already exists" (hit on
+          # 2026-09-18). So track that narrower signal separately.
+          cpd_needs_publish=false
+          npm_needs_publish=false
+
+          for toml in crates/*/Cargo.toml; do
+            name=$(grep '^name = ' "$toml" | head -1 | sed 's/name = "\(.*\)"/\1/')
+            local_ver=$(grep '^version = ' "$toml" | head -1 | sed 's/version = "\(.*\)"/\1/')
+            if [ -z "$name" ] || [ -z "$local_ver" ]; then
+              continue
+            fi
+            # Use the crates.io HTTP API for exact version matching.
+            # cargo info crate@ver exits 0 if the crate exists at ANY version,
+            # not just the specified one — so we must check the versions list.
+            published_ver=$(curl -sfH "Accept: application/json" -H "User-Agent: jscpd-ci (github.com/kucherenko/jscpd)" "https://crates.io/api/v1/crates/${name}" 2>/dev/null \
+              | jq -r '.crate.max_version // empty' || echo "")
+            if [ "$published_ver" = "$local_ver" ] && [ -n "$published_ver" ]; then
+              echo "${name}@${local_ver} already on crates.io (max_version=${published_ver})"
+            else
+              echo "crates.io release needed: ${name}@${local_ver} (published=${published_ver:-none})"
+              crates_needs_publish=true
+              rust_changed=true
+              if [ "$name" = "jscpd" ]; then
+                cpd_needs_publish=true
+              fi
+            fi
+          done
+
+          # ── npm: publish if rust/package.json version differs from npm registry
+          npm_published=$(npm info cpd version 2>/dev/null || echo "")
+          if [ "$npm_published" != "$rust_version" ]; then
+            echo "npm release needed: cpd published=${npm_published:-none} local=${rust_version}"
+            npm_needs_publish=true
+            rust_changed=true
+          else
+            echo "cpd@${rust_version} already on npm"
+          fi
+
+          # ── PyPI: publish if the wheels for this version are not on PyPI.
+          # Wheels are repacked from the npm platform binaries, so this never
+          # requires a rebuild; a version already on npm but missing on PyPI
+          # (e.g. the first release after PyPI support landed, or a failed
+          # upload) is published from the npm packages on the next push.
+          pypi_version=$(python3 scripts/build-pypi-wheels.py --pep440 "$rust_version")
+          pypi_needs_publish=false
+          if curl -sfo /dev/null -H "User-Agent: jscpd-ci (github.com/kucherenko/jscpd)" "https://pypi.org/pypi/jscpd/${pypi_version}/json"; then
+            echo "jscpd==${pypi_version} already on PyPI"
+          else
+            echo "PyPI release needed: jscpd==${pypi_version}"
+            pypi_needs_publish=true
+            rust_changed=true
+          fi
+
+          echo "rust_changed=${rust_changed}" >> "$GITHUB_OUTPUT"
+          echo "rust_version=${rust_version}" >> "$GITHUB_OUTPUT"
+          echo "crates_needs_publish=${crates_needs_publish}" >> "$GITHUB_OUTPUT"
+          echo "cpd_needs_publish=${cpd_needs_publish}" >> "$GITHUB_OUTPUT"
+          echo "npm_needs_publish=${npm_needs_publish}" >> "$GITHUB_OUTPUT"
+          echo "pypi_needs_publish=${pypi_needs_publish}" >> "$GITHUB_OUTPUT"
+          echo "Detected: rust_changed=${rust_changed}, crates_needs_publish=${crates_needs_publish}, cpd_needs_publish=${cpd_needs_publish}, npm_needs_publish=${npm_needs_publish}, pypi_needs_publish=${pypi_needs_publish}"
+
+  # ─── Rust CI ─────────────────────────────────────────────────────
+  rust-ci:
+    name: rust ci (clippy, test, build)
+    needs: detect
+    if: needs.detect.outputs.rust_changed == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: rust
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@4360b52568e2003a75bf9bc1d59f33a8e3fc893c # stable
+        with:
+          toolchain: "1.97.1"
+          components: clippy
+
+      - name: Cache Cargo registry and target
+        uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2
+        with:
+          workspaces: "rust -> rust/target"
+          cache-on-failure: true
+
+      - name: Clippy
+        run: cargo clippy --workspace -- -D warnings
+
+      - name: Test
+        run: cargo test --workspace --locked
+
+      - name: Build
+        run: cargo build --release --workspace --locked
+
+  # ─── Rust version bump detection ─────────────────────────────────
+  rust-version:
+    name: detect rust version bump
+    needs: [detect, rust-ci]
+    if: needs.detect.outputs.rust_changed == 'true' && needs.rust-ci.result == 'success'
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ needs.detect.outputs.rust_version }}
+      crates_bumped: ${{ needs.detect.outputs.crates_needs_publish }}
+      cpd_bumped: ${{ needs.detect.outputs.cpd_needs_publish }}
+      npm_bumped: ${{ needs.detect.outputs.npm_needs_publish }}
+      pypi_bumped: ${{ needs.detect.outputs.pypi_needs_publish }}
+    steps:
+      - name: Confirm
+        run: |
+          echo "Releasing Rust ${{ needs.detect.outputs.rust_version }}"
+          echo "crates_needs_publish=${{ needs.detect.outputs.crates_needs_publish }}"
+          echo "cpd_needs_publish=${{ needs.detect.outputs.cpd_needs_publish }}"
+          echo "npm_needs_publish=${{ needs.detect.outputs.npm_needs_publish }}"
+          echo "pypi_needs_publish=${{ needs.detect.outputs.pypi_needs_publish }}"
+
+  # ─── Rust publish ────────────────────────────────────────────────
+  rust-publish-crates:
+    name: publish crates.io packages
+    needs: rust-version
+    if: needs.rust-version.outputs.crates_bumped == 'true'
+    uses: ./.github/workflows/crates-publish.yml
+    with:
+      version: ${{ needs.rust-version.outputs.version }}
+    secrets: inherit
+    permissions:
+      contents: read
+      id-token: write
+      checks: write
+
+  rust-publish-npm:
+    name: publish npm rust packages
+    needs: rust-version
+    if: needs.rust-version.outputs.npm_bumped == 'true'
+    uses: ./.github/workflows/npm-rust-publish.yml
+    with:
+      version: ${{ needs.rust-version.outputs.version }}
+    secrets: inherit
+    permissions:
+      contents: read
+      id-token: write
+      checks: write
+
+  # ─── npm mirror ──────────────────────────────────────────────────
+  # npmmirror (registry.npmmirror.com) is an npm mirror for users in China.
+  # It copies a package when npm reports a change, but on 5.4.2 it never
+  # copied jscpd-linux-x64-gnu. For eight days it answered 404 for that
+  # version, and pnpm left the x64 Linux binary out of lockfiles without a
+  # warning (#1261). Once npm serves a package of this release, this job asks
+  # the mirror to sync it, and asks again every three minutes until the
+  # mirror has it. A package still missing after 30 minutes gets a warning;
+  # no other job waits for this one.
+  rust-npm-mirror:
+    name: sync npmmirror
+    needs: [rust-version, rust-publish-npm]
+    if: needs.rust-publish-npm.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Ask npmmirror to sync the npm packages
+        working-directory: rust
+        env:
+          VERSION: ${{ needs.rust-version.outputs.version }}
+        run: |
+          pkgs=(cpd jscpd)
+          while read -r name; do
+            pkgs+=("${name}")
+          done < <(jq -r '.[].packageName' npm/prebuilt-targets.json)
+          mirror=https://registry-direct.npmmirror.com
+          ua="User-Agent: jscpd-ci (github.com/kucherenko/jscpd)"
+          missing=("${pkgs[@]}")
+          next_ask=0
+          deadline=$(( $(date +%s) + 1800 ))
+          while true; do
+            ask=false
+            if [ "$(date +%s)" -ge "$next_ask" ]; then
+              ask=true
+              next_ask=$(( $(date +%s) + 180 ))
+            fi
+            still_missing=()
+            for pkg in "${missing[@]}"; do
+              if curl -sf -m 30 -o /dev/null -H "$ua" "${mirror}/${pkg}/${VERSION}"; then
+                echo "npmmirror serves ${pkg}@${VERSION}"
+                continue
+              fi
+              still_missing+=("${pkg}")
+              # The mirror copies what npm serves: asked before npm serves
+              # the version, it copies the old manifest again.
+              if $ask && curl -sf -m 30 -o /dev/null "https://registry.npmjs.org/${pkg}/${VERSION}"; then
+                if task=$(curl -sSf -m 30 -X PUT -H "$ua" "${mirror}/-/package/${pkg}/syncs" | jq -r '.id // empty'); then
+                  echo "Asked npmmirror to sync ${pkg}${task:+, log: https://registry.npmmirror.com/-/package/${pkg}/syncs/${task}/log}"
+                fi
+              fi
+            done
+            missing=(${still_missing[@]+"${still_missing[@]}"})
+            if [ ${#missing[@]} -eq 0 ] || [ "$(date +%s)" -ge "$deadline" ]; then
+              break
+            fi
+            echo "Waiting for npmmirror to serve: ${missing[*]}"
+            sleep 30
+          done
+          for pkg in ${missing[@]+"${missing[@]}"}; do
+            echo "::warning title=npmmirror lacks ${pkg}@${VERSION}::Installs from registry.npmmirror.com miss it. Ask the mirror again with: curl -X PUT ${mirror}/-/package/${pkg}/syncs"
+          done
+
+  # ─── PyPI ────────────────────────────────────────────────────────
+  # Platform wheels repacked from the npm platform binaries (no build):
+  # rust/scripts/build-pypi-wheels.py puts the same `jscpd` binary under
+  # `<pkg>.data/scripts/` as `jscpd` and `cpd`, one wheel per target. The
+  # upload uses PyPI trusted publishing (OIDC): the `jscpd` project on PyPI
+  # trusts this repository's `release.yml` workflow via the `pypi` environment,
+  # so no API token is stored. Runs after the npm publish because that is
+  # where the binaries come from; the fallback below covers resumed releases
+  # whose binaries are already on npm.
+  rust-publish-pypi:
+    name: publish pypi wheels
+    needs: [rust-version, rust-publish-npm]
+    if: always() && !cancelled() &&
+      needs.rust-version.result == 'success' &&
+      needs.rust-version.outputs.pypi_bumped == 'true' &&
+      needs.rust-publish-npm.result != 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: pypi
+      url: https://pypi.org/project/jscpd/
+    permissions:
+      contents: read
+      id-token: write # PyPI trusted publishing + PEP 740 attestations
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Download binary artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: jscpd-binary-*
+          path: release-assets
+          merge-multiple: true
+        continue-on-error: true
+
+      # The npm build job only uploads artifacts for targets it built in THIS
+      # run. When the platform packages were published by an earlier run (a
+      # resumed release, or PyPI support landing after a version shipped),
+      # repack the published npm binaries into the same tarball layout.
+      - name: Fill in missing binaries from npm
+        run: |
+          version="${{ needs.rust-version.outputs.version }}"
+          mkdir -p release-assets
+          for key in $(node -e "console.log(Object.keys(require('./rust/npm/prebuilt-targets.json')).join(' '))"); do
+            asset="release-assets/jscpd-${key}.tar.gz"
+            if [ -f "$asset" ]; then
+              echo "${key}: using artifact from this run"
+              continue
+            fi
+            package_name="jscpd-${key}"
+            binary_name="jscpd"
+            case "$key" in windows-*) binary_name="jscpd.exe" ;; esac
+            echo "${key}: repacking ${package_name}@${version} from npm"
+            work="repack/${key}"
+            rm -rf "$work" && mkdir -p "$work/stage"
+            npm pack "${package_name}@${version}" --pack-destination "$work" >/dev/null
+            tar -xzf "$work"/*.tgz -C "$work"
+            bin_path=$(find "$work/package" -name "$binary_name" -type f | head -1)
+            [ -n "$bin_path" ] || { echo "::error::${binary_name} not found in ${package_name}@${version}"; exit 1; }
+            cp "$bin_path" "$work/stage/"
+            cp LICENSE "$work/stage/LICENSE"
+            chmod +x "$work/stage/$binary_name"
+            tar -czf "$asset" -C "$work/stage" "$binary_name" LICENSE
+          done
+          ls -1 release-assets
+
+      - name: Build wheels
+        run: |
+          python3 rust/scripts/build-pypi-wheels.py \
+            --version "${{ needs.rust-version.outputs.version }}" \
+            --assets-dir release-assets \
+            --out-dir dist
+          ls -la dist
+
+      # Install the wheel that matches this runner from the local directory
+      # only, and make sure the packaged binary is the release being shipped.
+      - name: Smoke test
+        run: |
+          version="${{ needs.rust-version.outputs.version }}"
+          pypi_version=$(python3 rust/scripts/build-pypi-wheels.py --pep440 "$version")
+          python3 -m venv .venv
+          .venv/bin/pip install --quiet --no-index --find-links dist "jscpd==${pypi_version}"
+          for cmd in jscpd cpd; do
+            installed=$(".venv/bin/${cmd}" --version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1 || echo "NOT_FOUND")
+            echo "${cmd}: ${installed}, expected ${version}"
+            [ "$installed" = "$version" ] || { echo "::error::${cmd} from the wheel reports ${installed}"; exit 1; }
+          done
+          .venv/bin/jscpd fixtures --silent --reporters console || true
+
+      - name: Upload wheels artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: jscpd-wheels
+          path: dist/*.whl
+          retention-days: 1
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
+        with:
+          packages-dir: dist
+          # A resumed release may have uploaded some wheels already.
+          skip-existing: true
+
+  # ─── GitHub releases ─────────────────────────────────────────────
+  rust-release:
+    name: create rust github release
+    needs: [rust-version, rust-publish-crates, rust-publish-npm, rust-publish-pypi]
+    if: always() && !cancelled() &&
+      (needs.rust-version.outputs.cpd_bumped == 'true' || needs.rust-version.outputs.npm_bumped == 'true') &&
+      needs.rust-publish-crates.result != 'failure' &&
+      needs.rust-publish-npm.result != 'failure' &&
+      needs.rust-publish-pypi.result != 'failure'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write # keyless signing for build provenance (OpenSSF Scorecard: Signed-Releases)
+      attestations: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Download binary artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: jscpd-binary-*
+          path: release-assets
+          merge-multiple: true
+        continue-on-error: true
+
+      - name: Resolve published packages
+        id: packages
+        working-directory: rust
+        run: |
+          version="${{ needs.rust-version.outputs.version }}"
+          published=""
+          failed=""
+
+          # ── crates.io packages ──
+          for toml in crates/*/Cargo.toml; do
+            name=$(grep '^name = ' "$toml" | head -1 | sed 's/name = "\(.*\)"/\1/')
+            local_ver=$(grep '^version = ' "$toml" | head -1 | sed 's/version = "\(.*\)"/\1/')
+            if [ -z "$name" ] || [ -z "$local_ver" ]; then
+              continue
+            fi
+            max_ver=$(curl -sfH "Accept: application/json" -H "User-Agent: jscpd-ci (github.com/kucherenko/jscpd)" "https://crates.io/api/v1/crates/${name}" 2>/dev/null \
+              | jq -r '.crate.max_version // empty' || echo "")
+            if [ "$max_ver" = "$local_ver" ]; then
+              published="${published}  - \`${name}@${local_ver}\` on crates.io\n"
+            else
+              failed="${failed}  - \`${name}@${local_ver}\` (published: ${max_ver:-none})\n"
+            fi
+          done
+
+          # ── npm packages ──
+          # npm reads are eventually consistent: a package published seconds
+          # earlier can still be invisible here, which listed it under "Not Yet
+          # Published" in the release notes even though the publish succeeded
+          # (v5.1.0 hit this with the jscpd wrapper). npm also processes a new
+          # version before it serves it, which took up to 20 minutes per
+          # package on 5.4.2. Re-check only the packages still missing, against
+          # one shared deadline so a genuinely unpublished package can't
+          # stretch the wait.
+          npm_pkgs=(cpd jscpd jscpd-darwin-arm64 jscpd-darwin-x64 jscpd-linux-x64-gnu jscpd-linux-arm64-gnu jscpd-linux-x64-musl jscpd-linux-arm64-musl jscpd-windows-x64-msvc jscpd-windows-arm64-msvc)
+          missing=("${npm_pkgs[@]}")
+          resolved=""
+          deadline=$(( $(date +%s) + 1800 ))
+          while true; do
+            still_missing=()
+            for pkg in "${missing[@]}"; do
+              pub_ver=$(npm view "${pkg}@${version}" version 2>/dev/null || echo "")
+              if [ "$pub_ver" = "$version" ]; then
+                resolved="${resolved} ${pkg}"
+              else
+                still_missing+=("${pkg}")
+              fi
+            done
+            missing=(${still_missing[@]+"${still_missing[@]}"})
+            if [ ${#missing[@]} -eq 0 ] || [ "$(date +%s)" -ge "$deadline" ]; then
+              break
+            fi
+            echo "Waiting for npm to serve: ${missing[*]}"
+            sleep 15
+          done
+
+          for pkg in "${npm_pkgs[@]}"; do
+            if [[ " ${resolved} " == *" ${pkg} "* ]]; then
+              published="${published}  - \`${pkg}@${version}\` on npm\n"
+            else
+              # Platform packages may have different versions
+              latest_ver=$(npm view "${pkg}" version 2>/dev/null || echo "")
+              failed="${failed}  - \`${pkg}@${version}\` (published: ${latest_ver:-none})\n"
+            fi
+          done
+
+          # ── PyPI ──
+          pypi_version=$(python3 scripts/build-pypi-wheels.py --pep440 "$version")
+          if curl -sfo /dev/null -H "User-Agent: jscpd-ci (github.com/kucherenko/jscpd)" "https://pypi.org/pypi/jscpd/${pypi_version}/json"; then
+            published="${published}  - \`jscpd==${pypi_version}\` on PyPI\n"
+          else
+            failed="${failed}  - \`jscpd==${pypi_version}\` on PyPI\n"
+          fi
+
+          {
+            echo "published<<EOF"
+            echo -e "$published"
+            echo "EOF"
+            echo "failed<<EOF"
+            echo -e "$failed"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Extract release notes
+        id: notes
+        working-directory: rust
+        run: |
+          version="${{ needs.rust-version.outputs.version }}"
+          notes=$(node -e "
+            const fs = require('fs');
+            const ver = process.argv[1];
+            const changelog = fs.readFileSync('CHANGELOG.md', 'utf8');
+            const escaped = ver.replace(/\./g, '\\\\.');
+            const re = new RegExp('^## .*' + escaped);
+            const lines = changelog.split('\n');
+            let found = false;
+            const out = [];
+            for (const line of lines) {
+              if (!found && re.test(line)) { found = true; continue; }
+              if (found && /^## /.test(line)) break;
+              if (found && /^---$/.test(line)) break;
+              if (found) out.push(line);
+            }
+            process.stdout.write(out.join('\n'));
+          " "$version")
+          if [ -z "$notes" ]; then
+            notes="Release v${version}"
+          fi
+
+          # ── Append published packages info ──
+          # Use single-quoted assignments so markdown backticks in package
+          # names are not interpreted as command substitution.
+          published='${{ steps.packages.outputs.published }}'
+          failed='${{ steps.packages.outputs.failed }}'
+          if [ -n "$published" ]; then
+            notes="${notes}
+
+          ## Published Packages
+
+          ${published}"
+          fi
+          if [ -n "$failed" ]; then
+            notes="${notes}
+
+          ## Not Yet Published
+
+          ${failed}"
+          fi
+
+          # ── Verification instructions (only when binary assets ship) ──
+          # Quoted heredoc (the snippet contains backticks) written to a file
+          # rather than captured with $(...): bash 3.x drops the backslash
+          # line continuations inside a heredoc in a command substitution.
+          if ls ../release-assets/*.tar.gz >/dev/null 2>&1; then
+            verify_file="${RUNNER_TEMP:-/tmp}/jscpd-release-verify.md"
+            cat > "$verify_file" <<'VERIFY_EOF'
+          ## Verify
+
+          Archives are signed with [Sigstore](https://sigstore.dev) (keyless, `<asset>.sigstore.json`)
+          and carry SLSA build provenance. Replace `jscpd-linux-x64-gnu.tar.gz` with your asset:
+
+          ```bash
+          cosign verify-blob \
+            --bundle jscpd-linux-x64-gnu.tar.gz.sigstore.json \
+            --certificate-identity-regexp '^https://github\.com/kucherenko/jscpd/' \
+            --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+            jscpd-linux-x64-gnu.tar.gz
+          gh attestation verify jscpd-linux-x64-gnu.tar.gz --repo kucherenko/jscpd
+          sha256sum --check --ignore-missing checksums.txt
+          ```
+          VERIFY_EOF
+            notes="${notes}
+
+          $(cat "$verify_file")"
+          fi
+
+          {
+            echo "notes<<EOF"
+            echo "$notes"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NOTES: ${{ steps.notes.outputs.notes }}
+        run: |
+          version="${{ needs.rust-version.outputs.version }}"
+          tag="v${version}"
+
+          # Collect binary assets if they exist
+          assets=""
+          if [ -d release-assets ] && ls release-assets/*.tar.gz >/dev/null 2>&1; then
+            for f in release-assets/*.tar.gz; do
+              assets="$assets $f"
+            done
+          fi
+
+          if [ -n "$assets" ]; then
+            gh release create "${tag}" \
+              --target "$GITHUB_SHA" \
+              --title "Release v${version}" \
+              --notes "$RELEASE_NOTES" \
+              --latest \
+              $assets
+          else
+            gh release create "${tag}" \
+              --target "$GITHUB_SHA" \
+              --title "Release v${version}" \
+              --notes "$RELEASE_NOTES" \
+              --latest
+          fi
+
+      - name: Generate checksums
+        id: checksums
+        run: |
+          if [ -d release-assets ] && ls release-assets/*.tar.gz >/dev/null 2>&1; then
+            (cd release-assets && sha256sum *.tar.gz > checksums.txt)
+            echo "have=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "have=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Signed SLSA provenance for the release binaries, verifiable with
+      # `gh attestation verify <asset> --repo kucherenko/jscpd`. The bundle is
+      # also uploaded as a release asset (multiple.intoto.jsonl) so provenance
+      # travels with the artifacts (and OpenSSF Scorecard Signed-Releases
+      # detects it).
+      - name: Attest build provenance
+        if: steps.checksums.outputs.have == 'true'
+        id: attest
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: release-assets/*.tar.gz
+
+      # Sigstore keyless signatures (in addition to the SLSA attestation) so
+      # assets can be verified with plain `cosign verify-blob` and no GitHub
+      # CLI. One `<asset>.sigstore.json` bundle per archive plus checksums.txt;
+      # the job's `id-token: write` grant is what makes the OIDC flow work.
+      - name: Install cosign
+        if: steps.checksums.outputs.have == 'true'
+        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+
+      - name: Sign release assets (sigstore keyless)
+        if: steps.checksums.outputs.have == 'true'
+        working-directory: release-assets
+        run: |
+          for asset in *.tar.gz checksums.txt; do
+            cosign sign-blob --yes --bundle "${asset}.sigstore.json" "$asset"
+          done
+          ls -1 ./*.sigstore.json
+
+      - name: Upload checksums, provenance and signatures to release
+        if: steps.checksums.outputs.have == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag="v${{ needs.rust-version.outputs.version }}"
+          cp "${{ steps.attest.outputs.bundle-path }}" release-assets/multiple.intoto.jsonl
+          gh release upload "${tag}" \
+            release-assets/checksums.txt \
+            release-assets/multiple.intoto.jsonl \
+            release-assets/*.sigstore.json
+
+      # The composite GitHub Action (`uses: kucherenko/jscpd@v5`) follows a
+      # floating major tag. Move it to this release's commit for every stable
+      # Rust-line (5.x and later) release; pre-releases never move it.
+      - name: Update floating major tag
+        env:
+          VERSION: ${{ needs.rust-version.outputs.version }}
+        run: |
+          case "$VERSION" in
+            *-*) echo "pre-release ${VERSION}: leaving the floating major tag alone"; exit 0 ;;
+          esac
+          major="${VERSION%%.*}"
+          if [ "$major" -lt 5 ]; then
+            echo "v${VERSION} is not on the Rust line; leaving the floating major tag alone"
+            exit 0
+          fi
+          git tag -f "v${major}" "$GITHUB_SHA"
+          git push -f origin "refs/tags/v${major}"
+          echo "v${major} -> ${GITHUB_SHA}"
+
+  rust-docker:
+    name: publish docker image
+    needs: [rust-version, rust-release]
+    # Releases created with GITHUB_TOKEN never fire `release` events, so the
+    # image workflow is invoked directly.
+    if: needs.rust-release.result == 'success' && needs.rust-version.outputs.npm_bumped == 'true'
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+      attestations: write
+    uses: ./.github/workflows/docker.yml
+    with:
+      version: ${{ needs.rust-version.outputs.version }}
