@@ -152,5 +152,57 @@
     "skills": [
       { "name": "improve", "purpose": "Audit a codebase and prepare plans for another agent to execute." }
     ]
+  },
+  {
+    "source": "t3dotgg/tstack",
+    "author": "Theo Browne",
+    "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Theo Browne" },
+    "reviewed": "1085050f3baed1ac724caa4a8166145fb2ac88af",
+    "category": "T3",
+    "skills": [
+      {
+        "name": "full-send",
+        "purpose": "Complete a change through verification, review, and a merged pull request.",
+        "requires": ["sol-loop", "file-pr", "babysit-pr"]
+      },
+      {
+        "name": "full-stop",
+        "purpose": "Prepare a verified, reviewed pull request for the user to merge.",
+        "requires": ["full-send"]
+      },
+      {
+        "name": "council",
+        "purpose": "Gather and reconcile reviews from three model providers."
+      },
+      {
+        "name": "sol-loop",
+        "purpose": "Review changes with GPT Sol through bounded feedback rounds."
+      },
+      {
+        "name": "file-pr",
+        "purpose": "File a concise pull request that explains the problem and solution.",
+        "requires": ["leaving-pr-comments"],
+        "recommends": ["babysit-pr"]
+      },
+      {
+        "name": "takeover",
+        "purpose": "Finish existing work while preserving its contributors’ credit.",
+        "requires": ["modernize", "file-pr", "babysit-pr", "leaving-pr-comments"]
+      },
+      {
+        "name": "babysit-pr",
+        "purpose": "Monitor pull request checks and reviews and address verified findings.",
+        "requires": ["leaving-pr-comments"]
+      },
+      {
+        "name": "modernize",
+        "purpose": "Rebase an older pull request and reassess whether its change still belongs.",
+        "requires": ["leaving-pr-comments"]
+      },
+      {
+        "name": "leaving-pr-comments",
+        "purpose": "Write concise GitHub comments with explicit agent attribution."
+      }
+    ]
   }
 ]

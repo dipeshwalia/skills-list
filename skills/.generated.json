@@ -1,8 +1,172 @@
 {
   "files": {
+    "skills/t3-babysit-pr/COLLECTION.md": {
+      "executable": false,
+      "sha256": "21c899b9f0a1fdaffe44e7ea284c4fc73cf3ddeefe1b0912848081ca0d5092ea"
+    },
+    "skills/t3-babysit-pr/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-babysit-pr/SKILL.md": {
+      "executable": false,
+      "sha256": "4e65592d7736bb8866fc051073a78851a575f1bda5b720319074108ca725b1e3"
+    },
+    "skills/t3-babysit-pr/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "9313a17cb3b79bf7cb29e4a5f66ba9cc9667c1e032203405432e4aa8335dddee"
+    },
+    "skills/t3-babysit-pr/scripts/pr-wait": {
+      "executable": true,
+      "sha256": "90393f85b95b78bff1b039744bdfb09dc88ff2b430e1c3df687ee6f449c97214"
+    },
+    "skills/t3-council/COLLECTION.md": {
+      "executable": false,
+      "sha256": "a079bd277432d32ca26716a146b216b6f893f0615393a4a407bf9d53bafdc349"
+    },
+    "skills/t3-council/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-council/SKILL.md": {
+      "executable": false,
+      "sha256": "5f3c5d73e9f16bdc557f730ada8fc4ca6e380d7b57bd436f495bb0097270487e"
+    },
+    "skills/t3-council/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "2e144d817adcb12d50313db099bcc2b13a7baddadb9625fc6f80cc931023d283"
+    },
+    "skills/t3-file-pr/COLLECTION.md": {
+      "executable": false,
+      "sha256": "7606478ff72f36084c732cb41dd6fc8aa45767b003abf92af0abd621431ce5af"
+    },
+    "skills/t3-file-pr/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-file-pr/SKILL.md": {
+      "executable": false,
+      "sha256": "068222b29d4920e9077ac1037b4892a97bf987c06bdb32ca6465ddcaf80216e8"
+    },
+    "skills/t3-file-pr/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "0a63b0eaf11c9a73f91ee8a7fe89426780742f0c6a6e4cd6198c04a58d97dcac"
+    },
+    "skills/t3-full-send/COLLECTION.md": {
+      "executable": false,
+      "sha256": "160d4e102d801e4b7b4dab9e1c318a93aa1fd07f979e3b00590b02b38c733f6f"
+    },
+    "skills/t3-full-send/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-full-send/SKILL.md": {
+      "executable": false,
+      "sha256": "a86f368b9262770d258b25b9e46d9a8638c382e4eb739d1994b1f483d26f5f17"
+    },
+    "skills/t3-full-send/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "c7d1aaef4de783a35bea2bce236fe5485af2d5f3f3acc858648b91b944ecce2e"
+    },
+    "skills/t3-full-send/agents/openai.yaml": {
+      "executable": false,
+      "sha256": "2a57689e16d08c7bb014c49b814ec009ae2be378e64b7c5df8cdb30288ce0569"
+    },
+    "skills/t3-full-stop/COLLECTION.md": {
+      "executable": false,
+      "sha256": "8febe49181b96302e88137c16b4e1b9d187ec5700384e21e1baec533a67b0c21"
+    },
+    "skills/t3-full-stop/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-full-stop/SKILL.md": {
+      "executable": false,
+      "sha256": "528a88fc0394d2c9ddd12718def7583dd0dada28a526842f5a40ac39c757c723"
+    },
+    "skills/t3-full-stop/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "f10482a688370d3b8b3765cd1fd6373a5a96915ee5d17d707ef2def247be0e99"
+    },
+    "skills/t3-full-stop/agents/openai.yaml": {
+      "executable": false,
+      "sha256": "8e5654e345a106fe9ee932b1392a3e2601f609fd1801855dfca35d3de52a1045"
+    },
+    "skills/t3-leaving-pr-comments/COLLECTION.md": {
+      "executable": false,
+      "sha256": "1786ee956baba272a769d60c7944218d24b402ca05fbe4980a8bef5ce24928a7"
+    },
+    "skills/t3-leaving-pr-comments/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-leaving-pr-comments/SKILL.md": {
+      "executable": false,
+      "sha256": "828e021d3e0b7b153a17602ab691182d3372db5d001fbf6dae142537fd50a329"
+    },
+    "skills/t3-leaving-pr-comments/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "a1855634f1542638e98888f4a528e11fcde2a01393ee5d2e75d0a427c68a8eb4"
+    },
+    "skills/t3-leaving-pr-comments/agents/openai.yaml": {
+      "executable": false,
+      "sha256": "c8ce27c9ebc0ba117feb4c6f971c1a164199a0d78f918ab11f610188742b056b"
+    },
+    "skills/t3-modernize/COLLECTION.md": {
+      "executable": false,
+      "sha256": "3bff7a2ed111cfefc65e3fc20bb24735b229c8b7f58b8fadc5f527d8ac885c21"
+    },
+    "skills/t3-modernize/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-modernize/SKILL.md": {
+      "executable": false,
+      "sha256": "6e7aa89f4499b756e024168b19d31f1c028a090f2c1ea5f79c531165794547f8"
+    },
+    "skills/t3-modernize/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "40fbfe7d6ad98fc1a64662fcccb13f3db7eb7379ed88c470252c7330064801c1"
+    },
+    "skills/t3-modernize/agents/openai.yaml": {
+      "executable": false,
+      "sha256": "6ed42f1aafaaf5f339fbd7f43213263fffa7de25a2dc498f50013aa7ea0fad45"
+    },
+    "skills/t3-sol-loop/COLLECTION.md": {
+      "executable": false,
+      "sha256": "7bec4b4e67f3a56b431b94b34699a909f24951debe8cde00bfaec6f05673072f"
+    },
+    "skills/t3-sol-loop/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-sol-loop/SKILL.md": {
+      "executable": false,
+      "sha256": "36aa7e9125597ad91bd8fb14885a5da70b5d0a68963252aeaf1929b358f17ce0"
+    },
+    "skills/t3-sol-loop/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "a8027dc621409fe2cdc7ef6c65f21bf72b5a328019d2c0c36481c288a6c4c319"
+    },
+    "skills/t3-takeover/COLLECTION.md": {
+      "executable": false,
+      "sha256": "f50418d918726c28be05eb7ed1722f4ab506125ef7cfe566c25c4f32ddd9e14f"
+    },
+    "skills/t3-takeover/LICENSE.upstream": {
+      "executable": false,
+      "sha256": "8095f9a9f97d074131f6a2ce09b952d12c18b36f09f4e5df0517c4e64e82c851"
+    },
+    "skills/t3-takeover/SKILL.md": {
+      "executable": false,
+      "sha256": "902629cdba55bf8a7218cc1e91f158978d178c93ec0bc0b49c4d49f67d82e20d"
+    },
+    "skills/t3-takeover/UPSTREAM.md": {
+      "executable": false,
+      "sha256": "ed6fa4ac9658d4732d5133665530f636183d4edf5a454ffddf1375e556320556"
+    },
     "skills/workflow-code-review/COLLECTION.md": {
       "executable": false,
-      "sha256": "c93a774ac1804ae54b96eb8f6767100f507eaed07e47f9b843bd3c610eda70c1"
+      "sha256": "454dcbcd292a0aa3f8e559f12a2a77a3424317d8d8a4d4bd476b88c409ca44eb"
     },
     "skills/workflow-code-review/LICENSE.upstream": {
       "executable": false,
@@ -22,7 +186,7 @@
     },
     "skills/workflow-codebase-design/COLLECTION.md": {
       "executable": false,
-      "sha256": "7ab6e148190277ac9e6d6c591da3f235a1ea3ebc3ff789aabce55f4cab27883a"
+      "sha256": "59dc28c782b9f03152f8bc6f55760df5b48b33168cb046bb1486e3661eaf3d01"
     },
     "skills/workflow-codebase-design/DEEPENING.md": {
       "executable": false,
@@ -54,7 +218,7 @@
     },
     "skills/workflow-domain-modeling/COLLECTION.md": {
       "executable": false,
-      "sha256": "ac91c12d81219e838a6e0f9ba4bd84118dd21861be9cb17302daad38b45509ff"
+      "sha256": "3040b29159cf8c8c3fe757ea5ed60259aa36f2654b6415c93c5603af0f0fafd7"
     },
     "skills/workflow-domain-modeling/GLOSSARY-FORMAT.md": {
       "executable": false,
@@ -78,7 +242,7 @@
     },
     "skills/workflow-dry-refactoring/COLLECTION.md": {
       "executable": false,
-      "sha256": "1e727815282ed5c53abc47ab6718fefa4aabf306a585e538e6a2017cc77e1244"
+      "sha256": "5c29b3038724b93dee158bb74f48b6682e9502fbc9ecc39cd93287f9be8b46d2"
     },
     "skills/workflow-dry-refactoring/LICENSE.upstream": {
       "executable": false,
@@ -94,7 +258,7 @@
     },
     "skills/workflow-grill-me/COLLECTION.md": {
       "executable": false,
-      "sha256": "f3ae0a191c190d0546b8790825a09f66acdf25a01643f04184d54475cdc9da4e"
+      "sha256": "e5eb4e81b1e837035fea841d4e6345074be4b4a445fd0dcef8afa622bf238950"
     },
     "skills/workflow-grill-me/LICENSE.upstream": {
       "executable": false,
@@ -114,7 +278,7 @@
     },
     "skills/workflow-grill-with-docs/COLLECTION.md": {
       "executable": false,
-      "sha256": "49bb0cacffde518d7d6f921a7daddf921f96bd9ff26b1ed3f8bf29b5867bf22d"
+      "sha256": "c8d808790d8064dca193d0c48635e1c194cf4f087d697bcd6e247c2ce77e8d90"
     },
     "skills/workflow-grill-with-docs/LICENSE.upstream": {
       "executable": false,
@@ -134,7 +298,7 @@
     },
     "skills/workflow-grilling/COLLECTION.md": {
       "executable": false,
-      "sha256": "20140805f005a5e88ff7357c8e67401a8c437ef963e0afc9095f26957d969d20"
+      "sha256": "7df7c76fd659fb0c95fd176f8bd6c286596c67da334192624badc4c0730ddb19"
     },
     "skills/workflow-grilling/LICENSE.upstream": {
       "executable": false,
@@ -154,7 +318,7 @@
     },
     "skills/workflow-handoff/COLLECTION.md": {
       "executable": false,
-      "sha256": "76ef2bc990ff10058a8b02fd680e19e7b65b57f3d399f443759dc6ba29adc7ec"
+      "sha256": "9b6d8d836e57376b37a746f2589c831709d218b11dcd8ee4ea4027e981cddb46"
     },
     "skills/workflow-handoff/LICENSE.upstream": {
       "executable": false,
@@ -174,7 +338,7 @@
     },
     "skills/workflow-how/COLLECTION.md": {
       "executable": false,
-      "sha256": "e2259b877d007386910885a3c5ad9bf8747a4d8c29517490bfd61f8381e2cfff"
+      "sha256": "496bdb4e9c9a8c1cada024718e4fa8b259291973fe2fc051313538a5dbf38d96"
     },
     "skills/workflow-how/LICENSE.upstream": {
       "executable": false,
@@ -198,7 +362,7 @@
     },
     "skills/workflow-implement-spec/COLLECTION.md": {
       "executable": false,
-      "sha256": "a2a875c1fc3f6923ea99f074b834ae3e86fd21886e3f06f0737c29532c734a5d"
+      "sha256": "dc16aae61b32adc6e79ffbc56153b8b012629db8cb14e597f02c9010f7258252"
     },
     "skills/workflow-implement-spec/LICENSE.upstream": {
       "executable": false,
@@ -218,7 +382,7 @@
     },
     "skills/workflow-improve/COLLECTION.md": {
       "executable": false,
-      "sha256": "8007e62da464f24104b9eedec1f4b1a650c9b29760c28dc2e7267621a9962d6a"
+      "sha256": "45bd433335f0a257c9ad50fe7b10f965bb95a5c88487935c7ca5f1538344ee3e"
     },
     "skills/workflow-improve/LICENSE.upstream": {
       "executable": false,
@@ -246,7 +410,7 @@
     },
     "skills/workflow-jscpd/COLLECTION.md": {
       "executable": false,
-      "sha256": "4786d7ecdfad2da63a1a86b5581d5004bdfa63270725888856166069949f0f45"
+      "sha256": "18e8444c0f20b6795df06b598317bfa5d83d40cbc69bf4521eb4fcc62209ad8a"
     },
     "skills/workflow-jscpd/LICENSE.upstream": {
       "executable": false,
@@ -262,7 +426,7 @@
     },
     "skills/workflow-prototype/COLLECTION.md": {
       "executable": false,
-      "sha256": "c517092a7e95ea54460ec8c9c3bf857df9d3ba937f165924610a3a198f36273c"
+      "sha256": "5acbbf680dc89b8a77a9818c19b0f13c9b81d779c9a5cffe59cc02f009a664ce"
     },
     "skills/workflow-prototype/LICENSE.upstream": {
       "executable": false,
@@ -290,7 +454,7 @@
     },
     "skills/workflow-research/COLLECTION.md": {
       "executable": false,
-      "sha256": "36544b5cc0c8f7328166835e3fb3f40d966254173b66d65f0e011025f134a367"
+      "sha256": "2febe14c5210fee695a6f6c03d552d8abdef31ba056b5960276a1e8cedadb641"
     },
     "skills/workflow-research/LICENSE.upstream": {
       "executable": false,
@@ -310,7 +474,7 @@
     },
     "skills/workflow-setup-matt-pocock-skills/COLLECTION.md": {
       "executable": false,
-      "sha256": "07faeda038f3a61eed97362353bf9e2fcb062b85273f6f7a4252845e0eb3566e"
+      "sha256": "3922bd08b52e5c0e244362d4b5ae73548fb76ea8d9f43161e527969f58304913"
     },
     "skills/workflow-setup-matt-pocock-skills/LICENSE.upstream": {
       "executable": false,
@@ -350,7 +514,7 @@
     },
     "skills/workflow-statechart/COLLECTION.md": {
       "executable": false,
-      "sha256": "bf93a35abf685800e60b70ca5c82af86bba2c162432531cdf7339fa2068a8a67"
+      "sha256": "6b72c32dac49d8fc9517565f471770747a990dfc3ca320876c5f1d184d2d3696"
     },
     "skills/workflow-statechart/LICENSE.upstream": {
       "executable": false,
@@ -486,7 +650,7 @@
     },
     "skills/workflow-tdd/COLLECTION.md": {
       "executable": false,
-      "sha256": "e089822a5092eb831f741991a7c5898541b6ebb847130183361ea4dd3833baa3"
+      "sha256": "b9f49bd3db9f1d82b1d066e0dd0765e76990fb270a40a0a2e8730ea202e38b14"
     },
     "skills/workflow-tdd/LICENSE.upstream": {
       "executable": false,
@@ -514,7 +678,7 @@
     },
     "skills/workflow-teach/COLLECTION.md": {
       "executable": false,
-      "sha256": "13dc0e5f91f62b916419628f10cef97a36656308d0ea05e19e416313758c7d3d"
+      "sha256": "32b1f0c1f9a29803d85b008c88eb6e0b821836b09aa9fd83bb22f5cd2cefb676"
     },
     "skills/workflow-teach/GLOSSARY-FORMAT.md": {
       "executable": false,
@@ -550,7 +714,7 @@
     },
     "skills/workflow-to-questionnaire/COLLECTION.md": {
       "executable": false,
-      "sha256": "ac1b17767e6db6fec3b7230992fe26bfce42f18e5441a65e4bf5cb83a9f1e52b"
+      "sha256": "101fbb4e11a3b5976497c4ad2a33a94894dcc1e00cf07987ade780db84a277fe"
     },
     "skills/workflow-to-questionnaire/LICENSE.upstream": {
       "executable": false,
@@ -570,7 +734,7 @@
     },
     "skills/workflow-to-spec/COLLECTION.md": {
       "executable": false,
-      "sha256": "262cb0f6a35d4b9284ee49a6a6664cce5f90b1e9f278d1a44cebd5db1419bd30"
+      "sha256": "9cd7b5f9df5a3baa72e3cddf8745c3fd7767b760108ee0de0b31ae914e9e49d0"
     },
     "skills/workflow-to-spec/LICENSE.upstream": {
       "executable": false,
@@ -590,7 +754,7 @@
     },
     "skills/workflow-to-tickets/COLLECTION.md": {
       "executable": false,
-      "sha256": "2c41c8920339a39fd0b508944555df6614a696d38ee74b249f5836dd87289e9c"
+      "sha256": "fd54affe76780d36dd42910cbd10fa4dbecb80476ea81ac56e1e789592c45303"
     },
     "skills/workflow-to-tickets/LICENSE.upstream": {
       "executable": false,
@@ -610,7 +774,7 @@
     },
     "skills/workflow-wayfinder/COLLECTION.md": {
       "executable": false,
-      "sha256": "438850150791ade1c453a060a709f0e6ef3cd798373bf9b8aff5c14196aa7387"
+      "sha256": "737b901c74112b96c94fa3676f21f9ea59e507f7689120898c179c18e3e59e62"
     },
     "skills/workflow-wayfinder/LICENSE.upstream": {
       "executable": false,
@@ -630,7 +794,7 @@
     },
     "skills/workflow-writing-for-agents/COLLECTION.md": {
       "executable": false,
-      "sha256": "5d6343636c9be798177338e856688a096370e6b01a94d790ff568fa58b5f3d14"
+      "sha256": "0ffcc644d8ff85ebc45f1920099af5c48c8e4a550f5443024ce696edf7f36d9f"
     },
     "skills/workflow-writing-for-agents/LICENSE.upstream": {
       "executable": false,
@@ -654,7 +818,7 @@
     },
     "skills/writing-i-have-adhd/COLLECTION.md": {
       "executable": false,
-      "sha256": "3b91b9c62887c3863b1b5c0d453698c0b32bad523ca8d1307035243dff5c7d05"
+      "sha256": "926bf739b37dcaa99a29cddc88bc4ac2848491cb4c1b0045d8b59bf5ea27c55d"
     },
     "skills/writing-i-have-adhd/LICENSE.upstream": {
       "executable": false,
@@ -678,7 +842,7 @@
     },
     "skills/writing-simple-english/COLLECTION.md": {
       "executable": false,
-      "sha256": "e173523f277aaea5157ca967a965a199475c0d1d2849b2bdd3c6525f58171a1c"
+      "sha256": "71dda4e5526cca9bde6139882947eca63862e92ba6a219a748b0450a308c2376"
     },
     "skills/writing-simple-english/LICENSE.upstream": {
       "executable": false,
@@ -710,7 +874,7 @@
     },
     "skills/writing-technical-writing/COLLECTION.md": {
       "executable": false,
-      "sha256": "8a5bdccebba82a174a2536ab657b3c525f826c3aa4466cfb49db52a19daf5085"
+      "sha256": "a957e34a8fb2c9c7a2312b674f66c73b7d3ebcce33362e7ee76ca536663a3b95"
     },
     "skills/writing-technical-writing/LICENSE.upstream": {
       "executable": false,
@@ -726,7 +890,7 @@
     },
     "skills/writing-unslop/COLLECTION.md": {
       "executable": false,
-      "sha256": "6baca54f5aac639b8b0ef26e83df0746cb5dc50e044bbce66f899ef027f7ed27"
+      "sha256": "ebc7953f1bcf4b47c629ce690f79488936971775603d46ae1f0f442a9765a756"
     },
     "skills/writing-unslop/LICENSE.upstream": {
       "executable": false,
@@ -742,6 +906,15 @@
     }
   },
   "packages": {
+    "t3-babysit-pr": "upstreams/tstack/skills/babysit-pr",
+    "t3-council": "upstreams/tstack/skills/council",
+    "t3-file-pr": "upstreams/tstack/skills/file-pr",
+    "t3-full-send": "upstreams/tstack/skills/full-send",
+    "t3-full-stop": "upstreams/tstack/skills/full-stop",
+    "t3-leaving-pr-comments": "upstreams/tstack/skills/leaving-pr-comments",
+    "t3-modernize": "upstreams/tstack/skills/modernize",
+    "t3-sol-loop": "upstreams/tstack/skills/sol-loop",
+    "t3-takeover": "upstreams/tstack/skills/takeover",
     "workflow-code-review": "upstreams/mattpocock/skills/engineering/code-review",
     "workflow-codebase-design": "upstreams/mattpocock/skills/engineering/codebase-design",
     "workflow-domain-modeling": "upstreams/mattpocock/skills/engineering/domain-modeling",

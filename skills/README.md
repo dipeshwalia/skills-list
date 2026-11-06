@@ -43,6 +43,20 @@ These folders contain the actual installable packages. The tables below are gene
 | [`/writing-i-have-adhd`](writing-i-have-adhd/SKILL.md) | `i-have-adhd` | Make answers direct, scannable, and easier to follow. | [Ayoub Ghriss · original](https://github.com/ayghri/i-have-adhd/tree/1ecea1993b7fce257ffbd686c070948b5e07eda6/skills/i-have-adhd) |
 | [`/writing-simple-english`](writing-simple-english/SKILL.md) | `simple-english` | Write clear instructions using simplified technical English. | [AminBlg · original](https://github.com/AminBlg/SimpleEnglish/tree/a6fcb4fde098b33617cc1578d151ebf58774b883/skills/simple-english) |
 
+## T3
+
+| Invocation | Original skill | Purpose | Original source |
+| --- | --- | --- | --- |
+| [`/t3-full-send`](t3-full-send/SKILL.md) | `full-send` | Complete a change through verification, review, and a merged pull request. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/full-send) |
+| [`/t3-full-stop`](t3-full-stop/SKILL.md) | `full-stop` | Prepare a verified, reviewed pull request for the user to merge. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/full-stop) |
+| [`/t3-council`](t3-council/SKILL.md) | `council` | Gather and reconcile reviews from three model providers. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/council) |
+| [`/t3-sol-loop`](t3-sol-loop/SKILL.md) | `sol-loop` | Review changes with GPT Sol through bounded feedback rounds. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/sol-loop) |
+| [`/t3-file-pr`](t3-file-pr/SKILL.md) | `file-pr` | File a concise pull request that explains the problem and solution. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/file-pr) |
+| [`/t3-takeover`](t3-takeover/SKILL.md) | `takeover` | Finish existing work while preserving its contributors’ credit. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/takeover) |
+| [`/t3-babysit-pr`](t3-babysit-pr/SKILL.md) | `babysit-pr` | Monitor pull request checks and reviews and address verified findings. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/babysit-pr) |
+| [`/t3-modernize`](t3-modernize/SKILL.md) | `modernize` | Rebase an older pull request and reassess whether its change still belongs. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/modernize) |
+| [`/t3-leaving-pr-comments`](t3-leaving-pr-comments/SKILL.md) | `leaving-pr-comments` | Write concise GitHub comments with explicit agent attribution. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/leaving-pr-comments) |
+
 <!-- /inventory:catalog -->
 
 ## Maintain the packages

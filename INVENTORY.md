@@ -14,6 +14,7 @@ This collection curates editable upstream copies and publishes category-prefixed
 | [kucherenko/jscpd](https://github.com/kucherenko/jscpd) | Andrey Kucherenko | [MIT — 2013-2024 Andrey Kucherenko](upstreams/jscpd/LICENSE) | [`0b519608c47d287f59018ce4ad7f9939ac93e0c8`](https://github.com/kucherenko/jscpd/commit/0b519608c47d287f59018ce4ad7f9939ac93e0c8) |
 | [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish) | AminBlg | [MIT — 2026 AminBlg](upstreams/simple-english/LICENSE) | [`a6fcb4fde098b33617cc1578d151ebf58774b883`](https://github.com/AminBlg/SimpleEnglish/commit/a6fcb4fde098b33617cc1578d151ebf58774b883) |
 | [shadcn/improve](https://github.com/shadcn/improve) | shadcn | [MIT — 2026 shadcn](upstreams/improve/LICENSE.md) | [`cac56e1ebd3c279aa9153616cfeac7b174ab90f9`](https://github.com/shadcn/improve/commit/cac56e1ebd3c279aa9153616cfeac7b174ab90f9) |
+| [t3dotgg/tstack](https://github.com/t3dotgg/tstack) | Theo Browne | [MIT — 2026 Theo Browne](upstreams/tstack/LICENSE) | [`1085050f3baed1ac724caa4a8166145fb2ac88af`](https://github.com/t3dotgg/tstack/commit/1085050f3baed1ac724caa4a8166145fb2ac88af) |
 
 <!-- /inventory:sources -->
 
@@ -47,6 +48,15 @@ The source repositories remain Git subtrees so upstream updates can merge with l
 | Workflow | `/workflow-dry-refactoring` / `dry-refactoring` | Refactor confirmed duplication detected by jscpd. | [Andrey Kucherenko · original](https://github.com/kucherenko/jscpd/tree/0b519608c47d287f59018ce4ad7f9939ac93e0c8/skills/dry-refactoring) | [SKILL.md](skills/workflow-dry-refactoring/SKILL.md) |
 | Writing | `/writing-simple-english` / `simple-english` | Write clear instructions using simplified technical English. | [AminBlg · original](https://github.com/AminBlg/SimpleEnglish/tree/a6fcb4fde098b33617cc1578d151ebf58774b883/skills/simple-english) | [SKILL.md](skills/writing-simple-english/SKILL.md) |
 | Workflow | `/workflow-improve` / `improve` | Audit a codebase and prepare plans for another agent to execute. | [shadcn · original](https://github.com/shadcn/improve/tree/cac56e1ebd3c279aa9153616cfeac7b174ab90f9/skills/improve) | [SKILL.md](skills/workflow-improve/SKILL.md) |
+| T3 | `/t3-full-send` / `full-send` | Complete a change through verification, review, and a merged pull request. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/full-send) | [SKILL.md](skills/t3-full-send/SKILL.md) |
+| T3 | `/t3-full-stop` / `full-stop` | Prepare a verified, reviewed pull request for the user to merge. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/full-stop) | [SKILL.md](skills/t3-full-stop/SKILL.md) |
+| T3 | `/t3-council` / `council` | Gather and reconcile reviews from three model providers. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/council) | [SKILL.md](skills/t3-council/SKILL.md) |
+| T3 | `/t3-sol-loop` / `sol-loop` | Review changes with GPT Sol through bounded feedback rounds. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/sol-loop) | [SKILL.md](skills/t3-sol-loop/SKILL.md) |
+| T3 | `/t3-file-pr` / `file-pr` | File a concise pull request that explains the problem and solution. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/file-pr) | [SKILL.md](skills/t3-file-pr/SKILL.md) |
+| T3 | `/t3-takeover` / `takeover` | Finish existing work while preserving its contributors’ credit. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/takeover) | [SKILL.md](skills/t3-takeover/SKILL.md) |
+| T3 | `/t3-babysit-pr` / `babysit-pr` | Monitor pull request checks and reviews and address verified findings. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/babysit-pr) | [SKILL.md](skills/t3-babysit-pr/SKILL.md) |
+| T3 | `/t3-modernize` / `modernize` | Rebase an older pull request and reassess whether its change still belongs. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/modernize) | [SKILL.md](skills/t3-modernize/SKILL.md) |
+| T3 | `/t3-leaving-pr-comments` / `leaving-pr-comments` | Write concise GitHub comments with explicit agent attribution. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/leaving-pr-comments) | [SKILL.md](skills/t3-leaving-pr-comments/SKILL.md) |
 
 <!-- /inventory:requested -->
 
@@ -86,6 +96,12 @@ The builder rejects a selection that leaves out a required companion. Recommenda
 | `technical-writing` | `unslop` | — |
 | `dry-refactoring` | `jscpd` | — |
 | `jscpd` | — | `compare-codebases` (not selected), `code-migration` (not selected) |
+| `full-send` | `sol-loop`, `file-pr`, `babysit-pr` | — |
+| `full-stop` | `full-send` | — |
+| `file-pr` | `leaving-pr-comments` | `babysit-pr` |
+| `takeover` | `modernize`, `file-pr`, `babysit-pr`, `leaving-pr-comments` | — |
+| `babysit-pr` | `leaving-pr-comments` | — |
+| `modernize` | `leaving-pr-comments` | — |
 
 <!-- /inventory:companions -->
 
@@ -99,6 +115,7 @@ The builder rejects a selection that leaves out a required companion. Recommenda
 - `statechart` includes its scripts and references. Its package leaves out the upstream `scripts/test` fixtures, which only its developers use. Running it needs a supported JavaScript or TypeScript runtime and TLC with Java, with setup through `mise`; image rendering uses Pele.
 - `dry-refactoring` and `jscpd` use the jscpd CLI when invoked. `improve` can audit without subagents, but its optional `execute` mode requires isolated-worktree delegation and host-compatible model settings.
 - This inventory does not install runtime dependencies or activate upstream plugin hooks. `simple-english` includes its four reference files, not the copyrighted official STE dictionary.
+- The `t3-` namespace contains all nine tstack skills by Theo Browne. Its GitHub workflows need an authenticated `gh` CLI; `babysit-pr` includes the original executable `scripts/pr-wait`, which uses Python 3 and POSIX file locking. `council` needs models from three providers, and `sol-loop` needs a host that can delegate to GPT Sol. T3 Code integrations are used when available, with the upstream's documented alternatives elsewhere.
 
 ## Keep attribution with each copy
 
