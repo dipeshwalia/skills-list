@@ -1,0 +1,200 @@
+skills/t3-file-pr/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-52
+skills/workflow-tdd/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-modernize/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-104
+skills/t3-sol-loop/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/writing-technical-writing/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/writing-unslop/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-babysit-pr/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-119
+skills/t3-full-stop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+skills/t3-file-pr/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+skills/workflow-to-tickets/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-full-stop/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/t3-council/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-58
+skills/t3-full-send/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-125
+skills/t3-modernize/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-4
+skills/workflow-writing-for-agents/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-leaving-pr-comments/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/workflow-improve/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+INVENTORY.md
+  s_2f75f3b4e8cc04::t_e00982caed2827 118
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 17,51-59,99-104
+skills/workflow-how/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-babysit-pr/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/workflow-to-spec/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/writing-i-have-adhd/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/workflow-jscpd/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/writing-simple-english/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+upstreams/tstack/skills/babysit-pr/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+skills/workflow-implement-spec/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+upstreams/tstack/skills/modernize/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/workflow-wayfinder/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/workflow-grill-me/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-full-stop/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-49
+skills/t3-sol-loop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+upstreams/tstack/skills/file-pr/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+skills/t3-council/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/t3-full-send/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-4
+skills/t3-modernize/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/workflow-codebase-design/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+upstreams/tstack/skills/takeover/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+skills/workflow-teach/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-sol-loop/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+upstreams/tstack/skills/leaving-pr-comments/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+skills/t3-takeover/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+upstreams/tstack/skills/takeover/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+upstreams/tstack/skills/file-pr/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+upstreams/tstack/skills/full-stop/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+upstreams/tstack/skills/sol-loop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+skills/workflow-handoff/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-file-pr/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/t3-full-send/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+upstreams/tstack/skills/council/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+upstreams/tstack/skills/sol-loop/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/t3-takeover/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-44
+skills/t3-babysit-pr/scripts/pr-wait
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-556
+skills/t3-leaving-pr-comments/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/workflow-statechart/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-full-stop/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-4
+upstreams/tstack/skills/full-send/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+skills/t3-council/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+skills/t3-leaving-pr-comments/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+skills/workflow-code-review/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-takeover/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/workflow-grilling/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-babysit-pr/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/workflow-setup-matt-pocock-skills/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+upstreams/tstack/skills/full-stop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+skills/t3-leaving-pr-comments/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/workflow-prototype/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+upstreams/tstack/skills/leaving-pr-comments/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/t3-full-stop/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/workflow-dry-refactoring/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/workflow-grill-with-docs/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/workflow-research/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+upstreams/tstack/skills/council/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+README.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 99
+skills/t3-full-send/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/t3-full-send/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+sources.json
+  s_2f75f3b4e8cc04::t_e00982caed2827 155-206
+skills/t3-council/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/t3-modernize/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+skills/t3-takeover/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+skills/README.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 46-59
+skills/t3-sol-loop/SKILL.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-121
+skills/workflow-domain-modeling/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-babysit-pr/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-15
+upstreams/tstack/skills/babysit-pr/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/t3-leaving-pr-comments/agents/openai.yaml
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-4
+upstreams/tstack/skills/modernize/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-11
+upstreams/tstack/skills/full-send/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/t3-modernize/LICENSE.upstream
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-21
+skills/workflow-to-questionnaire/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 11,14,17-19,29-30,35,37
+skills/t3-file-pr/COLLECTION.md
+  s_2f75f3b4e8cc04::t_2bdf3c9cf95865 1-46
+skills/.generated.json
+  s_2f75f3b4e8cc04::t_0a4a59d73fd887 3-166,169,189,221,245,261,281,301,321,341,365,385,413,429,457,477,517,653,681,717,737,757,777,797,821,845,877,893,909-917
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cdb37c35520cfdbe7e816fe2ff1ff2e9e7b6860f",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
