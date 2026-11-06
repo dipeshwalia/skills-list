@@ -1,0 +1,55 @@
+upstreams/jscpd/skills/dry-refactoring/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 5-6
+skills/workflow-jscpd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 5-6
+upstreams/cursor-plugins/pstack/skills/unslop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+skills/README.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 31-34,41-42
+sources.json
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 79,120
+upstreams/cursor-plugins/pstack/skills/technical-writing/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+upstreams/cursor-plugins/pstack/skills/statechart/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+INVENTORY.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 12,14,43-46,48,75
+skills/workflow-how/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+skills/writing-unslop/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+skills/writing-technical-writing/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+upstreams/jscpd/skills/jscpd/SKILL.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 238
+upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+skills/workflow-jscpd/SKILL.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 240
+skills/workflow-dry-refactoring/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 5-6
+upstreams/jscpd/skills/jscpd/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 5-6
+README.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 94
+skills/workflow-statechart/UPSTREAM.md
+  s_2f75f3b4e8cc04::t_d5326ab7560cb2 3,6
+skills/.generated.json
+  s_2f75f3b4e8cc04::t_9c69f8793a407f 257,353,421,425,529,889,905
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b8165c788c010de8dc0df712fb1c5b667e954673",
+  "prompts": {},
+  "sessions": {
+    "s_2f75f3b4e8cc04": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a02-f5a4-7020-bd73-e0e3d0965dad",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
