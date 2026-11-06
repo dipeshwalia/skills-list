@@ -1,9 +1,9 @@
 # Original-source attribution
 
-- Original author: Lauren Tan, as credited in [pstack's plugin metadata](https://github.com/cursor/plugins/blob/ae5650febf4320793844c12c4adaa937f417f8da/pstack/plugin.json).
+- Original author: Lauren Tan, as credited in [pstack's plugin metadata](https://github.com/cursor/plugins/blob/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/plugin.json).
 - Original repository: [cursor/plugins](https://github.com/cursor/plugins), pstack plugin.
 - Original skill: [statechart](https://github.com/cursor/plugins/tree/main/pstack/skills/statechart).
-- Reviewed upstream revision: [`ae5650febf4320793844c12c4adaa937f417f8da`](https://github.com/cursor/plugins/tree/ae5650febf4320793844c12c4adaa937f417f8da/pstack/skills/statechart).
+- Reviewed upstream revision: [`2776ddd2355d6d6c8747d3964600f28daf62f049`](https://github.com/cursor/plugins/tree/2776ddd2355d6d6c8747d3964600f28daf62f049/pstack/skills/statechart).
 - Original copyright: Copyright (c) 2026 Lauren Tan.
 - License: MIT, from [pstack/LICENSE](LICENSE.upstream); the complete original notice is copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 

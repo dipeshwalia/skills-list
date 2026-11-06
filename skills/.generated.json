@@ -254,7 +254,7 @@
     },
     "skills/workflow-dry-refactoring/UPSTREAM.md": {
       "executable": false,
-      "sha256": "4b9da4cd3d6d44459f15933d60d29d722ad3c4384d81b242809373e4e4de6bfd"
+      "sha256": "e9e90a0f06425b39ccc140a6c9fe231f17df33ecb1257f1ceadec304de50e3b9"
     },
     "skills/workflow-grill-me/COLLECTION.md": {
       "executable": false,
@@ -350,7 +350,7 @@
     },
     "skills/workflow-how/UPSTREAM.md": {
       "executable": false,
-      "sha256": "c7d09bda74b9b2a7ff13e92e759eef029ab0c6b0ccf660d225a4a928a35216d9"
+      "sha256": "cc384f6f473c93f4e632b974f5248211504ad92b555e29b378579efd697c5e33"
     },
     "skills/workflow-how/references/explainer-prompt.md": {
       "executable": false,
@@ -418,11 +418,11 @@
     },
     "skills/workflow-jscpd/SKILL.md": {
       "executable": false,
-      "sha256": "bdeef3515df8f529dc8cc77136aecd6e895d8d70506d9f376782633ef01a9a34"
+      "sha256": "82207f0b16464d98467f4e4bb14bac8931266042d17d6494064ac55a3b447153"
     },
     "skills/workflow-jscpd/UPSTREAM.md": {
       "executable": false,
-      "sha256": "5c9949317ff895501d0ca876fbff4624b1b53b466e29baf1ab81bab7338c4f46"
+      "sha256": "b5ee4742a7991869717696cda5715280683526c0c92f5560545a1e7080fcca0d"
     },
     "skills/workflow-prototype/COLLECTION.md": {
       "executable": false,
@@ -526,7 +526,7 @@
     },
     "skills/workflow-statechart/UPSTREAM.md": {
       "executable": false,
-      "sha256": "db98405f5313624db62297b53ee837b42331d5e9b13ec608a84ae6f282d3c684"
+      "sha256": "18d7f3c4f05e75b6d1ae8ce9617f08195e69b6643a06ffcb27f04a2120853369"
     },
     "skills/workflow-statechart/references/render.md": {
       "executable": false,
@@ -886,7 +886,7 @@
     },
     "skills/writing-technical-writing/UPSTREAM.md": {
       "executable": false,
-      "sha256": "513c699f8bc39e449fb19ac4bf2a41aadc764a523c7486690b15e1976984621e"
+      "sha256": "353a4086a1873366671f8e4a5dfe4584ba71b16147ff7d86060657507b9f52cd"
     },
     "skills/writing-unslop/COLLECTION.md": {
       "executable": false,
@@ -902,7 +902,7 @@
     },
     "skills/writing-unslop/UPSTREAM.md": {
       "executable": false,
-      "sha256": "80bd83aef7dcebc162c25a3e28d0480eeafc8eeca9834561d5764604016ff111"
+      "sha256": "2ffb6ade6874b6130bc5559feae36ab5d79c573175a86fdc6808c743307ef571"
     }
   },
   "packages": {

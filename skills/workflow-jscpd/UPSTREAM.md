@@ -2,8 +2,8 @@
 
 - Original author: Andrey Kucherenko.
 - Original repository: [kucherenko/jscpd](https://github.com/kucherenko/jscpd).
-- Original skill: [jscpd](https://github.com/kucherenko/jscpd/tree/0b519608c47d287f59018ce4ad7f9939ac93e0c8/skills/jscpd).
-- Reviewed upstream revision: [`0b519608c47d287f59018ce4ad7f9939ac93e0c8`](https://github.com/kucherenko/jscpd/commit/0b519608c47d287f59018ce4ad7f9939ac93e0c8).
+- Original skill: [jscpd](https://github.com/kucherenko/jscpd/tree/cbd542396ba309598f418f5e53ab1ca6214cdba5/skills/jscpd).
+- Reviewed upstream revision: [`cbd542396ba309598f418f5e53ab1ca6214cdba5`](https://github.com/kucherenko/jscpd/commit/cbd542396ba309598f418f5e53ab1ca6214cdba5).
 - License: MIT; the original copyright and complete notice are copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 
 The optional `compare-codebases` and `code-migration` links point to the reviewed upstream revision so those unselected workflows remain accessible. Other instructions and resources are unchanged. Local additions are this provenance file and `LICENSE.upstream`.

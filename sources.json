@@ -76,7 +76,7 @@
     "source": "cursor/plugins/pstack",
     "author": "Lauren Tan",
     "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Lauren Tan" },
-    "reviewed": "ae5650febf4320793844c12c4adaa937f417f8da",
+    "reviewed": "2776ddd2355d6d6c8747d3964600f28daf62f049",
     "skills": [
       {
         "name": "how",
@@ -117,7 +117,7 @@
     "source": "kucherenko/jscpd",
     "author": "Andrey Kucherenko",
     "license": { "file": "LICENSE", "name": "MIT", "copyright": "2013-2024 Andrey Kucherenko" },
-    "reviewed": "0b519608c47d287f59018ce4ad7f9939ac93e0c8",
+    "reviewed": "cbd542396ba309598f418f5e53ab1ca6214cdba5",
     "category": "Workflow",
     "skills": [
       {
