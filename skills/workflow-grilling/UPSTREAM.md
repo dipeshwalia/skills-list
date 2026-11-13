@@ -3,7 +3,7 @@
 - Original author: [Matt Pocock](https://github.com/mattpocock).
 - Original repository: [mattpocock/skills](https://github.com/mattpocock/skills).
 - Original skill: [grilling](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling).
-- Reviewed upstream revision: [`4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling).
+- Reviewed upstream revision: [`5863806dd4e15c63174bee4e7515a4256792ecfa`](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/productivity/grilling).
 - Original copyright: Copyright (c) 2026 Matt Pocock.
 - License: MIT; the complete original notice is in [LICENSE.upstream](LICENSE.upstream).
 

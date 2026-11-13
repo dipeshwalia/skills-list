@@ -2,8 +2,8 @@
 
 - Original author: AminBlg.
 - Original repository: [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish).
-- Original skill: [simple-english](https://github.com/AminBlg/SimpleEnglish/tree/a6fcb4fde098b33617cc1578d151ebf58774b883/skills/simple-english).
-- Reviewed upstream revision: [`a6fcb4fde098b33617cc1578d151ebf58774b883`](https://github.com/AminBlg/SimpleEnglish/commit/a6fcb4fde098b33617cc1578d151ebf58774b883).
+- Original skill: [simple-english](https://github.com/AminBlg/SimpleEnglish/tree/300432a9e4c473229a7049ab61b8ca2522d9214c/skills/simple-english).
+- Reviewed upstream revision: [`300432a9e4c473229a7049ab61b8ca2522d9214c`](https://github.com/AminBlg/SimpleEnglish/commit/300432a9e4c473229a7049ab61b8ca2522d9214c).
 - License: MIT; the original copyright and complete notice are copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 
 Original instructions, supporting resources, and invocation metadata are preserved. Local additions are this provenance file and `LICENSE.upstream`.

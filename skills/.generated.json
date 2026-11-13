@@ -14,7 +14,7 @@
     },
     "skills/t3-babysit-pr/UPSTREAM.md": {
       "executable": false,
-      "sha256": "9313a17cb3b79bf7cb29e4a5f66ba9cc9667c1e032203405432e4aa8335dddee"
+      "sha256": "2cae53990e265842ff49307b5c117e5b3a4209eb471e55108bde8b847f053a1b"
     },
     "skills/t3-babysit-pr/scripts/pr-wait": {
       "executable": true,
@@ -30,11 +30,11 @@
     },
     "skills/t3-council/SKILL.md": {
       "executable": false,
-      "sha256": "5f3c5d73e9f16bdc557f730ada8fc4ca6e380d7b57bd436f495bb0097270487e"
+      "sha256": "43a823182c65e982d55e907aa8a989202ea29e1e8c027dddc640dd373b5bba7a"
     },
     "skills/t3-council/UPSTREAM.md": {
       "executable": false,
-      "sha256": "2e144d817adcb12d50313db099bcc2b13a7baddadb9625fc6f80cc931023d283"
+      "sha256": "d7c0f88f00c0acf81ecefc91616f6350da9ea3914555567e1d33b7724895111f"
     },
     "skills/t3-file-pr/COLLECTION.md": {
       "executable": false,
@@ -50,7 +50,7 @@
     },
     "skills/t3-file-pr/UPSTREAM.md": {
       "executable": false,
-      "sha256": "0a63b0eaf11c9a73f91ee8a7fe89426780742f0c6a6e4cd6198c04a58d97dcac"
+      "sha256": "d9d2dfc7ee8336aef6d05717c91e1c18059379ca3753bc6f627b65c24228362c"
     },
     "skills/t3-full-send/COLLECTION.md": {
       "executable": false,
@@ -66,7 +66,7 @@
     },
     "skills/t3-full-send/UPSTREAM.md": {
       "executable": false,
-      "sha256": "c7d1aaef4de783a35bea2bce236fe5485af2d5f3f3acc858648b91b944ecce2e"
+      "sha256": "51db7faaf1c59ce7f1f169f7e7ba03642d12ce72e8efda7ca5bee2467b910ad7"
     },
     "skills/t3-full-send/agents/openai.yaml": {
       "executable": false,
@@ -86,7 +86,7 @@
     },
     "skills/t3-full-stop/UPSTREAM.md": {
       "executable": false,
-      "sha256": "f10482a688370d3b8b3765cd1fd6373a5a96915ee5d17d707ef2def247be0e99"
+      "sha256": "e75611a0b0db71681b566294fb7206bfc1669eae7d331bb76ddfbf484b8a727e"
     },
     "skills/t3-full-stop/agents/openai.yaml": {
       "executable": false,
@@ -106,7 +106,7 @@
     },
     "skills/t3-leaving-pr-comments/UPSTREAM.md": {
       "executable": false,
-      "sha256": "a1855634f1542638e98888f4a528e11fcde2a01393ee5d2e75d0a427c68a8eb4"
+      "sha256": "bc1717bef7474fb718945c8514f70af1514ee977d151bfb7e801225f549c82a4"
     },
     "skills/t3-leaving-pr-comments/agents/openai.yaml": {
       "executable": false,
@@ -126,7 +126,7 @@
     },
     "skills/t3-modernize/UPSTREAM.md": {
       "executable": false,
-      "sha256": "40fbfe7d6ad98fc1a64662fcccb13f3db7eb7379ed88c470252c7330064801c1"
+      "sha256": "883b7be049fb5f70a7da3bbf3dc7801062a52deba6d4e1a39ec4ce07f1dd31e2"
     },
     "skills/t3-modernize/agents/openai.yaml": {
       "executable": false,
@@ -146,7 +146,7 @@
     },
     "skills/t3-sol-loop/UPSTREAM.md": {
       "executable": false,
-      "sha256": "a8027dc621409fe2cdc7ef6c65f21bf72b5a328019d2c0c36481c288a6c4c319"
+      "sha256": "2f8214e2ceb4293cf0b7d187df482014a8f6c3a7bf0ca559d0caec16fcbd2ea6"
     },
     "skills/t3-takeover/COLLECTION.md": {
       "executable": false,
@@ -162,7 +162,7 @@
     },
     "skills/t3-takeover/UPSTREAM.md": {
       "executable": false,
-      "sha256": "ed6fa4ac9658d4732d5133665530f636183d4edf5a454ffddf1375e556320556"
+      "sha256": "4602a099085cb2a27235bd5ffaeeb84a442ffea0379bb1ab09b9e4b8a6ceb395"
     },
     "skills/workflow-code-review/COLLECTION.md": {
       "executable": false,
@@ -178,7 +178,7 @@
     },
     "skills/workflow-code-review/UPSTREAM.md": {
       "executable": false,
-      "sha256": "d936c98766b0ecc4c881184afff09f9f298e7502cc0c541719f488ca8a6122b2"
+      "sha256": "e5c90001b05e0bd61cf41370fc6bd32ff279edac6a3bbe698fc556ad908e3951"
     },
     "skills/workflow-code-review/agents/openai.yaml": {
       "executable": false,
@@ -206,7 +206,7 @@
     },
     "skills/workflow-codebase-design/UPSTREAM.md": {
       "executable": false,
-      "sha256": "e36bca19dea3e0f82d06d28e9c6b7ab31a5f9f8dbc43838d8750ffb6fcf8c7e2"
+      "sha256": "414d990872269644e28ec4bb9985e461e60bd5b95399dcde48fc2ff5bc9e0d38"
     },
     "skills/workflow-codebase-design/agents/openai.yaml": {
       "executable": false,
@@ -234,7 +234,7 @@
     },
     "skills/workflow-domain-modeling/UPSTREAM.md": {
       "executable": false,
-      "sha256": "6642594283dfd21aed36e91b391e922a1208e1fe66698e290cbf876d1fc848b7"
+      "sha256": "870b7fb7b8ce80b7536f9108833166256211e68844f8a0bcdafd04fa28041f62"
     },
     "skills/workflow-domain-modeling/agents/openai.yaml": {
       "executable": false,
@@ -254,7 +254,7 @@
     },
     "skills/workflow-dry-refactoring/UPSTREAM.md": {
       "executable": false,
-      "sha256": "e9e90a0f06425b39ccc140a6c9fe231f17df33ecb1257f1ceadec304de50e3b9"
+      "sha256": "079f112fbfe62fc21d3dcf27e6ffef9172462369fa199c4ea3ab0d187eb11979"
     },
     "skills/workflow-grill-me/COLLECTION.md": {
       "executable": false,
@@ -270,7 +270,7 @@
     },
     "skills/workflow-grill-me/UPSTREAM.md": {
       "executable": false,
-      "sha256": "48d50ce5ebecfd5e4a2aa3c0f2cbc2e4865795d803c7cb7638941041c54a8cad"
+      "sha256": "11bac03217575d39a62f0313ea811560b25402f15bf4bce0ca6493f742ebc7ca"
     },
     "skills/workflow-grill-me/agents/openai.yaml": {
       "executable": false,
@@ -290,7 +290,7 @@
     },
     "skills/workflow-grill-with-docs/UPSTREAM.md": {
       "executable": false,
-      "sha256": "863e49bf78f71cdbd4f6fcb6cc338ddffd19165190a77cf2df357e4819f57d1f"
+      "sha256": "8b37abbb3dc44b05ee9741162aae9fd1839788336977b9a537872fa0f1b2fa8b"
     },
     "skills/workflow-grill-with-docs/agents/openai.yaml": {
       "executable": false,
@@ -310,7 +310,7 @@
     },
     "skills/workflow-grilling/UPSTREAM.md": {
       "executable": false,
-      "sha256": "b00785f0bec9bdb5e27920dc447244fbc06ccc6f37adeed17543ffb08ae41921"
+      "sha256": "2ae1465e627ded766168b690ccf4ba8cc4eca905df400e2e6223392a01681b18"
     },
     "skills/workflow-grilling/agents/openai.yaml": {
       "executable": false,
@@ -330,7 +330,7 @@
     },
     "skills/workflow-handoff/UPSTREAM.md": {
       "executable": false,
-      "sha256": "252b3373c12137a0bb07a2625fb685d2e2f9e17eb57fe54a03c5878ed9bc27ac"
+      "sha256": "ea03898a6ed969ae4b560923fffa06ba9bdd81c075ec4fef7622eacc5ce6fc0d"
     },
     "skills/workflow-handoff/agents/openai.yaml": {
       "executable": false,
@@ -350,7 +350,7 @@
     },
     "skills/workflow-how/UPSTREAM.md": {
       "executable": false,
-      "sha256": "cc384f6f473c93f4e632b974f5248211504ad92b555e29b378579efd697c5e33"
+      "sha256": "6257b75fabda93bf717392e6f68ff0eaab3bb2d66ad4f626481be13e8dc7f808"
     },
     "skills/workflow-how/references/explainer-prompt.md": {
       "executable": false,
@@ -374,7 +374,7 @@
     },
     "skills/workflow-implement-spec/UPSTREAM.md": {
       "executable": false,
-      "sha256": "f9bafeeb2e8e2206252e7994d65160e3e85c27690336907cd6c372cc3abe19fd"
+      "sha256": "62bb9db56d420cbdb291452e600fbd9f9cd40dbd7da071c37e8778c1ffd89495"
     },
     "skills/workflow-implement-spec/agents/openai.yaml": {
       "executable": false,
@@ -422,7 +422,7 @@
     },
     "skills/workflow-jscpd/UPSTREAM.md": {
       "executable": false,
-      "sha256": "b5ee4742a7991869717696cda5715280683526c0c92f5560545a1e7080fcca0d"
+      "sha256": "8793e2da1d9aa112c3f75e63f760953ac5445057fcfa09343820fa01f026a541"
     },
     "skills/workflow-prototype/COLLECTION.md": {
       "executable": false,
@@ -446,7 +446,7 @@
     },
     "skills/workflow-prototype/UPSTREAM.md": {
       "executable": false,
-      "sha256": "b0aed96ff30fbb94cabfc85581bc94d0ff0ae042dc17389774ca15a1c753c9a1"
+      "sha256": "d210116f552c1e0af4121594f413a0784937054ce47ddc7eb36bb6b25ab2c32f"
     },
     "skills/workflow-prototype/agents/openai.yaml": {
       "executable": false,
@@ -466,7 +466,7 @@
     },
     "skills/workflow-research/UPSTREAM.md": {
       "executable": false,
-      "sha256": "32f7e8fb5f00baef38b76c32593cf3c1ba8eef277f28d393f745abe66e9b945b"
+      "sha256": "2ccb8f95551931ebe4b6a4d8f3474fb8d2131e36f2502894878628afc3372049"
     },
     "skills/workflow-research/agents/openai.yaml": {
       "executable": false,
@@ -486,7 +486,7 @@
     },
     "skills/workflow-setup-matt-pocock-skills/UPSTREAM.md": {
       "executable": false,
-      "sha256": "662a1f8560f91efcbf11a6b5e23416d0ee120a6c86e56c75482925886f3c24ea"
+      "sha256": "1c3645592d0a5577e571a13221fd9efdd9ce9c5a44ffd732f78be1901de741ab"
     },
     "skills/workflow-setup-matt-pocock-skills/agents/openai.yaml": {
       "executable": false,
@@ -526,7 +526,7 @@
     },
     "skills/workflow-statechart/UPSTREAM.md": {
       "executable": false,
-      "sha256": "18d7f3c4f05e75b6d1ae8ce9617f08195e69b6643a06ffcb27f04a2120853369"
+      "sha256": "c1e48a93da705153cfc7d3437d1bbaf65ba79cc924c8e4271ae56046f9bab11f"
     },
     "skills/workflow-statechart/references/render.md": {
       "executable": false,
@@ -662,7 +662,7 @@
     },
     "skills/workflow-tdd/UPSTREAM.md": {
       "executable": false,
-      "sha256": "8ecf05ad40df95c3fbf618d954faae8431673f233f5088129d4da82094bc12ee"
+      "sha256": "c039e3bc24eeac5379b5cae43801d5f699d0c0a88d81c99878276de510217aa6"
     },
     "skills/workflow-tdd/agents/openai.yaml": {
       "executable": false,
@@ -706,7 +706,7 @@
     },
     "skills/workflow-teach/UPSTREAM.md": {
       "executable": false,
-      "sha256": "7617cb81f432ad2b99990ad4ef665a2b5b0a0e455c0670ec05c62ed97dcff454"
+      "sha256": "235a5f7ace27911f0d8c873353a0d594562544b70375967a605e770f01900c33"
     },
     "skills/workflow-teach/agents/openai.yaml": {
       "executable": false,
@@ -726,7 +726,7 @@
     },
     "skills/workflow-to-questionnaire/UPSTREAM.md": {
       "executable": false,
-      "sha256": "d860d4859755e5b4fa1e73e6f408e701f8ec346f5cbf505db7ed2547a761f302"
+      "sha256": "9e103d310430bb0cdd80f1159b51f0686385d57d612a4298da95ba9c5e6dc68a"
     },
     "skills/workflow-to-questionnaire/agents/openai.yaml": {
       "executable": false,
@@ -746,7 +746,7 @@
     },
     "skills/workflow-to-spec/UPSTREAM.md": {
       "executable": false,
-      "sha256": "45fd1dc9815c586516f9466bcade362fdb00ae2c35260b00f9ab22d3349cfd19"
+      "sha256": "96d52db6a5457ce483789792d2765d900c710d558c4addd8442543086fca3a59"
     },
     "skills/workflow-to-spec/agents/openai.yaml": {
       "executable": false,
@@ -766,7 +766,7 @@
     },
     "skills/workflow-to-tickets/UPSTREAM.md": {
       "executable": false,
-      "sha256": "c786eb5c29b449c0a59ec49ea87e9a97ea6cb5fdc5690e9c6a75c27770a67858"
+      "sha256": "2b5294969fcc27847707b172ed8d87b0ae829f28f0c96ccda7a4397ae2db73f6"
     },
     "skills/workflow-to-tickets/agents/openai.yaml": {
       "executable": false,
@@ -786,7 +786,7 @@
     },
     "skills/workflow-wayfinder/UPSTREAM.md": {
       "executable": false,
-      "sha256": "3061b39216dcd736149dfedc2e470e9ad295a28a8ab9a54151b5c8541d12fe84"
+      "sha256": "67db60f4c4de9623681fb48aba9457e3d83024ef5466984b000f0d9166d9a25e"
     },
     "skills/workflow-wayfinder/agents/openai.yaml": {
       "executable": false,
@@ -810,7 +810,7 @@
     },
     "skills/workflow-writing-for-agents/UPSTREAM.md": {
       "executable": false,
-      "sha256": "e026eb2dc0e9440c63450a356f0b06027161e1a20a0001d0fa581fba5f92e190"
+      "sha256": "9604de78a69ce8b5226737354bc053390cb01f69cdc3e034149702671f4c9fae"
     },
     "skills/workflow-writing-for-agents/agents/openai.yaml": {
       "executable": false,
@@ -850,11 +850,11 @@
     },
     "skills/writing-simple-english/SKILL.md": {
       "executable": false,
-      "sha256": "d002fa77510f6fd73a57501843af20509d2bbe69a355ff8402c3acb6ce904d15"
+      "sha256": "c9101036b327b943e233cf9eb6aeeb3643024f663fad3a5626650cf5b792ed46"
     },
     "skills/writing-simple-english/UPSTREAM.md": {
       "executable": false,
-      "sha256": "68441df578df6474e0573dba081a5c80c548744a4915127ed1a7fe237e17c402"
+      "sha256": "9658cd9e023edbe12f649811a8183aaeca80f16d0e865511173ba639ad8ab026"
     },
     "skills/writing-simple-english/references/rule-catalog.md": {
       "executable": false,
@@ -886,7 +886,7 @@
     },
     "skills/writing-technical-writing/UPSTREAM.md": {
       "executable": false,
-      "sha256": "353a4086a1873366671f8e4a5dfe4584ba71b16147ff7d86060657507b9f52cd"
+      "sha256": "0aa831ff1e685b1b2415c7e09825f23abcc4c8717337869741278b8220dc44c4"
     },
     "skills/writing-unslop/COLLECTION.md": {
       "executable": false,
@@ -902,7 +902,7 @@
     },
     "skills/writing-unslop/UPSTREAM.md": {
       "executable": false,
-      "sha256": "2ffb6ade6874b6130bc5559feae36ab5d79c573175a86fdc6808c743307ef571"
+      "sha256": "545cec2bdf6c6f6c5900fbcd62a867542aa576ebddea69e18be2bbff471dbcd1"
     }
   },
   "packages": {

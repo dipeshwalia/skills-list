@@ -2,8 +2,8 @@
 
 - Original author: Theo Browne.
 - Original repository: [t3dotgg/tstack](https://github.com/t3dotgg/tstack).
-- Original skill: [full-send](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af/skills/full-send).
-- Reviewed upstream revision: [`1085050f3baed1ac724caa4a8166145fb2ac88af`](https://github.com/t3dotgg/tstack/commit/1085050f3baed1ac724caa4a8166145fb2ac88af).
+- Original skill: [full-send](https://github.com/t3dotgg/tstack/tree/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/full-send).
+- Reviewed upstream revision: [`11e37a74d0a6868c121cd0910ab2b3bd9873b92a`](https://github.com/t3dotgg/tstack/commit/11e37a74d0a6868c121cd0910ab2b3bd9873b92a).
 - License: MIT; copyright 2026 Theo Browne. The original copyright and complete notice are copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 
 Original instructions, supporting resources, and invocation metadata are preserved. Local additions are this provenance file and `LICENSE.upstream`. The collection publishes this skill under the `t3-` namespace.
