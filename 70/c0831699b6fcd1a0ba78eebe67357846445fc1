@@ -1,0 +1,167 @@
+INVENTORY.md
+  s_6a0450cd8f927c::t_74f6388bdcd73b 11-12,14-15,17,29-46,48-49,51-59,71-75
+README.md
+  s_6a0450cd8f927c::t_c145afeca6edae 94
+skills/.generated.json
+  s_6a0450cd8f927c::t_5957529fa51e3c 17,33,37,53,69,89,109,129,149,165,181,209,237,257,273,293,313,333,353,377,425,449,469,489,529,665,709,729,749,769,789,813,853,857,889,905
+skills/README.md
+  s_6a0450cd8f927c::t_71ef807794a8bd 13-34,41-42,44,50-58
+skills/t3-babysit-pr/UPSTREAM.md
+  s_6a0450cd8f927c::t_3980b6bb6aa735 5-6
+skills/t3-council/SKILL.md
+  s_6a0450cd8f927c::t_7f6f59bcb3c337 30-35
+skills/t3-council/UPSTREAM.md
+  s_6a0450cd8f927c::t_18b9017f053ca1 5-6
+skills/t3-file-pr/UPSTREAM.md
+  s_6a0450cd8f927c::t_e8d14d56daf93b 5-6
+skills/t3-full-send/UPSTREAM.md
+  s_6a0450cd8f927c::t_785cbdca696d3f 5-6
+skills/t3-full-stop/UPSTREAM.md
+  s_6a0450cd8f927c::t_aec66ce7723cff 5-6
+skills/t3-leaving-pr-comments/UPSTREAM.md
+  s_6a0450cd8f927c::t_b432d947089dcf 5-6
+skills/t3-modernize/UPSTREAM.md
+  s_6a0450cd8f927c::t_a4f46a8d6b865e 5-6
+skills/t3-sol-loop/UPSTREAM.md
+  s_6a0450cd8f927c::t_4ddddf8b0d86a7 5-6
+skills/t3-takeover/UPSTREAM.md
+  s_6a0450cd8f927c::t_7d7d44ed5c605d 5-6
+skills/workflow-code-review/UPSTREAM.md
+  s_6a0450cd8f927c::t_46848fde5d12e1 6
+skills/workflow-codebase-design/UPSTREAM.md
+  s_6a0450cd8f927c::t_09190230319ccb 6
+skills/workflow-domain-modeling/UPSTREAM.md
+  s_6a0450cd8f927c::t_8dc7323b621e0c 6
+skills/workflow-dry-refactoring/UPSTREAM.md
+  s_6a0450cd8f927c::t_6c392b29693dd0 5-6
+skills/workflow-grill-me/UPSTREAM.md
+  s_6a0450cd8f927c::t_14edf3b7160c8b 5-6
+skills/workflow-grill-with-docs/UPSTREAM.md
+  s_6a0450cd8f927c::t_b82e67a0b7cd20 6
+skills/workflow-grilling/UPSTREAM.md
+  s_6a0450cd8f927c::t_1ef696cfe9f892 6
+skills/workflow-handoff/UPSTREAM.md
+  s_6a0450cd8f927c::t_43f6b1528a0e8e 5-6
+skills/workflow-how/UPSTREAM.md
+  s_6a0450cd8f927c::t_0dc99440a4d76a 3,6
+skills/workflow-implement-spec/UPSTREAM.md
+  s_6a0450cd8f927c::t_00c77d22e1e63e 6
+skills/workflow-jscpd/UPSTREAM.md
+  s_6a0450cd8f927c::t_47492e255bd3c9 5-6
+skills/workflow-prototype/UPSTREAM.md
+  s_6a0450cd8f927c::t_df2cbe256b55d2 6
+skills/workflow-research/UPSTREAM.md
+  s_6a0450cd8f927c::t_941d1a660b653b 6
+skills/workflow-setup-matt-pocock-skills/UPSTREAM.md
+  s_6a0450cd8f927c::t_57c4f159a02aa1 6
+skills/workflow-statechart/UPSTREAM.md
+  s_6a0450cd8f927c::t_e94fb404def463 3,6
+skills/workflow-tdd/UPSTREAM.md
+  s_6a0450cd8f927c::t_98d1baa7b5ef44 6
+skills/workflow-teach/UPSTREAM.md
+  s_6a0450cd8f927c::t_e7b67b760b2189 5-6
+skills/workflow-to-questionnaire/UPSTREAM.md
+  s_6a0450cd8f927c::t_dffea73167a546 5-6
+skills/workflow-to-spec/UPSTREAM.md
+  s_6a0450cd8f927c::t_05dfa430eb6e19 6
+skills/workflow-to-tickets/UPSTREAM.md
+  s_6a0450cd8f927c::t_9c4d399f4a2d4b 6
+skills/workflow-wayfinder/UPSTREAM.md
+  s_6a0450cd8f927c::t_46da03bb309b53 6
+skills/workflow-writing-for-agents/UPSTREAM.md
+  s_6a0450cd8f927c::t_3b5c32a7966c71 5-6
+skills/writing-simple-english/SKILL.md
+  s_6a0450cd8f927c::t_f9dab029a12cec 15,19,65,77
+skills/writing-simple-english/UPSTREAM.md
+  s_6a0450cd8f927c::t_4ca6a6b716e3bd 5-6
+skills/writing-technical-writing/UPSTREAM.md
+  s_6a0450cd8f927c::t_28c34eb2a446e4 3,6
+skills/writing-unslop/UPSTREAM.md
+  s_6a0450cd8f927c::t_2622493a1f3346 3,6
+sources.json
+  s_6a0450cd8f927c::t_b16ef447a39bc2 6,79,120,140,160
+upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md
+  s_6a0450cd8f927c::t_3be1b58c1730fb 3,6
+upstreams/cursor-plugins/pstack/skills/statechart/UPSTREAM.md
+  s_6a0450cd8f927c::t_7917df90de9c3c 3,6
+upstreams/cursor-plugins/pstack/skills/technical-writing/UPSTREAM.md
+  s_6a0450cd8f927c::t_8365159e17fbc4 3,6
+upstreams/cursor-plugins/pstack/skills/unslop/UPSTREAM.md
+  s_6a0450cd8f927c::t_5756fefc1bb11d 3,6
+upstreams/jscpd/skills/dry-refactoring/UPSTREAM.md
+  s_6a0450cd8f927c::t_0fcfde7d6d8c17 5-6
+upstreams/jscpd/skills/jscpd/UPSTREAM.md
+  s_6a0450cd8f927c::t_564d7bcfebbabf 5-6
+upstreams/mattpocock/skills/engineering/code-review/UPSTREAM.md
+  s_6a0450cd8f927c::t_c1a215dbbb0333 6
+upstreams/mattpocock/skills/engineering/codebase-design/UPSTREAM.md
+  s_6a0450cd8f927c::t_298162af441979 6
+upstreams/mattpocock/skills/engineering/domain-modeling/UPSTREAM.md
+  s_6a0450cd8f927c::t_8d41169834ccac 6
+upstreams/mattpocock/skills/engineering/grill-with-docs/UPSTREAM.md
+  s_6a0450cd8f927c::t_39f8a95a8ed086 6
+upstreams/mattpocock/skills/engineering/implement-spec/UPSTREAM.md
+  s_6a0450cd8f927c::t_6ef69db85c1fc0 6
+upstreams/mattpocock/skills/engineering/prototype/UPSTREAM.md
+  s_6a0450cd8f927c::t_e72998e74cc184 6
+upstreams/mattpocock/skills/engineering/research/UPSTREAM.md
+  s_6a0450cd8f927c::t_3f8678ad6b2b34 6
+upstreams/mattpocock/skills/engineering/setup-matt-pocock-skills/UPSTREAM.md
+  s_6a0450cd8f927c::t_68a18a81596bc8 6
+upstreams/mattpocock/skills/engineering/tdd/UPSTREAM.md
+  s_6a0450cd8f927c::t_55e51704b2c607 6
+upstreams/mattpocock/skills/engineering/to-spec/UPSTREAM.md
+  s_6a0450cd8f927c::t_8eecfe29fcc312 6
+upstreams/mattpocock/skills/engineering/to-tickets/UPSTREAM.md
+  s_6a0450cd8f927c::t_56777229def762 6
+upstreams/mattpocock/skills/engineering/wayfinder/UPSTREAM.md
+  s_6a0450cd8f927c::t_dfe4dc922a3def 6
+upstreams/mattpocock/skills/productivity/grill-me/UPSTREAM.md
+  s_6a0450cd8f927c::t_8f1ba6ae466fa8 5-6
+upstreams/mattpocock/skills/productivity/grilling/UPSTREAM.md
+  s_6a0450cd8f927c::t_13d24b66c4d392 6
+upstreams/mattpocock/skills/productivity/handoff/UPSTREAM.md
+  s_6a0450cd8f927c::t_eb3416747d4dfd 5-6
+upstreams/mattpocock/skills/productivity/teach/UPSTREAM.md
+  s_6a0450cd8f927c::t_c2493cd93e1ba4 5-6
+upstreams/mattpocock/skills/productivity/to-questionnaire/UPSTREAM.md
+  s_6a0450cd8f927c::t_abe048b4538a7d 5-6
+upstreams/mattpocock/skills/productivity/writing-for-agents/UPSTREAM.md
+  s_6a0450cd8f927c::t_b81bba47a96a8b 5-6
+upstreams/simple-english/skills/simple-english/UPSTREAM.md
+  s_6a0450cd8f927c::t_2d595174d34911 5-6
+upstreams/tstack/skills/babysit-pr/UPSTREAM.md
+  s_6a0450cd8f927c::t_8f47fb8971c721 5-6
+upstreams/tstack/skills/council/UPSTREAM.md
+  s_6a0450cd8f927c::t_e2e9fce6faf53a 5-6
+upstreams/tstack/skills/file-pr/UPSTREAM.md
+  s_6a0450cd8f927c::t_d3ca88da73ded3 5-6
+upstreams/tstack/skills/full-send/UPSTREAM.md
+  s_6a0450cd8f927c::t_118010e628f254 5-6
+upstreams/tstack/skills/full-stop/UPSTREAM.md
+  s_6a0450cd8f927c::t_85e60973543dad 5-6
+upstreams/tstack/skills/leaving-pr-comments/UPSTREAM.md
+  s_6a0450cd8f927c::t_95652669ca43be 5-6
+upstreams/tstack/skills/modernize/UPSTREAM.md
+  s_6a0450cd8f927c::t_e55ce3071c40dc 5-6
+upstreams/tstack/skills/sol-loop/UPSTREAM.md
+  s_6a0450cd8f927c::t_5465c1511d4435 5-6
+upstreams/tstack/skills/takeover/UPSTREAM.md
+  s_6a0450cd8f927c::t_d29b08667fea84 5-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "70c0831699b6fcd1a0ba78eebe67357846445fc1",
+  "prompts": {},
+  "sessions": {
+    "s_6a0450cd8f927c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1d5e2-3520-7130-96c1-4c4bb64c45e2",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
