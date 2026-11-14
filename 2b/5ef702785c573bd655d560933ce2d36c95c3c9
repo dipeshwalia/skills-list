@@ -1,0 +1,43 @@
+INVENTORY.md
+  s_7da2c0491c0cc7::t_5b385222d1a1ab 12,43-46
+README.md
+  s_7da2c0491c0cc7::t_813950c38726fb 94
+skills/.generated.json
+  s_7da2c0491c0cc7::t_edfcc26b58eb6e 353,529,889,905
+skills/README.md
+  s_7da2c0491c0cc7::t_841fd4c1b08305 31-32,41-42
+skills/workflow-how/UPSTREAM.md
+  s_7da2c0491c0cc7::t_eeccbb5ed6302b 3,6
+skills/workflow-statechart/UPSTREAM.md
+  s_7da2c0491c0cc7::t_c9ad055013cd54 3,6
+skills/writing-technical-writing/UPSTREAM.md
+  s_7da2c0491c0cc7::t_5ed1cb3f8a5750 3,6
+skills/writing-unslop/UPSTREAM.md
+  s_7da2c0491c0cc7::t_c9f80e200e889d 3,6
+sources.json
+  s_7da2c0491c0cc7::t_492feaabc989d6 79
+upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md
+  s_7da2c0491c0cc7::t_b2f0d12456a8df 3,6
+upstreams/cursor-plugins/pstack/skills/statechart/UPSTREAM.md
+  s_7da2c0491c0cc7::t_010b652745bc15 3,6
+upstreams/cursor-plugins/pstack/skills/technical-writing/UPSTREAM.md
+  s_7da2c0491c0cc7::t_329ce8e957deb0 3,6
+upstreams/cursor-plugins/pstack/skills/unslop/UPSTREAM.md
+  s_7da2c0491c0cc7::t_da879b4d289e5e 3,6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2b5ef702785c573bd655d560933ce2d36c95c3c9",
+  "prompts": {},
+  "sessions": {
+    "s_7da2c0491c0cc7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1db3f-85da-7fc3-b528-e01db9e64404",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
