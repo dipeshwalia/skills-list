@@ -1,9 +1,9 @@
 # Original-source attribution
 
-- Original author: Lauren Tan, as credited in [pstack's plugin metadata](https://github.com/cursor/plugins/blob/24621dbcc59e205a7faadb0e06d540f91712b5cc/pstack/plugin.json).
+- Original author: Lauren Tan, as credited in [pstack's plugin metadata](https://github.com/cursor/plugins/blob/3dbd22ff12742fb28c9700b9760baa29ed41dc13/pstack/plugin.json).
 - Original repository: [cursor/plugins](https://github.com/cursor/plugins), pstack plugin.
 - Original skill: [how](https://github.com/cursor/plugins/tree/main/pstack/skills/how).
-- Reviewed upstream revision: [`24621dbcc59e205a7faadb0e06d540f91712b5cc`](https://github.com/cursor/plugins/tree/24621dbcc59e205a7faadb0e06d540f91712b5cc/pstack/skills/how).
+- Reviewed upstream revision: [`3dbd22ff12742fb28c9700b9760baa29ed41dc13`](https://github.com/cursor/plugins/tree/3dbd22ff12742fb28c9700b9760baa29ed41dc13/pstack/skills/how).
 - Original copyright: Copyright (c) 2026 Lauren Tan.
 - License: MIT, from [pstack/LICENSE](LICENSE.upstream); the complete original notice is copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 
