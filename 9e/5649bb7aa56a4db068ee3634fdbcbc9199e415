@@ -1,0 +1,160 @@
+skills/t3-sol-loop/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+INVENTORY.md
+  s_fb85ef46e19e4e::t_75070df715841a 11,30
+skills/workflow-tdd/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-to-tickets/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/t3-full-send/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-domain-modeling/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/writing-simple-english/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-code-review/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-ask-neon/scripts/neon_acp.py
+  s_fb85ef46e19e4e::t_6f5771651291d5 240-245,419
+  s_fb85ef46e19e4e::t_fbe6ebdd3cf8d1 86-239,246-254,339-347,392-397,552
+  s_fb85ef46e19e4e::t_26c0462767c242 301-336,353-354
+  s_fb85ef46e19e4e::t_45ef943354e7ff 466
+  s_fb85ef46e19e4e::t_bb8980a5342ce6 1-85,255-300,337-338,348-352,355-391,398-418,420-465,467-551,553-558
+tests/test_neon_acp.py
+  s_fb85ef46e19e4e::t_26c0462767c242 76,78,92-98,150-160
+  s_fb85ef46e19e4e::t_6f5771651291d5 185-202
+  s_fb85ef46e19e4e::t_f09fabfac15f9d 1-75,77,79-91,99-149,161-184,203-217
+skills/workflow-ask-neon/SKILL.md
+  s_fb85ef46e19e4e::t_6f5771651291d5 12
+  s_fb85ef46e19e4e::t_f09fabfac15f9d 14-15,42-43,67
+  s_fb85ef46e19e4e::t_7d9d448a6ba157 1-2,8-11,13,17-19,21,23,25,28,31,37,39,62,65,68,70-72,74,81,83-87
+  s_fb85ef46e19e4e::t_9a68ab2c88bcb2 3-7
+  s_fb85ef46e19e4e::t_37a5a944d1235a 16
+  s_fb85ef46e19e4e::t_99af3d80afc2b9 20
+  s_fb85ef46e19e4e::t_7148dd4795a40b 22
+  s_fb85ef46e19e4e::t_78e71ea9e497cc 24
+  s_fb85ef46e19e4e::t_8e4028ef260269 26-27
+  s_fb85ef46e19e4e::t_106bec6209d2f7 29-30
+  s_fb85ef46e19e4e::t_70b8cfe0a76f8b 32-36
+  s_fb85ef46e19e4e::t_0280d4352529fc 38
+  s_fb85ef46e19e4e::t_f4a914bb1c9437 40-41
+  s_fb85ef46e19e4e::t_86af9b67cb20cd 44-46,59-61
+  s_fb85ef46e19e4e::t_165d8147800f34 63-64
+  s_fb85ef46e19e4e::t_01c4fd7a0effe9 66
+  s_fb85ef46e19e4e::t_8c8ffd95779492 69
+  s_fb85ef46e19e4e::t_397045a73a4a9f 73
+  s_fb85ef46e19e4e::t_49451e4113bd0a 75-80
+  s_fb85ef46e19e4e::t_cd4e38d9092e69 82
+  s_fb85ef46e19e4e::t_bf0f68b30b6f04 88-90
+  s_fb85ef46e19e4e::t_a6c328cf017180 47-58,91-92
+scripts/build-skills.py
+  s_fb85ef46e19e4e::t_f09fabfac15f9d 189
+  s_fb85ef46e19e4e::t_e02bab78cb07a2 15-16
+  s_fb85ef46e19e4e::t_462c230ba0c967 65-66,213-217,220,225
+skills/workflow-wayfinder/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/t3-babysit-pr/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-codebase-design/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-statechart/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-to-questionnaire/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+sources.json
+  s_fb85ef46e19e4e::t_7d9d448a6ba157 3-15
+  s_bb474ab2aafe17::t_661fd9b20b6d96 2
+sources.ts
+  s_fb85ef46e19e4e::t_7d9d448a6ba157 7-8,13-14
+skills/workflow-prototype/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-to-spec/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/README.md
+  s_fb85ef46e19e4e::t_75070df715841a 13
+  s_fb85ef46e19e4e::t_462c230ba0c967 65
+skills/workflow-setup-matt-pocock-skills/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+docs/skillshare.md
+  s_fb85ef46e19e4e::t_e02bab78cb07a2 65-67
+skills/t3-council/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-grill-with-docs/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-research/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/t3-modernize/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-handoff/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/t3-file-pr/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+README.md
+  s_fb85ef46e19e4e::t_462c230ba0c967 50-51,70
+  s_fb85ef46e19e4e::t_75070df715841a 95
+skills/workflow-ask-neon/LICENSE
+  s_fb85ef46e19e4e::t_7d9d448a6ba157 1-21
+skills/workflow-dry-refactoring/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/t3-full-stop/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+tests/test_build_skills.py
+  s_fb85ef46e19e4e::t_daad871dfe40c3 398-435,459-496
+  s_fb85ef46e19e4e::t_f09fabfac15f9d 436-458
+skills/writing-technical-writing/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+scripts/inventory.py
+  s_fb85ef46e19e4e::t_462c230ba0c967 4,22,39-40,152-153,158-162,164,174-175,185,187-188,221-225,241,243-251,359
+skills/workflow-grill-me/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/t3-takeover/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-how/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/t3-leaving-pr-comments/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-implement-spec/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-improve/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-jscpd/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-teach/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-writing-for-agents/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/writing-i-have-adhd/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/writing-unslop/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-grilling/COLLECTION.md
+  s_fb85ef46e19e4e::t_75070df715841a 11
+skills/workflow-ask-neon/agents/openai.yaml
+  s_fb85ef46e19e4e::t_7d9d448a6ba157 1-2
+skills/.generated.json
+  s_fb85ef46e19e4e::t_6d86b4de3639e1 5,25,41,57,77,97,117,137,153,169,189,221,245,261,281,301,321,341,365,385,413,429,457,477,517,653,681,717,737,757,777,797,821,845,877,893
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9e5649bb7aa56a4db068ee3634fdbcbc9199e415",
+  "prompts": {},
+  "sessions": {
+    "s_bb474ab2aafe17": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "conscious-twin",
+        "model": "unknown"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    },
+    "s_fb85ef46e19e4e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a203e9-4a3c-77f0-8929-4a54989f209f",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
