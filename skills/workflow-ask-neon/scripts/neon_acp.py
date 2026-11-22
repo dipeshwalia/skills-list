@@ -14,7 +14,8 @@ Subcommands:
     new                         create a run directory; prints its path
     stage RUN --root DIR FILE…  copy files (paths relative to DIR) into RUN/ws
     ask RUN [--resume ID]       send RUN/prompt.txt to Neon; exit 0 only on SUCCESS
-    start RUN [ask options]     run `ask` detached; an earlier result.json is archived
+    start RUN [ask options]     run `ask` detached; an earlier result.json is archived.
+                                A running ask holds RUN/ask.lock; the kernel frees it on exit
     wait RUN [--seconds N]      print new progress for up to N seconds, then the state:
                                 exit 0 SUCCESS, 1 another final status, 2 still running
 
@@ -25,13 +26,18 @@ Neon to reading files inside the workspace:
   refused. agy ends a turn after a refusal, so `ask` then sends at most two follow-up
   prompts asking Neon to answer from what it can read.
 - Tripwire: agy runs some actions without asking (it has read files outside the
-  workspace and run `ls` unasked). The moment a tool call that is not a read inside
-  the workspace starts, `ask` stops agy and reports ABORTED. That usually beats the
-  next model call, so the data rarely leaves, but it is not a guarantee: staging is
-  the real protection.
+  workspace and run `ls` unasked), and it reports every tool call as already
+  in_progress before it asks. The moment a tool call that is not a read inside the
+  workspace is reported, `ask` SIGKILLs agy's process group and reports ABORTED. That
+  usually beats the next model call, so the data rarely leaves, but it is not a
+  guarantee: staging is the real protection. A call agy reports as already failed
+  never ran; it counts as a refusal instead.
+- `--resume` accepts only the session this run created (RUN/session_id), and `ask`
+  refuses a workspace holding anything `stage` would refuse, however it got there.
 """
 import argparse
 import collections
+import fcntl
 import json
 import os
 import queue
@@ -48,8 +54,9 @@ MAX_STAGED_BYTES = 1_000_000
 REFUSED_SUFFIXES = (".pcap", ".pcapng", ".cap", ".erf", ".parquet", ".db", ".sqlite", ".duckdb",
                     ".pem", ".key", ".p12", ".pfx", ".zip", ".tar", ".gz", ".tgz", ".zst", ".7z")
 REFUSED_NAMES = (".env", "id_rsa", "id_ed25519", ".netrc", "credentials.json")
-READ_TOOLS = (None, "read_file", "view_file", "list_dir")
-PATH_KEYS = ("Path", "path", "AbsolutePath", "DirectoryPath", "SearchPath", "file", "File", "uri", "url")
+READ_TOOLS = ("read_file", "view_file", "list_dir")
+# Argument keys that name a file or place; any key containing one of these words counts.
+PATH_WORDS = ("path", "file", "dir", "uri", "url", "cwd", "root", "target")
 CONTINUE = ("That action is not available in this consultation: {refused}. "
             "Read only files inside your working directory and run nothing. "
             "Answer the original question now from the prompt and the files you have read.")
@@ -64,7 +71,7 @@ CONFIG = ("model", "thought_level", "mode")
 def cmd_new(_args):
     run = tempfile.mkdtemp(prefix="neon-run.", dir=os.environ.get("TMPDIR") or tempfile.gettempdir())
     os.mkdir(os.path.join(run, "ws"))
-    print(run)
+    print(os.path.realpath(run))
     return 0
 
 
@@ -79,6 +86,22 @@ def refusal(rel, path):
     if os.path.getsize(path) > MAX_STAGED_BYTES:
         return f"is larger than {MAX_STAGED_BYTES:,} bytes; stage an excerpt instead"
     return None
+
+
+def workspace_problems(ws):
+    """Files in the workspace that stage would refuse, however they got there."""
+    problems = []
+    for dirpath, dirnames, filenames in os.walk(ws):
+        for name in dirnames + filenames:
+            path = os.path.join(dirpath, name)
+            rel = os.path.relpath(path, ws)
+            if os.path.islink(path):
+                problems.append(f"{rel}: is a symlink")
+            elif name in filenames:
+                why = refusal(rel, path)
+                if why:
+                    problems.append(f"{rel}: {why}")
+    return problems
 
 
 def cmd_stage(args):
@@ -219,6 +242,13 @@ class Acp:
     def notify(self, method, params):
         self.outbox.put({"jsonrpc": "2.0", "method": method, "params": params})
 
+    def kill_now(self):
+        """SIGKILL agy's whole process group at once: the tripwire cannot wait."""
+        try:
+            os.killpg(self.p.pid, signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            pass
+
     def close(self):
         with self.close_lock:
             if self.closed.is_set():
@@ -260,6 +290,9 @@ class Acp:
 
 def cmd_ask(args):
     run = os.path.realpath(args.run)
+    lock_fd = args.lock_fd if args.lock_fd is not None else take_lock(run)  # held until exit
+    if lock_fd is None:
+        sys.exit("ask: an ask is already running in this run; use wait")
     ws = os.path.join(run, "ws")
     deadline = time.monotonic() + args.timeout
     t0 = time.monotonic()
@@ -273,26 +306,45 @@ def cmd_ask(args):
     def remaining(cap):
         return min(cap, deadline - time.monotonic())
 
+    say_lock = threading.Lock()
+
     def say(event):
         line = f"[{time.monotonic() - t0:7.1f}s] {event}"
-        print(line, file=sys.stderr, flush=True)
-        progress.write(line + "\n")
-        progress.flush()
+        with say_lock:
+            print(line, file=sys.stderr, flush=True)
+            progress.write(line + "\n")
+            progress.flush()
 
     def inside(path):
         """True only for a plain local path that resolves inside the workspace."""
-        if not isinstance(path, str) or not path.strip() or "://" in path or path.startswith("~") or "$" in path:
+        if (not isinstance(path, str) or not path.strip() or path != path.strip() or ":" in path
+                or "\x00" in path or path.startswith("~") or "$" in path):
             return False
-        real = os.path.realpath(path if os.path.isabs(path) else os.path.join(ws, path))
-        return os.path.commonpath([ws, real]) == ws
+        try:
+            real = os.path.realpath(path if os.path.isabs(path) else os.path.join(ws, path))
+            return os.path.commonpath([ws, real]) == ws
+        except ValueError:
+            return False
 
     def paths_of(tc):
-        found = [loc.get("path") for loc in tc.get("locations") or [] if isinstance(loc, dict)]
+        """Every path-like value in a tool call: locations, and path-named keys at any depth."""
+        found = [loc.get("path") for loc in tc.get("locations") or [] if isinstance(loc, dict) and "path" in loc]
+
+        def walk(value, key=""):
+            if isinstance(value, dict):
+                for k, v in value.items():
+                    walk(v, k)
+            elif isinstance(value, list):
+                for v in value:
+                    walk(v, key)
+            elif isinstance(value, str) and any(w in key.lower() for w in PATH_WORDS):
+                found.append(value)
+            elif value is not None and not isinstance(value, (str, bool, int, float)) and key:
+                found.append(repr(value))
+
         for key in ("args", "rawInput"):
-            a = tc.get(key)
-            if isinstance(a, dict):
-                found += [a[k] for k in PATH_KEYS if k in a]
-        return found
+            walk(tc.get(key))
+        return [p if isinstance(p, str) else repr(p) for p in found]
 
     def contained(name, kind, paths):
         """A read of files inside the workspace: the only action Neon may take."""
@@ -307,14 +359,22 @@ def cmd_ask(args):
 
     def trip(reason, paths):
         with lock:
-            if state["abort"]:
-                return
-            state["abort"] = reason
-            state["outside"] += [p for p in paths if not inside(p) and p not in state["outside"]]
-        say(f"TRIPWIRE: {reason}; stopping agy")
-        threading.Thread(target=state["acp"].close, daemon=True).start()
+            first = not state["abort"]
+            if first:
+                state["abort"] = reason
+                state["outside"] += [p for p in paths if not inside(p) and p not in state["outside"]]
+        if state["acp"]:
+            state["acp"].kill_now()  # before anything else: the next model call carries the data
+        if first:
+            say(f"TRIPWIRE: {reason}; agy killed")
 
     def on_notify(method, params):
+        try:
+            handle_update(method, params)
+        except Exception as e:  # a handler bug must not switch the tripwire off
+            trip(f"client error while checking a tool call: {type(e).__name__}: {e}", [])
+
+    def handle_update(method, params):
         if method != "session/update" or params.get("sessionId") != state["sid"]:
             return
         u = params.get("update") or {}
@@ -332,10 +392,23 @@ def cmd_ask(args):
         elif kind == "agent_thought_chunk" and not state["thinking"]:
             state["thinking"] = True
             say("thinking")
-        elif kind in ("tool_call", "tool_call_update") and u.get("toolCallId"):
+        elif kind in ("tool_call", "tool_call_update"):
+            if not u.get("toolCallId"):
+                trip(f"Neon started a tool call with no id ({u.get('name') or u.get('kind')})", paths_of(u))
+                return
             snapshot = merge_tool(u)
             if kind == "tool_call":
                 say(f"tool: {snapshot.get('name') or snapshot.get('kind', '?')} {snapshot.get('title', '')}"[:200])
+            label = f"{snapshot.get('name') or snapshot.get('kind')} {snapshot.get('title', '')}".strip()
+            if snapshot.get("status") == "failed":
+                # agy blocked it before it ran (as with `ls`): nothing left, so count it as
+                # a refusal and let the follow-up prompt continue the consultation.
+                if not contained(snapshot.get("name"), snapshot.get("kind"), snapshot["paths"]):
+                    with lock:
+                        if label not in state["refused"]:
+                            state["refused"].append(label)
+                    say(f"blocked by agy: {label}"[:200])
+                return
             # Pending calls may omit paths until a later update. Reject known unsafe
             # metadata immediately, and require complete containment once execution starts.
             unsafe = (snapshot.get("name") not in READ_TOOLS or
@@ -395,6 +468,17 @@ def cmd_ask(args):
             prompt = f.read()
         if not prompt.strip():
             raise RuntimeError("prompt.txt is empty; write the consultation question first")
+        unsafe = workspace_problems(ws)
+        if unsafe:
+            raise RuntimeError("the workspace holds files stage would refuse: " + "; ".join(unsafe[:10]))
+        own_session = os.path.join(run, "session_id")
+        if args.resume and (not os.path.exists(own_session) or open(own_session).read().strip() != args.resume):
+            raise RuntimeError("--resume takes only the session this run created (see <run>/session_id)")
+        try:
+            os.remove(os.path.join(run, "result.json"))  # never leave an earlier answer looking current
+        except FileNotFoundError:
+            pass
+        say(f"--- ask {'--resume ' + args.resume if args.resume else '(new session)'}")
         acp = state["acp"] = Acp(["agy", "acp", "--log-file", os.path.join(run, "agy.log")],
                                  ws, on_notify, on_request, args.trace)
         init = acp.call("initialize", {"protocolVersion": 1, "clientCapabilities": {
@@ -409,12 +493,15 @@ def cmd_ask(args):
         else:
             opened = acp.call("session/new", {"cwd": ws, "mcpServers": []}, timeout=remaining(120))
             state["sid"] = opened["sessionId"]
+            with open(own_session, "w") as f:
+                f.write(state["sid"])
         sid = result["session_id"] = state["sid"]
         apply_config(sid, opened.get("configOptions") or [])
         say(f"session {sid}: {args.model} {args.thought}, {args.mode} mode; prompt sent")
         text, continues = prompt, 0
         while True:
-            refused_before = len(state["refused"])
+            with lock:
+                refused_before, text_before = len(state["refused"]), len(state["text"])
             state["collecting"] = True
             try:
                 done = acp.call("session/prompt", {"sessionId": sid, "prompt": [{"type": "text", "text": text}]},
@@ -428,10 +515,15 @@ def cmd_ask(args):
             finally:
                 state["collecting"] = False
             result["stop_reason"] = done.get("stopReason")
-            answered = "".join(state["text"]).strip()
-            new_refusals = state["refused"][refused_before:]
-            if answered or done.get("stopReason") != "end_turn" or continues >= MAX_CONTINUES or not new_refusals:
+            with lock:
+                new_refusals = state["refused"][refused_before:]
+                # Text before a refusal is a preamble ("let me check…"), not an answer.
+                answered = "".join(state["text"][text_before:]).strip()
+            if (answered and not new_refusals) or done.get("stopReason") != "end_turn" or \
+                    continues >= MAX_CONTINUES or not new_refusals:
                 break
+            with lock:
+                del state["text"][text_before:]  # drop the preamble; the follow-up answers in full
             continues += 1
             text = CONTINUE.format(refused="; ".join(new_refusals))
             say(f"turn ended with no answer after a refusal; follow-up {continues} of {MAX_CONTINUES}")
@@ -455,74 +547,106 @@ def cmd_ask(args):
         result.update(response="".join(state["text"]), duration_seconds=round(time.monotonic() - t0, 1),
                       tool_calls=[dict(t) for t in state["tools"].values()], refused=list(state["refused"]),
                       outside_workspace=list(dict.fromkeys(
-                          os.path.realpath(p if os.path.isabs(p) else os.path.join(ws, p)) if isinstance(p, str) else repr(p)
+                          os.path.realpath(p) if isinstance(p, str) and os.path.isabs(p) and "\x00" not in p else str(p)
                           for p in state["outside"])),
                       agy_stderr="".join(acp.stderr if acp else [])[-2000:])
     out = os.path.join(run, "result.json")
-    with open(out + ".tmp", "w", encoding="utf-8") as f:
+    with open(f"{out}.{os.getpid()}.tmp", "w", encoding="utf-8") as f:
         json.dump(result, f, indent=1)
-    os.replace(out + ".tmp", out)
+    os.replace(f"{out}.{os.getpid()}.tmp", out)
     say(f"done: {result['status']}" + (f" ({result['error']})" if result.get("error") else ""))
     progress.close()
     return 0 if result["status"] == "SUCCESS" else 1
 
 
+def take_lock(run, exclusive=True):
+    """Open RUN/ask.lock and lock it without blocking; return the fd, or None if held."""
+    fd = os.open(os.path.join(run, "ask.lock"), os.O_RDWR | os.O_CREAT, 0o600)
+    try:
+        fcntl.flock(fd, (fcntl.LOCK_EX if exclusive else fcntl.LOCK_SH) | fcntl.LOCK_NB)
+        return fd
+    except BlockingIOError:
+        os.close(fd)
+        return None
+
+
+def running(run):
+    """True while an ask holds RUN/ask.lock; the kernel drops the lock when it exits."""
+    if not os.path.exists(os.path.join(run, "ask.lock")):
+        return False
+    fd = take_lock(run, exclusive=False)
+    if fd is None:
+        return True
+    os.close(fd)
+    return False
+
+
 def cmd_start(args):
     run = os.path.realpath(args.run)
-    if os.path.exists(os.path.join(run, "ask.pid")) and running(run):
+    fd = take_lock(run)
+    if fd is None:
         sys.exit("start: an ask is already running in this run; use wait")
-    old = os.path.join(run, "result.json")
+    old, archived = os.path.join(run, "result.json"), None
     if os.path.exists(old):
         n = 1
         while os.path.exists(os.path.join(run, f"result.{n}.json")):
             n += 1
-        os.replace(old, os.path.join(run, f"result.{n}.json"))
-        print(f"archived the earlier result as result.{n}.json")
-    argv = [sys.executable, "-I", os.path.realpath(__file__), "ask"] + sys.argv[sys.argv.index("start") + 1:]
-    with open(os.path.join(run, "ask.out"), "a", encoding="utf-8") as out:
-        p = subprocess.Popen(argv, stdin=subprocess.DEVNULL, stdout=out, stderr=out, start_new_session=True)
-    with open(os.path.join(run, "ask.pid"), "w") as f:
-        f.write(str(p.pid))
+        archived = os.path.join(run, f"result.{n}.json")
+        os.replace(old, archived)
+    rest = sys.argv[sys.argv.index("start") + 1:]
+    argv = [sys.executable, "-I", os.path.realpath(__file__), "ask"] + rest + ["--lock-fd", str(fd)]
+    try:
+        with open(os.path.join(run, "ask.out"), "a", encoding="utf-8") as out:
+            subprocess.Popen(argv, stdin=subprocess.DEVNULL, stdout=out, stderr=out,
+                             start_new_session=True, pass_fds=(fd,))
+    except Exception:
+        if archived:
+            os.replace(archived, old)
+        raise
+    finally:
+        os.close(fd)  # the child holds the same lock until it exits
+    if archived:
+        print(f"archived the earlier result as {os.path.basename(archived)}")
     print(f"started; follow it with: wait {run}")
     return 0
-
-
-def running(run):
-    try:
-        pid = int(open(os.path.join(run, "ask.pid")).read().strip())
-        os.kill(pid, 0)
-    except (OSError, ValueError):
-        return False
-    try:  # a finished child stays a zombie until reaped; treat that as not running
-        return os.waitpid(pid, os.WNOHANG) == (0, 0)
-    except ChildProcessError:
-        return True
 
 
 def cmd_wait(args):
     run = os.path.realpath(args.run)
     log, mark = os.path.join(run, "progress.log"), os.path.join(run, ".wait-offset")
-    offset = int(open(mark).read()) if os.path.exists(mark) else 0
+    try:
+        offset = int(open(mark).read())
+    except (OSError, ValueError):
+        offset = 0
     end = time.monotonic() + args.seconds
-    while True:
-        if os.path.exists(log):
-            with open(log, encoding="utf-8") as f:
-                f.seek(offset)
-                chunk = f.read()
-                offset = f.tell()
-            if chunk:
-                sys.stdout.write(chunk)
-                sys.stdout.flush()
-            with open(mark, "w") as f:
+
+    def drain():
+        nonlocal offset
+        if not os.path.exists(log):
+            return
+        with open(log, encoding="utf-8") as f:
+            f.seek(offset)
+            chunk = f.read()
+            offset = f.tell()
+        if chunk:
+            sys.stdout.write(chunk)
+            sys.stdout.flush()
+            with open(mark + ".tmp", "w") as f:
                 f.write(str(offset))
-        result = os.path.join(run, "result.json")
-        if os.path.exists(result) and not running(run):
-            status = json.load(open(result, encoding="utf-8")).get("status")
+            os.replace(mark + ".tmp", mark)
+
+    while True:
+        live = running(run)  # probe once, then decide from that one answer
+        drain()
+        if not live:
+            result = os.path.join(run, "result.json")
+            try:
+                status = json.load(open(result, encoding="utf-8")).get("status")
+            except (OSError, ValueError):
+                print(f"ask is not running and wrote no result; see {os.path.join(run, 'ask.out')}")
+                return 1
             print(f"final status: {status}; read {result}")
             return 0 if status == "SUCCESS" else 1
-        if not running(run) and not os.path.exists(result):
-            print(f"ask is not running and wrote no result; see {os.path.join(run, 'ask.out')}")
-            return 1
         if time.monotonic() >= end:
             print("still running; call wait again")
             return 2
@@ -547,9 +671,10 @@ def main():
         k.add_argument("--mode", default="default", help="agy mode; default sends permission requests to this client")
         k.add_argument("--timeout", type=float, default=1800, help="seconds for the whole consultation")
         k.add_argument("--trace", help="write every raw ACP message to this file (debugging)")
+        k.add_argument("--lock-fd", type=int, help=argparse.SUPPRESS)
     w = sub.add_parser("wait", help="print new progress and report whether ask has finished")
     w.add_argument("run")
-    w.add_argument("--seconds", type=float, default=30, help="longest wait before returning (default 30)")
+    w.add_argument("--seconds", type=float, default=100, help="longest wait before returning (default 100)")
     args = a.parse_args()
     return {"new": cmd_new, "stage": cmd_stage, "ask": cmd_ask, "start": cmd_start, "wait": cmd_wait}[args.command](args)
 
