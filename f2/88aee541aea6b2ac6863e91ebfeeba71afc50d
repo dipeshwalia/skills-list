@@ -1,0 +1,58 @@
+.metadata.json
+  h_43702bfdbafe7b 1-36
+skills/workflow-ask-neon/CONSULT.md
+  h_43702bfdbafe7b 1-83
+skills/workflow-ask-neon/SKILL.md
+  h_43702bfdbafe7b 3,8,10,12,14-18,20,22,24,26-29,31,33,35,37
+skills/workflow-ask-neon/scripts/neon_acp.py
+  h_43702bfdbafe7b 17-18,29-36,40,57-59,74,91-106,245-251,293-295,309-310,313-316,320-326,330-344,346-347,362-369,372-377,395-398,402-411,471-481,496-497,503-504,518-523,525-526,550,554,556,562-583,586-587,589,594-609,617-620,622-634,636-647,674,677
+skillshare/SKILL.md
+  h_43702bfdbafe7b 1-236
+skillshare/references/TROUBLESHOOTING.md
+  h_43702bfdbafe7b 1-80
+skillshare/references/audit-review.md
+  h_43702bfdbafe7b 1-39
+skillshare/references/audit.md
+  h_43702bfdbafe7b 1-225
+skillshare/references/backup.md
+  h_43702bfdbafe7b 1-57
+skillshare/references/extras.md
+  h_43702bfdbafe7b 1-362
+skillshare/references/hooks.md
+  h_43702bfdbafe7b 1-157
+skillshare/references/init.md
+  h_43702bfdbafe7b 1-99
+skillshare/references/install.md
+  h_43702bfdbafe7b 1-354
+skillshare/references/log.md
+  h_43702bfdbafe7b 1-64
+skillshare/references/mcp.md
+  h_43702bfdbafe7b 1-493
+skillshare/references/memory-review.md
+  h_43702bfdbafe7b 1-82
+skillshare/references/native-agents.md
+  h_43702bfdbafe7b 1-58
+skillshare/references/plugins.md
+  h_43702bfdbafe7b 1-318
+skillshare/references/status.md
+  h_43702bfdbafe7b 1-131
+skillshare/references/sync.md
+  h_43702bfdbafe7b 1-182
+skillshare/references/targets.md
+  h_43702bfdbafe7b 1-281
+skillshare/references/trash.md
+  h_43702bfdbafe7b 1-59
+skillshare/scripts/run.sh
+  h_43702bfdbafe7b 1-136
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f288aee541aea6b2ac6863e91ebfeeba71afc50d",
+  "prompts": {},
+  "humans": {
+    "h_43702bfdbafe7b": {
+      "author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
