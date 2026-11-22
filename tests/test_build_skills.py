@@ -395,6 +395,105 @@ class BuildSkillsTests(unittest.TestCase):
         self.build(success=False)
         self.assertEqual(self.snapshot(), before)
 
+    def local_original(self, name="local"):
+        folder = f"skills/workflow-{name}"
+        self.write(f"{folder}/SKILL.md", f"---\nname: workflow-{name}\ndescription: Ask a local expert.\n---\n\nOriginal instructions.\n")
+        self.write(f"{folder}/LICENSE", LICENSE)
+        record = {
+            "source": "example/personal", "local": True, "author": "Example Author",
+            "license": {"file": f"{folder}/LICENSE", "name": "MIT", "copyright": "2026 Example Author"},
+            "reviewed": None, "category": "Workflow",
+            "skills": [{"name": name, "purpose": "Ask a local expert."}],
+        }
+        self.sources.append(record)
+        self.save_sources()
+        return record
+
+    def test_local_original_is_cataloged_but_never_generated_or_removed(self):
+        self.local_original()
+        path = self.root / "skills/workflow-local/SKILL.md"
+        original = path.read_bytes()
+        self.build()
+        self.assertEqual(path.read_bytes(), original)
+        state = json.loads((self.root / "skills/.generated.json").read_text())
+        self.assertNotIn("workflow-local", state["packages"])
+        self.assertFalse(any(name.startswith("skills/workflow-local/") for name in state["files"]))
+        self.assertIn("workflow-local", (self.root / "skills/README.md").read_text())
+        self.assertIn("Local original", (self.root / "INVENTORY.md").read_text())
+        self.assertFalse((path.parent / "UPSTREAM.md").exists())
+        self.assertFalse((path.parent / "COLLECTION.md").exists())
+        path.write_text(path.read_text() + "\nAn original improvement.\n")
+        changed = path.read_bytes()
+        self.build("--check")
+        self.build()
+        self.assertEqual(path.read_bytes(), changed)
+        self.sources.pop()
+        self.save_sources()
+        self.build()
+        self.assertEqual(path.read_bytes(), changed)
+        self.assertNotIn("workflow-local", (self.root / "skills/README.md").read_text())
+
+    def test_local_only_inventory_builds_without_generating_originals(self):
+        self.local_original()
+        self.sources.pop(0)
+        self.save_sources()
+        self.build()
+        self.build("--check")
+        state = json.loads((self.root / "skills/.generated.json").read_text())
+        self.assertEqual(state["packages"], {})
+        self.assertEqual(state["files"], {})
+        self.assertIn("workflow-local", (self.root / "skills/README.md").read_text())
+
+    def test_switching_to_local_only_retires_imports_and_preserves_original(self):
+        self.build()
+        self.local_original()
+        path = self.root / "skills/workflow-local/SKILL.md"
+        original = path.read_bytes()
+        self.sources.pop(0)
+        self.save_sources()
+        self.build()
+        self.build("--check")
+        self.assertEqual(path.read_bytes(), original)
+        self.assertFalse((self.root / "skills/workflow-one").exists())
+
+    def test_local_original_companions_are_validated_and_available_to_imports(self):
+        record = self.local_original()
+        record["skills"][0]["requires"] = ["one"]
+        self.sources[0]["skills"][0]["requires"].append("local")
+        self.save_sources()
+        self.write("upstreams/example/skills/one/notes.md", "Consult /local and [its instructions](../local/SKILL.md).\n")
+        self.build()
+        notes = (self.root / "skills/workflow-one/notes.md").read_text()
+        self.assertIn("/workflow-local", notes)
+        self.assertIn("../workflow-local/SKILL.md", notes)
+        record["skills"][0]["requires"] = ["missing"]
+        self.save_sources()
+        self.assertIn("local requires missing", self.build(success=False).stderr)
+
+    def test_local_original_requires_local_metadata_and_a_portable_license(self):
+        record = self.local_original()
+        record["reviewed"] = REVIEWED
+        self.save_sources()
+        self.assertIn("reviewed: null", self.build(success=False).stderr)
+        record["reviewed"] = None
+        record["skills"][0]["exclude"] = ["notes.md"]
+        self.save_sources()
+        self.assertIn("exclude applies only", self.build(success=False).stderr)
+        record["skills"][0].pop("exclude")
+        record["license"]["file"] = "upstreams/example/LICENSE"
+        self.save_sources()
+        (self.root / "skills/workflow-local/LICENSE").unlink()
+        self.assertIn("LICENSE must carry", self.build(success=False).stderr)
+
+    def test_generated_package_cannot_be_reclassified_as_a_local_original(self):
+        self.build()
+        self.local_original("one")
+        self.sources.pop(0)
+        self.save_sources()
+        before = self.snapshot()
+        self.assertIn("cannot become a local original", self.build(success=False).stderr)
+        self.assertEqual(self.snapshot(), before)
+
 
 if __name__ == "__main__":
     unittest.main()

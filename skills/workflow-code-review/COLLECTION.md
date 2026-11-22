@@ -8,6 +8,7 @@ Use these names when the imported instructions refer to another selected skill:
 
 | Original name | Collection invocation |
 | --- | --- |
+| `ask-neon` | `/workflow-ask-neon` |
 | `babysit-pr` | `/t3-babysit-pr` |
 | `code-review` | `/workflow-code-review` |
 | `codebase-design` | `/workflow-codebase-design` |

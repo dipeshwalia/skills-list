@@ -10,6 +10,7 @@ These folders contain the actual installable packages. The tables below are gene
 
 | Invocation | Original skill | Purpose | Original source |
 | --- | --- | --- | --- |
+| [`/workflow-ask-neon`](workflow-ask-neon/SKILL.md) | `ask-neon` | Ask Gemini Neon with xhigh reasoning through Antigravity CLI. | [Dipesh Walia · original](https://github.com/dipeshwalia/skills-list/tree/HEAD/skills/workflow-ask-neon) |
 | [`/workflow-grill-with-docs`](workflow-grill-with-docs/SKILL.md) | `grill-with-docs` | Interview a design while building its domain documentation. | [Matt Pocock · original](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/grill-with-docs) |
 | [`/workflow-wayfinder`](workflow-wayfinder/SKILL.md) | `wayfinder` | Plan a large effort through linked decision tickets. | [Matt Pocock · original](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/wayfinder) |
 | [`/workflow-to-tickets`](workflow-to-tickets/SKILL.md) | `to-tickets` | Break a plan into implementation tickets and dependencies. | [Matt Pocock · original](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/to-tickets) |
@@ -61,6 +62,6 @@ These folders contain the actual installable packages. The tables below are gene
 
 ## Maintain the packages
 
-Edit the canonical skill under `upstreams/<source>/`, then run `python3 scripts/build-skills.py`. The builder preserves supporting resources and original-source notices, updates invocation names and selected sibling links, and includes a `COLLECTION.md` alias guide in each package. It refuses to overwrite manual changes in generated packages.
+For imported skills, edit the canonical skill under `upstreams/<source>/`, then run `python3 scripts/build-skills.py`. The builder preserves supporting resources and original-source notices, updates invocation names and selected sibling links, and includes a `COLLECTION.md` alias guide in each generated package. It refuses to overwrite manual changes in generated packages. Edit local originals directly in their `skills/<category>-<name>/` folder; their `local: true` records in `sources.json` keep them in the catalog without making their files generated.
 
 Run `python3 scripts/build-skills.py --check` to verify that the packages match the manifest and source copies. See [the inventory](../INVENTORY.md) for licenses and revisions, [the update workflow](../docs/upstreams.md) for customization, and [Skillshare setup](../docs/skillshare.md) for installation.

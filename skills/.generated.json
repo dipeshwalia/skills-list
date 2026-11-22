@@ -2,7 +2,7 @@
   "files": {
     "skills/t3-babysit-pr/COLLECTION.md": {
       "executable": false,
-      "sha256": "21c899b9f0a1fdaffe44e7ea284c4fc73cf3ddeefe1b0912848081ca0d5092ea"
+      "sha256": "13c97ca930082ac7671c76689d837c56cef5f326ebbafaba5c0506073ea46d5e"
     },
     "skills/t3-babysit-pr/LICENSE.upstream": {
       "executable": false,
@@ -22,7 +22,7 @@
     },
     "skills/t3-council/COLLECTION.md": {
       "executable": false,
-      "sha256": "a079bd277432d32ca26716a146b216b6f893f0615393a4a407bf9d53bafdc349"
+      "sha256": "f26885a7f58c14b8f0794b81a1473eb98e8b39e01f3702da3a4732c48c76be85"
     },
     "skills/t3-council/LICENSE.upstream": {
       "executable": false,
@@ -38,7 +38,7 @@
     },
     "skills/t3-file-pr/COLLECTION.md": {
       "executable": false,
-      "sha256": "7606478ff72f36084c732cb41dd6fc8aa45767b003abf92af0abd621431ce5af"
+      "sha256": "be42708ad347131ad07ba375cf38d4945278c7b56b77bd55f2bd7f40ea3e9ac8"
     },
     "skills/t3-file-pr/LICENSE.upstream": {
       "executable": false,
@@ -54,7 +54,7 @@
     },
     "skills/t3-full-send/COLLECTION.md": {
       "executable": false,
-      "sha256": "160d4e102d801e4b7b4dab9e1c318a93aa1fd07f979e3b00590b02b38c733f6f"
+      "sha256": "2fc26174089e3d2cdc69e8e95fda7381ee7afb060803f1d0537db034b452f463"
     },
     "skills/t3-full-send/LICENSE.upstream": {
       "executable": false,
@@ -74,7 +74,7 @@
     },
     "skills/t3-full-stop/COLLECTION.md": {
       "executable": false,
-      "sha256": "8febe49181b96302e88137c16b4e1b9d187ec5700384e21e1baec533a67b0c21"
+      "sha256": "13a9df8819b825e935cfac7d387c0293c87df3c5308c5402b58a82de84ad2a82"
     },
     "skills/t3-full-stop/LICENSE.upstream": {
       "executable": false,
@@ -94,7 +94,7 @@
     },
     "skills/t3-leaving-pr-comments/COLLECTION.md": {
       "executable": false,
-      "sha256": "1786ee956baba272a769d60c7944218d24b402ca05fbe4980a8bef5ce24928a7"
+      "sha256": "4c85d3cf7e235708cccb2c2da13067b5503b23243c633c986cb9a9d190ceebb5"
     },
     "skills/t3-leaving-pr-comments/LICENSE.upstream": {
       "executable": false,
@@ -114,7 +114,7 @@
     },
     "skills/t3-modernize/COLLECTION.md": {
       "executable": false,
-      "sha256": "3bff7a2ed111cfefc65e3fc20bb24735b229c8b7f58b8fadc5f527d8ac885c21"
+      "sha256": "0c839abcb0a4253368e5821f05406685622be9f6558330084ca84085aa2b2390"
     },
     "skills/t3-modernize/LICENSE.upstream": {
       "executable": false,
@@ -134,7 +134,7 @@
     },
     "skills/t3-sol-loop/COLLECTION.md": {
       "executable": false,
-      "sha256": "7bec4b4e67f3a56b431b94b34699a909f24951debe8cde00bfaec6f05673072f"
+      "sha256": "9ab89bf39f6bde9b6629d16121a2f622e79f429535d83b22cf89395fde6f2609"
     },
     "skills/t3-sol-loop/LICENSE.upstream": {
       "executable": false,
@@ -150,7 +150,7 @@
     },
     "skills/t3-takeover/COLLECTION.md": {
       "executable": false,
-      "sha256": "f50418d918726c28be05eb7ed1722f4ab506125ef7cfe566c25c4f32ddd9e14f"
+      "sha256": "2a695d6dd07616d266aa06a61bc09e259651be493613df896c1bb5296862c5ad"
     },
     "skills/t3-takeover/LICENSE.upstream": {
       "executable": false,
@@ -166,7 +166,7 @@
     },
     "skills/workflow-code-review/COLLECTION.md": {
       "executable": false,
-      "sha256": "454dcbcd292a0aa3f8e559f12a2a77a3424317d8d8a4d4bd476b88c409ca44eb"
+      "sha256": "e5b929d3e003350592f69d9a8a773e26073f4ae06bd0871165e802d12b914de4"
     },
     "skills/workflow-code-review/LICENSE.upstream": {
       "executable": false,
@@ -186,7 +186,7 @@
     },
     "skills/workflow-codebase-design/COLLECTION.md": {
       "executable": false,
-      "sha256": "59dc28c782b9f03152f8bc6f55760df5b48b33168cb046bb1486e3661eaf3d01"
+      "sha256": "279942990bb2d2066f3c35b1ab311f00f5e444950b5859df664a9f94e958ce7a"
     },
     "skills/workflow-codebase-design/DEEPENING.md": {
       "executable": false,
@@ -218,7 +218,7 @@
     },
     "skills/workflow-domain-modeling/COLLECTION.md": {
       "executable": false,
-      "sha256": "3040b29159cf8c8c3fe757ea5ed60259aa36f2654b6415c93c5603af0f0fafd7"
+      "sha256": "6f812dbbda0e36ceb63691bb0b09da5ef6e29597a015fd7585c551fda6c26682"
     },
     "skills/workflow-domain-modeling/GLOSSARY-FORMAT.md": {
       "executable": false,
@@ -242,7 +242,7 @@
     },
     "skills/workflow-dry-refactoring/COLLECTION.md": {
       "executable": false,
-      "sha256": "5c29b3038724b93dee158bb74f48b6682e9502fbc9ecc39cd93287f9be8b46d2"
+      "sha256": "0d804defba09eb451ff90e0631dd6fb28dc5ce182c2985d7923f6742ab22e45e"
     },
     "skills/workflow-dry-refactoring/LICENSE.upstream": {
       "executable": false,
@@ -258,7 +258,7 @@
     },
     "skills/workflow-grill-me/COLLECTION.md": {
       "executable": false,
-      "sha256": "e5eb4e81b1e837035fea841d4e6345074be4b4a445fd0dcef8afa622bf238950"
+      "sha256": "67b1b5e5d13ac7c0956c49146293a4abd9a6442280861b2c040e110888a60a54"
     },
     "skills/workflow-grill-me/LICENSE.upstream": {
       "executable": false,
@@ -278,7 +278,7 @@
     },
     "skills/workflow-grill-with-docs/COLLECTION.md": {
       "executable": false,
-      "sha256": "c8d808790d8064dca193d0c48635e1c194cf4f087d697bcd6e247c2ce77e8d90"
+      "sha256": "128df2adaf77d962a5598f346bd2b6d4595756c48ebe6eae106e1a2ff53db145"
     },
     "skills/workflow-grill-with-docs/LICENSE.upstream": {
       "executable": false,
@@ -298,7 +298,7 @@
     },
     "skills/workflow-grilling/COLLECTION.md": {
       "executable": false,
-      "sha256": "7df7c76fd659fb0c95fd176f8bd6c286596c67da334192624badc4c0730ddb19"
+      "sha256": "1b088b1a63a7041de8aed9740efc47eb8a6fa05706a33d89c01b27faa2d181a0"
     },
     "skills/workflow-grilling/LICENSE.upstream": {
       "executable": false,
@@ -318,7 +318,7 @@
     },
     "skills/workflow-handoff/COLLECTION.md": {
       "executable": false,
-      "sha256": "9b6d8d836e57376b37a746f2589c831709d218b11dcd8ee4ea4027e981cddb46"
+      "sha256": "bb614a3d77d225ca3da29b9c84e235342d433b1252fe2a0196fa5dd319d2cb5c"
     },
     "skills/workflow-handoff/LICENSE.upstream": {
       "executable": false,
@@ -338,7 +338,7 @@
     },
     "skills/workflow-how/COLLECTION.md": {
       "executable": false,
-      "sha256": "496bdb4e9c9a8c1cada024718e4fa8b259291973fe2fc051313538a5dbf38d96"
+      "sha256": "4c67be24c81446417a6a090bdf293792a61ea1ff1d6e4bd59b5a19b0dc55e212"
     },
     "skills/workflow-how/LICENSE.upstream": {
       "executable": false,
@@ -362,7 +362,7 @@
     },
     "skills/workflow-implement-spec/COLLECTION.md": {
       "executable": false,
-      "sha256": "dc16aae61b32adc6e79ffbc56153b8b012629db8cb14e597f02c9010f7258252"
+      "sha256": "e2b5fcae457493c609398838bf9c92b8680ab0cee42e668aca187a32a158b16f"
     },
     "skills/workflow-implement-spec/LICENSE.upstream": {
       "executable": false,
@@ -382,7 +382,7 @@
     },
     "skills/workflow-improve/COLLECTION.md": {
       "executable": false,
-      "sha256": "45bd433335f0a257c9ad50fe7b10f965bb95a5c88487935c7ca5f1538344ee3e"
+      "sha256": "48142826f0222ad64a8bae703a26bc3044e52d3c5293790c18aed0934b5485c8"
     },
     "skills/workflow-improve/LICENSE.upstream": {
       "executable": false,
@@ -410,7 +410,7 @@
     },
     "skills/workflow-jscpd/COLLECTION.md": {
       "executable": false,
-      "sha256": "18e8444c0f20b6795df06b598317bfa5d83d40cbc69bf4521eb4fcc62209ad8a"
+      "sha256": "763d1944c53e6e6912e72588646ac6f8545de14fad0b35e4b65469e9933f4370"
     },
     "skills/workflow-jscpd/LICENSE.upstream": {
       "executable": false,
@@ -426,7 +426,7 @@
     },
     "skills/workflow-prototype/COLLECTION.md": {
       "executable": false,
-      "sha256": "5acbbf680dc89b8a77a9818c19b0f13c9b81d779c9a5cffe59cc02f009a664ce"
+      "sha256": "8090d37913c0ae50757e0c8699ef113f2ed3317bb62cb81cf730ffd0197ebd5d"
     },
     "skills/workflow-prototype/LICENSE.upstream": {
       "executable": false,
@@ -454,7 +454,7 @@
     },
     "skills/workflow-research/COLLECTION.md": {
       "executable": false,
-      "sha256": "2febe14c5210fee695a6f6c03d552d8abdef31ba056b5960276a1e8cedadb641"
+      "sha256": "8607ddee41ec6a43c8d430a3564040312a26d1fd62e62fc38188c39c7d8c5f12"
     },
     "skills/workflow-research/LICENSE.upstream": {
       "executable": false,
@@ -474,7 +474,7 @@
     },
     "skills/workflow-setup-matt-pocock-skills/COLLECTION.md": {
       "executable": false,
-      "sha256": "3922bd08b52e5c0e244362d4b5ae73548fb76ea8d9f43161e527969f58304913"
+      "sha256": "9e1a6f7cebdf8b35159f03f20b901dc5b187115d67875975d73f4e701708a98e"
     },
     "skills/workflow-setup-matt-pocock-skills/LICENSE.upstream": {
       "executable": false,
@@ -514,7 +514,7 @@
     },
     "skills/workflow-statechart/COLLECTION.md": {
       "executable": false,
-      "sha256": "6b72c32dac49d8fc9517565f471770747a990dfc3ca320876c5f1d184d2d3696"
+      "sha256": "1b4f9990104838423a2232547351fb17ac36e50ccb349fc4c6f0fd5eb150b06a"
     },
     "skills/workflow-statechart/LICENSE.upstream": {
       "executable": false,
@@ -650,7 +650,7 @@
     },
     "skills/workflow-tdd/COLLECTION.md": {
       "executable": false,
-      "sha256": "b9f49bd3db9f1d82b1d066e0dd0765e76990fb270a40a0a2e8730ea202e38b14"
+      "sha256": "d5171492df8046ead9ccbd281acdaa34b75743b5833676b2ee4caa10ce0ccdcc"
     },
     "skills/workflow-tdd/LICENSE.upstream": {
       "executable": false,
@@ -678,7 +678,7 @@
     },
     "skills/workflow-teach/COLLECTION.md": {
       "executable": false,
-      "sha256": "32b1f0c1f9a29803d85b008c88eb6e0b821836b09aa9fd83bb22f5cd2cefb676"
+      "sha256": "2992780830288e8a086d43c02c31e90df0f0b2ed26b764d2966a9d4930e1adb8"
     },
     "skills/workflow-teach/GLOSSARY-FORMAT.md": {
       "executable": false,
@@ -714,7 +714,7 @@
     },
     "skills/workflow-to-questionnaire/COLLECTION.md": {
       "executable": false,
-      "sha256": "101fbb4e11a3b5976497c4ad2a33a94894dcc1e00cf07987ade780db84a277fe"
+      "sha256": "2efbfc041c2bdf5c5593ddf9f2643faab348a349c83083a08771620e98464759"
     },
     "skills/workflow-to-questionnaire/LICENSE.upstream": {
       "executable": false,
@@ -734,7 +734,7 @@
     },
     "skills/workflow-to-spec/COLLECTION.md": {
       "executable": false,
-      "sha256": "9cd7b5f9df5a3baa72e3cddf8745c3fd7767b760108ee0de0b31ae914e9e49d0"
+      "sha256": "a956c777ce701b56e5ab6be41baeb654e82d58f7707830ba6fbbfbe76d2634e1"
     },
     "skills/workflow-to-spec/LICENSE.upstream": {
       "executable": false,
@@ -754,7 +754,7 @@
     },
     "skills/workflow-to-tickets/COLLECTION.md": {
       "executable": false,
-      "sha256": "fd54affe76780d36dd42910cbd10fa4dbecb80476ea81ac56e1e789592c45303"
+      "sha256": "066626cc01bd9522ab8490a146ecc09be84f061e76cabbbac68fd862cf1c859d"
     },
     "skills/workflow-to-tickets/LICENSE.upstream": {
       "executable": false,
@@ -774,7 +774,7 @@
     },
     "skills/workflow-wayfinder/COLLECTION.md": {
       "executable": false,
-      "sha256": "737b901c74112b96c94fa3676f21f9ea59e507f7689120898c179c18e3e59e62"
+      "sha256": "b489a2489a11a95b618178c337c862697e4ffc6d7373fdee4a05ceb15f54a666"
     },
     "skills/workflow-wayfinder/LICENSE.upstream": {
       "executable": false,
@@ -794,7 +794,7 @@
     },
     "skills/workflow-writing-for-agents/COLLECTION.md": {
       "executable": false,
-      "sha256": "0ffcc644d8ff85ebc45f1920099af5c48c8e4a550f5443024ce696edf7f36d9f"
+      "sha256": "cee5fe32c5dbf2762b35d244c6d80137ac071c5c849a761d23d5aee11f15e5ba"
     },
     "skills/workflow-writing-for-agents/LICENSE.upstream": {
       "executable": false,
@@ -818,7 +818,7 @@
     },
     "skills/writing-i-have-adhd/COLLECTION.md": {
       "executable": false,
-      "sha256": "926bf739b37dcaa99a29cddc88bc4ac2848491cb4c1b0045d8b59bf5ea27c55d"
+      "sha256": "80c49d570abd7455651d80d1c4941d2724bc32551e1e0aefcede65182c139c50"
     },
     "skills/writing-i-have-adhd/LICENSE.upstream": {
       "executable": false,
@@ -842,7 +842,7 @@
     },
     "skills/writing-simple-english/COLLECTION.md": {
       "executable": false,
-      "sha256": "71dda4e5526cca9bde6139882947eca63862e92ba6a219a748b0450a308c2376"
+      "sha256": "59be11b47f240aed7100808b6b9130dc921b64b0dc3319dd4984faa1093f0dec"
     },
     "skills/writing-simple-english/LICENSE.upstream": {
       "executable": false,
@@ -874,7 +874,7 @@
     },
     "skills/writing-technical-writing/COLLECTION.md": {
       "executable": false,
-      "sha256": "a957e34a8fb2c9c7a2312b674f66c73b7d3ebcce33362e7ee76ca536663a3b95"
+      "sha256": "e51515b01bc1337490a854d403db572fce5033b88bed9676accae205d73d9b73"
     },
     "skills/writing-technical-writing/LICENSE.upstream": {
       "executable": false,
@@ -890,7 +890,7 @@
     },
     "skills/writing-unslop/COLLECTION.md": {
       "executable": false,
-      "sha256": "ebc7953f1bcf4b47c629ce690f79488936971775603d46ae1f0f442a9765a756"
+      "sha256": "1d4d265a0a6e748aaa5f309b3b62afef4995a4bfc47359d2749aa6cf865f9d2b"
     },
     "skills/writing-unslop/LICENSE.upstream": {
       "executable": false,

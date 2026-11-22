@@ -1,5 +1,19 @@
 [
   {
+    "source": "dipeshwalia/skills-list",
+    "local": true,
+    "author": "Dipesh Walia",
+    "license": { "file": "skills/workflow-ask-neon/LICENSE", "name": "MIT", "copyright": "2026 Dipesh Walia" },
+    "reviewed": null,
+    "category": "Workflow",
+    "skills": [
+      {
+        "name": "ask-neon",
+        "purpose": "Ask Gemini Neon with xhigh reasoning through Antigravity CLI."
+      }
+    ]
+  },
+  {
     "source": "mattpocock/skills",
     "author": "Matt Pocock",
     "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Matt Pocock" },

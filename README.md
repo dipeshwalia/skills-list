@@ -47,6 +47,8 @@ python3 scripts/build-skills.py --check
 
 The builder keeps references, scripts, invocation metadata, credits, and licenses. It updates package names and selected sibling links. It refuses to overwrite manual edits in generated packages; make customizations in the canonical source instead.
 
+Author original skills directly in `skills/<category>-<name>/`. Record them in `sources.json` with `local: true`, `reviewed: null`, and the unprefixed name; include a `LICENSE` in each skill folder. The builder validates their credits and companions and includes them in the catalogs without rewriting their files. [Ask Neon](skills/workflow-ask-neon/SKILL.md) is an original skill for consulting Gemini Neon through Antigravity CLI.
+
 ## Keep your copies current
 
 Commit local work, then preview and merge updates from the configured parent repositories:
@@ -65,7 +67,7 @@ See [the upstream workflow](docs/upstreams.md) for adding sources and resolving 
 ```text
 sources.json                    Inventory records: selection, credits, reviews, companions
 sources.ts                      Typed interfaces for the inventory records
-skills/<category>-<name>/       Generated installable packages
+skills/<category>-<name>/       Generated packages and editable original skills
 skills/README.md                Categorized catalog
 upstreams/<source>/             Editable canonical copies and merge history
 upstreams.json                  Parent repository URLs and refs
@@ -90,6 +92,7 @@ Every selected skill is listed here, including supporting dependencies. Names us
 
 | Original author | Original project | Included skills | License |
 | --- | --- | --- | --- |
+| Dipesh Walia | [dipeshwalia/skills-list](https://github.com/dipeshwalia/skills-list) | [ask-neon](skills/workflow-ask-neon/SKILL.md) | [MIT](skills/workflow-ask-neon/LICENSE) |
 | Matt Pocock | [mattpocock/skills](https://github.com/mattpocock/skills) | [code-review](skills/workflow-code-review/SKILL.md), [codebase-design](skills/workflow-codebase-design/SKILL.md), [domain-modeling](skills/workflow-domain-modeling/SKILL.md), [grill-me](skills/workflow-grill-me/SKILL.md), [grill-with-docs](skills/workflow-grill-with-docs/SKILL.md), [grilling](skills/workflow-grilling/SKILL.md), [handoff](skills/workflow-handoff/SKILL.md), [implement-spec](skills/workflow-implement-spec/SKILL.md), [prototype](skills/workflow-prototype/SKILL.md), [research](skills/workflow-research/SKILL.md), [setup-matt-pocock-skills](skills/workflow-setup-matt-pocock-skills/SKILL.md), [tdd](skills/workflow-tdd/SKILL.md), [teach](skills/workflow-teach/SKILL.md), [to-questionnaire](skills/workflow-to-questionnaire/SKILL.md), [to-spec](skills/workflow-to-spec/SKILL.md), [to-tickets](skills/workflow-to-tickets/SKILL.md), [wayfinder](skills/workflow-wayfinder/SKILL.md), [writing-for-agents](skills/workflow-writing-for-agents/SKILL.md) | [MIT](upstreams/mattpocock/LICENSE) |
 | Lauren Tan | [pstack in cursor/plugins](https://github.com/cursor/plugins/tree/3dbd22ff12742fb28c9700b9760baa29ed41dc13/pstack) | [how](skills/workflow-how/SKILL.md), [statechart](skills/workflow-statechart/SKILL.md), [technical-writing](skills/writing-technical-writing/SKILL.md), [unslop](skills/writing-unslop/SKILL.md) | [MIT](upstreams/cursor-plugins/pstack/LICENSE) |
 | Ayoub Ghriss | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | [i-have-adhd](skills/writing-i-have-adhd/SKILL.md) | [MIT](upstreams/i-have-adhd/LICENSE) |

@@ -1,7 +1,7 @@
 """Resolve the skill inventory: selection, credits, reviewed revisions, and companions.
 
 `resolve_inventory(root)` is the one place that reads sources.json and checks it against the
-imported upstreams. Packaging and the generated attribution tables both use its result.
+imported upstreams and local originals. Packaging and the generated attribution tables both use its result.
 """
 
 from dataclasses import dataclass
@@ -19,7 +19,7 @@ NAME_FIELD = re.compile(r"^name:\s*(['\"]?)([a-z0-9-]+)\1\s*(?:#.*)?$", re.M)
 REVISION = re.compile(r"[0-9a-f]{40}")
 REQUIRED_FILES = {"SKILL.md", "UPSTREAM.md", "LICENSE.upstream"}
 ROLES = ("requested", "supporting")
-PROJECT_FIELDS = {"source", "author", "license", "reviewed", "category", "skills"}
+PROJECT_FIELDS = {"source", "author", "license", "reviewed", "category", "skills", "local"}
 SKILL_FIELDS = {"name", "purpose", "category", "role", "requires", "recommends", "exclude"}
 LICENSE_FIELDS = {"file", "name", "copyright"}
 
@@ -36,8 +36,8 @@ class Project:
     license_name: str
     copyright: str
     license_file: Path
-    reviewed: str
-    upstream: str
+    reviewed: str | None
+    upstream: str | None
 
 
 @dataclass(frozen=True)
@@ -149,16 +149,19 @@ def _relative(value, what):
 
 
 def _project(root, record, repositories, helper):
-    if not isinstance(record, dict) or set(record) - PROJECT_FIELDS or not PROJECT_FIELDS - {"category"} <= set(record):
-        raise ValueError("Each sources.json record needs source, author, license, reviewed, and skills; category is optional.")
+    if not isinstance(record, dict) or set(record) - PROJECT_FIELDS or not PROJECT_FIELDS - {"category", "local"} <= set(record):
+        raise ValueError("Each sources.json record needs source, author, license, reviewed, and skills; category and local are optional.")
     source = _text(record["source"], "source")
     parts = source.split("/")
     if len(parts) < 2 or any(not part or part in (".", "..") or "\\" in part for part in parts):
         raise ValueError(f"Invalid source: {source!r}")
-    upstream = repositories.get("/".join(parts[:2]).lower())
-    if upstream is None:
+    local = record.get("local", False)
+    if not isinstance(local, bool) or (local and (len(parts) != 2 or record["reviewed"] is not None)):
+        raise ValueError(f"{source}: local must be a boolean; local originals need an owner/repo source and reviewed: null.")
+    upstream = None if local else repositories.get("/".join(parts[:2]).lower())
+    if upstream is None and not local:
         raise ValueError(f"{source}: configure and import this GitHub repository in upstreams.json first.")
-    base = root / "upstreams" / upstream
+    base = root if local else root / "upstreams" / upstream
     home, folder = base.joinpath(*parts[2:]), resolve_source_path(base, parts)
     if not all(path.resolve().is_relative_to(base.resolve()) for path in (home, folder)):
         raise ValueError(f"Source escapes its upstream repository: {source}")
@@ -168,6 +171,8 @@ def _project(root, record, repositories, helper):
     if not isinstance(license, dict) or set(license) != LICENSE_FIELDS:
         raise ValueError(f"{source}: license needs file, name, and copyright.")
     license_file = home / _relative(license["file"], f"{source}: license file")
+    if not license_file.resolve().is_relative_to(base.resolve()):
+        raise ValueError(f"{source}: license file escapes its source directory.")
     license_name = _text(license["name"], f"{source}: license name")
     holder = _text(license["copyright"], f"{source}: license copyright")
     if not license_file.is_file():
@@ -177,10 +182,10 @@ def _project(root, record, repositories, helper):
         raise ValueError(f"{source}: {license_file.relative_to(root)} does not state {license_name} and copyright {holder!r}.")
 
     reviewed = record["reviewed"]
-    if not isinstance(reviewed, str) or not REVISION.fullmatch(reviewed):
+    if not local and (not isinstance(reviewed, str) or not REVISION.fullmatch(reviewed)):
         raise ValueError(f"{source}: reviewed must be a full 40-character commit SHA.")
-    imported = helper.imported_revision(upstream)
-    if imported is None:
+    imported = None if local else helper.imported_revision(upstream)
+    if not local and imported is None:
         raise ValueError(f"upstreams/{upstream}: no Git subtree history found. Build from a Git clone that includes the import.")
     if imported != reviewed:
         raise ValueError(
@@ -208,15 +213,16 @@ def _skill(root, entry, record, project, found, problems):
     name = entry["name"]
     if not valid_name(name):
         raise ValueError(f"{project.source}: invalid skill name {name!r}.")
-    if name in problems:
-        raise ValueError(problems[name])
-    if name not in found:
-        raise ValueError(f"{project.source}: skill {name!r} was not found.")
     category = _text(entry.get("category", record.get("category")), f"{name}: category")
     prefix = re.sub(r"[\s_]+", "-", category.lower())
     alias = f"{prefix}-{name}"
     if not valid_name(prefix) or not valid_name(alias):
         raise ValueError(f"{name}: invalid category {category!r}.")
+    lookup = alias if project.upstream is None else name
+    if lookup in problems:
+        raise ValueError(problems[lookup])
+    if lookup not in found:
+        raise ValueError(f"{project.source}: skill {lookup!r} was not found.")
     role = entry.get("role", "requested")
     if role not in ROLES:
         raise ValueError(f"{name}: role must be requested or supporting.")
@@ -232,8 +238,17 @@ def _skill(root, entry, record, project, found, problems):
     if any(item.parts[0] in REQUIRED_FILES for item in excludes):
         raise ValueError(f"{name}: exclude cannot remove SKILL.md, UPSTREAM.md, or LICENSE.upstream.")
 
-    package = found[name]
+    package = found[lookup]
     folder = package.relative_to(root)
+    if project.upstream is None:
+        if package != root / "skills" / alias:
+            raise ValueError(f"{name}: local originals must live directly in skills/{alias}/.")
+        if excludes:
+            raise ValueError(f"{name}: local originals are installed as authored; exclude applies only to imported skills.")
+        if not (package / "LICENSE").is_file() or (package / "LICENSE").read_bytes() != (root / project.license_file).read_bytes():
+            raise ValueError(f"{folder}/LICENSE must carry the project's original license verbatim.")
+        url = f"https://github.com/{project.repository}/tree/HEAD/{folder.as_posix()}"
+        return Skill(name, alias, category, role, purpose, requires, recommends, excludes, package, url, project)
     for required in REQUIRED_FILES:
         if not (package / required).is_file():
             raise ValueError(f"{folder}: missing {required}; record source credits before building.")
@@ -341,7 +356,7 @@ def catalog_sections(inventory):
                 f"[{project.title}]({project.url})",
                 project.author,
                 f"[{project.license_name} — {project.copyright}]({project.license_file.as_posix()})",
-                f"[`{project.reviewed}`](https://github.com/{project.repository}/commit/{project.reviewed})",
+                f"[`{project.reviewed}`](https://github.com/{project.repository}/commit/{project.reviewed})" if project.upstream else "Local original",
             )
             for project in inventory.projects
         ],

@@ -12,6 +12,8 @@ import shutil
 import sys
 
 
+# Loading the inventory must not create cache files during --check or a rejected build.
+sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "skills/.generated.json"
 # Files that operating systems and tools create on their own; Git ignores them.
@@ -60,6 +62,8 @@ def desired_files(inventory):
     rows = "\n".join(f"| `{name}` | `/{alias}` |" for name, alias in sorted(aliases.items()))
     files = {}
     for skill in inventory.skills:
+        if skill.project.upstream is None:
+            continue  # Local originals are authored and installed in place, never generated.
         source, alias, excludes = skill.package, skill.alias, skill.excludes
         destination = Path("skills") / alias
         if (source / "COLLECTION.md").exists():
@@ -182,6 +186,7 @@ def publish_packages(files, previous, state):
     for leftover in (staging, retired):
         if leftover.exists():
             shutil.rmtree(leftover)
+    staging.mkdir(parents=True)
     for relative, (data, mode) in files.items():
         path = staging / Path(relative).relative_to("skills")
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -205,15 +210,19 @@ def build(check=False):
     files = desired_files(inventory)
     catalogs = render_catalogs(inventory_lib.catalog_sections(inventory))
     previous = read_state()
-    verify_managed(previous, [skill.alias for skill in inventory.skills])
+    generated = [skill for skill in inventory.skills if skill.project.upstream is not None]
+    for skill in inventory.skills:
+        if skill.project.upstream is None and skill.alias in previous["packages"]:
+            raise ValueError(f"{skill.alias}: a generated package cannot become a local original in place; choose a new name.")
+    verify_managed(previous, [skill.alias for skill in generated])
     state = {
         "version": 1,
-        "packages": {skill.alias: skill.package.relative_to(ROOT).as_posix() for skill in inventory.skills},
+        "packages": {skill.alias: skill.package.relative_to(ROOT).as_posix() for skill in generated},
         "files": {path: fingerprint(data, mode) for path, (data, mode) in sorted(files.items())},
     }
     packages_current = previous == state and STATE.is_file()
     stale = sorted(path for path, text in catalogs.items() if (ROOT / path).read_text() != text)
-    count = len(inventory.skills)
+    count = len(generated)
     if check:
         if not packages_current:
             raise ValueError("Generated skills are stale. Run python3 scripts/build-skills.py.")

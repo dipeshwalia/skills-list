@@ -4,12 +4,14 @@ import manifest from './sources.json' with { type: 'json' }
 export interface Source {
   /** Project in owner/repo or owner/repo/sub/path form. */
   source: string
+  /** Original skills authored directly in skills/<category>-<name>/, without an upstream import. */
+  local?: boolean
   /** Original author credited for every skill in this project. */
   author: string
   /** License file (relative to the project), license name, and copyright holder as the file states them. */
   license: { file: string; name: string; copyright: string }
-  /** Upstream commit whose changes and provenance were reviewed. The builder publishes nothing newer. */
-  reviewed: string
+  /** Reviewed upstream commit, or null for local originals whose history lives in this repository. */
+  reviewed: string | null
   /** Default category for the skills below. Workflow becomes the /workflow-<skill-name> prefix. */
   category?: string
   skills: SkillRecord[]

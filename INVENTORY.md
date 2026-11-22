@@ -8,6 +8,7 @@ This collection curates editable upstream copies and publishes category-prefixed
 
 | Source | Original author | License and copyright | Reviewed upstream revision |
 | --- | --- | --- | --- |
+| [dipeshwalia/skills-list](https://github.com/dipeshwalia/skills-list) | Dipesh Walia | [MIT — 2026 Dipesh Walia](skills/workflow-ask-neon/LICENSE) | Local original |
 | [mattpocock/skills](https://github.com/mattpocock/skills) | Matt Pocock | [MIT — 2026 Matt Pocock](upstreams/mattpocock/LICENSE) | [`5863806dd4e15c63174bee4e7515a4256792ecfa`](https://github.com/mattpocock/skills/commit/5863806dd4e15c63174bee4e7515a4256792ecfa) |
 | [pstack in cursor/plugins](https://github.com/cursor/plugins/tree/3dbd22ff12742fb28c9700b9760baa29ed41dc13/pstack) | Lauren Tan | [MIT — 2026 Lauren Tan](upstreams/cursor-plugins/pstack/LICENSE) | [`3dbd22ff12742fb28c9700b9760baa29ed41dc13`](https://github.com/cursor/plugins/commit/3dbd22ff12742fb28c9700b9760baa29ed41dc13) |
 | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | Ayoub Ghriss | [MIT — 2026 Ayoub Ghriss](upstreams/i-have-adhd/LICENSE) | [`1ecea1993b7fce257ffbd686c070948b5e07eda6`](https://github.com/ayghri/i-have-adhd/commit/1ecea1993b7fce257ffbd686c070948b5e07eda6) |
@@ -26,6 +27,7 @@ The source repositories remain Git subtrees so upstream updates can merge with l
 
 | Category | Invocation / original skill | Purpose | Original author and source | Package |
 | --- | --- | --- | --- | --- |
+| Workflow | `/workflow-ask-neon` / `ask-neon` | Ask Gemini Neon with xhigh reasoning through Antigravity CLI. | [Dipesh Walia · original](https://github.com/dipeshwalia/skills-list/tree/HEAD/skills/workflow-ask-neon) | [SKILL.md](skills/workflow-ask-neon/SKILL.md) |
 | Workflow | `/workflow-grill-with-docs` / `grill-with-docs` | Interview a design while building its domain documentation. | [Matt Pocock · original](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/grill-with-docs) | [SKILL.md](skills/workflow-grill-with-docs/SKILL.md) |
 | Workflow | `/workflow-wayfinder` / `wayfinder` | Plan a large effort through linked decision tickets. | [Matt Pocock · original](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/wayfinder) | [SKILL.md](skills/workflow-wayfinder/SKILL.md) |
 | Workflow | `/workflow-to-tickets` / `to-tickets` | Break a plan into implementation tickets and dependencies. | [Matt Pocock · original](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/to-tickets) | [SKILL.md](skills/workflow-to-tickets/SKILL.md) |
