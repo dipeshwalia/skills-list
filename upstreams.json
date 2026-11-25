@@ -26,5 +26,9 @@
   "tstack": {
     "repository": "https://github.com/t3dotgg/tstack.git",
     "ref": "main"
+  },
+  "stately": {
+    "repository": "https://github.com/statelyai/skills.git",
+    "ref": "main"
   }
 }
