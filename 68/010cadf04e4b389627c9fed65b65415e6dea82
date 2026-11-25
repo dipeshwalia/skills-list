@@ -1,0 +1,147 @@
+skills/workflow-statechart/scripts/run.ts
+  s_9967518b799cec::t_228574ebee7d8b 11,58,61,71,85,137,140,165,223-228,240-247,293-294,314-328
+upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 3,6
+skills/workflow-statechart/SKILL.md
+  s_9967518b799cec::t_228574ebee7d8b 21
+skills/workflow-wayfinder/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/workflow-how/SKILL.md
+  s_9967518b799cec::t_228574ebee7d8b 11,15,17,19,21,23,25
+skills/writing-technical-writing/SKILL.md
+  s_9967518b799cec::t_228574ebee7d8b 11,13-17,21-23,27,29-32,36-42,44,50-53,58-64
+upstreams/mattpocock/skills/engineering/code-review/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+skills/workflow-research/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+upstreams/mattpocock/skills/engineering/research/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+skills/workflow-jscpd/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 5-6
+skills/workflow-domain-modeling/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/workflow-setup-matt-pocock-skills/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+upstreams/mattpocock/skills/productivity/to-questionnaire/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 5-6
+skills/workflow-tdd/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/README.md
+  s_9967518b799cec::t_228574ebee7d8b 14-35,46-47
+upstreams/mattpocock/skills/productivity/grill-me/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 5-6
+upstreams/mattpocock/skills/engineering/prototype/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+skills/workflow-handoff/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 5-6
+upstreams/mattpocock/skills/engineering/codebase-design/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+skills/workflow-statechart/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 3,6
+skills/workflow-codebase-design/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/workflow-dry-refactoring/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 5-6
+skills/workflow-statechart/scripts/frontends/dot.ts
+  s_9967518b799cec::t_228574ebee7d8b 38-41
+skills/workflow-to-tickets/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/workflow-to-spec/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/workflow-prototype/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/workflow-statechart/scripts/kill.ts
+  s_9967518b799cec::t_228574ebee7d8b 1-15
+skills/writing-unslop/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 3,6
+upstreams/mattpocock/skills/engineering/domain-modeling/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+upstreams/jscpd/skills/jscpd/SKILL.md
+  s_9967518b799cec::t_228574ebee7d8b 238
+upstreams/mattpocock/skills/productivity/handoff/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 5-6
+skills/workflow-writing-for-agents/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 5-6
+skills/workflow-code-review/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/workflow-to-questionnaire/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 5-6
+upstreams/mattpocock/skills/engineering/tdd/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+upstreams/jscpd/skills/jscpd/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 5-6
+upstreams/mattpocock/skills/engineering/setup-matt-pocock-skills/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+README.md
+  s_9967518b799cec::t_228574ebee7d8b 97
+skills/workflow-teach/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 5-6
+skills/workflow-grill-with-docs/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+upstreams/mattpocock/skills/engineering/to-tickets/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+INVENTORY.md
+  s_9967518b799cec::t_228574ebee7d8b 12-13,15,32-49,51,79-83
+skills/writing-technical-writing/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 3,6
+sources.json
+  s_9967518b799cec::t_228574ebee7d8b 20,93,134
+skills/workflow-statechart/scripts/backends/mermaid.ts
+  s_9967518b799cec::t_228574ebee7d8b 96-141,170-172,186-188,208
+upstreams/mattpocock/skills/productivity/teach/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 5-6
+upstreams/mattpocock/skills/engineering/to-spec/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+upstreams/jscpd/skills/dry-refactoring/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 5-6
+upstreams/mattpocock/skills/engineering/grill-with-docs/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+upstreams/cursor-plugins/pstack/skills/technical-writing/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 3,6
+upstreams/mattpocock/skills/productivity/writing-for-agents/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 5-6
+skills/workflow-how/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 3,6,10
+upstreams/cursor-plugins/pstack/skills/statechart/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 3,6
+upstreams/mattpocock/skills/productivity/grilling/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+skills/workflow-grill-me/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 5-6
+skills/writing-unslop/SKILL.md
+  s_9967518b799cec::t_228574ebee7d8b 14-41
+upstreams/cursor-plugins/pstack/skills/unslop/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 3,6
+upstreams/mattpocock/skills/engineering/wayfinder/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+skills/workflow-statechart/scripts/janitor.ts
+  s_9967518b799cec::t_228574ebee7d8b 1-13
+skills/workflow-jscpd/SKILL.md
+  s_9967518b799cec::t_228574ebee7d8b 240
+skills/workflow-statechart/scripts/statechart.ts
+  s_9967518b799cec::t_228574ebee7d8b 7-8,114,118-119,122-123,125-128,131-133
+skills/workflow-implement-spec/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+upstreams/mattpocock/skills/engineering/implement-spec/UPSTREAM.md
+  s_9967518b799cec::t_ea85525fe8d69c 6
+skills/workflow-grilling/UPSTREAM.md
+  s_9967518b799cec::t_228574ebee7d8b 6
+skills/.generated.json
+  s_9967518b799cec::t_6df73ad6594936 181,209,237,257,273,293,313,333,349,353,369,413,417,441,461,481,565,569,581,597,631-638,681,689,1025,1069,1089,1109,1129,1149,1173,1317,1321,1333,1337
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "68010cadf04e4b389627c9fed65b65415e6dea82",
+  "prompts": {},
+  "sessions": {
+    "s_9967518b799cec": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a2107b-f5f9-7a32-b07c-e3bcffc37db3",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
