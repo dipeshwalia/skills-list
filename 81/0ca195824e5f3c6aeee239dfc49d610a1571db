@@ -1,0 +1,19 @@
+upstreams.json
+  s_9967518b799cec::t_a7466531edd02a 29-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "810ca195824e5f3c6aeee239dfc49d610a1571db",
+  "prompts": {},
+  "sessions": {
+    "s_9967518b799cec": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a2107b-f5f9-7a32-b07c-e3bcffc37db3",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
