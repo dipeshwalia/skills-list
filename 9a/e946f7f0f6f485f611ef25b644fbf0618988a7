@@ -1,0 +1,342 @@
+skills/workflow-stately/references/render.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-160
+skills/workflow-xstate-v5/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-15
+skills/workflow-statechart/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/tlc-import.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-212
+skills/workflow-stately/scripts/engine/janitor.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-12
+skills/workflow-stately/scripts/engine/passes/annotate.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-128
+skills/workflow-stately/scripts/native-check.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-1621
+skills/workflow-dry-refactoring/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+upstreams/stately/skills/stately/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-stately/references/verification-pairing.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-41
+skills/t3-takeover/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-handoff/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-research/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/passes/paths.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-60
+skills/workflow-stately/references/state-bugs.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-249
+skills/workflow-stately/scripts/select-view.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-102
+skills/workflow-stately/scripts/diagnostics.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-13
+skills/workflow-xstate-v5/evals/extract_and_typecheck.py
+  s_9967518b799cec::t_3d26e1d1031b11 1-328
+skills/workflow-xstate-v5/references/examples.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-473
+skills/workflow-stately/scripts/engine/package.json
+  s_9967518b799cec::t_3d26e1d1031b11 1
+upstreams/stately/skills/xstate-v5/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/writing-unslop/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+upstreams/stately/skills/state-management/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-11
+skills/writing-readme/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-stately/scripts/engine/passes/label.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-269
+skills/writing-readme/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-15
+skills/workflow-stately/scripts/engine/frontends/spec.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-115
+skills/README.md
+  s_9967518b799cec::t_3d26e1d1031b11 37-40,50
+skills/workflow-stately/scripts/engine/ir.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-548
+skills/workflow-stately/scripts/native-conform.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-386
+skills/workflow-xstate-v5/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/workflow-stately/scripts/check-janitor.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-57
+skills/workflow-xstate-v6/SKILL.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-83
+skills/t3-file-pr/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-xstate-v5/evals/evals.json
+  s_9967518b799cec::t_3d26e1d1031b11 1-90
+skills/workflow-implement-spec/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/passes/reach.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-135
+skills/workflow-stately/scripts/engine/backends/mermaid.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-249
+skills/workflow-stately/scripts/check-evidence.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-123
+skills/workflow-state-management/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/t3-leaving-pr-comments/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-state-management/references/redux.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-66
+skills/workflow-stately/scripts/process-control.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-237
+skills/workflow-xstate-v5/references/v4-to-v5-quick-ref.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-227
+skills/workflow-xstate-v6/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-15
+skills/writing-readme/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/workflow-stately/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-improve/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/backends/report.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-177
+skills/workflow-stately/scripts/pstack-result.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-2
+skills/workflow-stately/references/native-checking.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-435
+skills/workflow-stately/scripts/state-leads.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-448
+skills/workflow-stately/scripts/engine/backends/plain-text.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-72
+skills/workflow-xstate-v5/references/observables-and-inspection.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-113
+skills/workflow-stately/scripts/engine/frontends/config.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-276
+skills/workflow-xstate-v5/references/advanced-patterns.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-258
+INVENTORY.md
+  s_9967518b799cec::t_3d26e1d1031b11 19,63-67,113-115
+  s_9967518b799cec::t_89940db4f9877b 130
+skills/workflow-stately/references/compatibility.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-131
+skills/workflow-stately/scripts/run-check.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-702
+skills/workflow-stately/agents/openai.yaml
+  s_9967518b799cec::t_3d26e1d1031b11 1-4
+skills/workflow-xstate-v5/evals/regrade_weighted.py
+  s_9967518b799cec::t_3d26e1d1031b11 1-84
+skills/workflow-stately/scripts/engine/run.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-506
+skills/workflow-stately/scripts/engine/backends/cfg.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-33
+skills/workflow-wayfinder/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/references/app-understanding.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-130
+skills/workflow-state-management/references/review-checklist.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-39
+skills/workflow-stately/scripts/check-compare.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-282
+skills/workflow-stately/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/workflow-stately/references/native-workflow.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-79
+skills/workflow-state-management/references/react.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-72
+skills/workflow-stately/README.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-297
+upstreams/stately/skills/xstate-v5/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-11
+skills/workflow-stately/scripts/check-view.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-143
+skills/workflow-stately/references/state-review.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-199
+README.md
+  s_9967518b799cec::t_3d26e1d1031b11 103
+skills/workflow-stately/references/formal-checking.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-313
+skills/workflow-stately/scripts/native-tla.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-816
+skills/workflow-to-spec/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/check-scope.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-90
+skills/workflow-stately/scripts/engine/passes/loop-check.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-68
+skills/workflow-stately/scripts/render-chart.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-41
+skills/workflow-stately/scripts/engine/passes/regions.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-295
+skills/workflow-stately/scripts/engine/worker.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-35
+skills/workflow-state-management/references/async-state.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-53
+skills/workflow-stately/scripts/toolchain.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-580
+skills/workflow-stately/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-19
+skills/workflow-grilling/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-domain-modeling/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-grill-me/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/references/check-result.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-119
+skills/workflow-stately/references/implicit-machines.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-275
+skills/workflow-stately/scripts/engine/frontends/trace.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-24
+skills/workflow-stately/references/model-authoring.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-194
+skills/workflow-stately/scripts/run-native-check.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-225
+skills/workflow-state-management/references/vue-pinia.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-46
+skills/workflow-stately/scripts/stately-check
+  s_9967518b799cec::t_3d26e1d1031b11 1-29
+skills/workflow-xstate-v6/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/workflow-stately/scripts/engine/statechart
+  s_9967518b799cec::t_3d26e1d1031b11 1-29
+skills/t3-council/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/NOTICE.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-45
+skills/workflow-grill-with-docs/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/checked-view.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-385
+skills/workflow-stately/scripts/stately-check.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-281
+skills/workflow-tdd/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-state-management/SKILL.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-217
+skills/workflow-stately/scripts/check-worker.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-350
+skills/workflow-teach/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/t3-sol-loop/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-xstate-v6/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-prototype/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/frontends/view.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-119
+skills/workflow-stately/scripts/engine/passes/region-check.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-97
+skills/workflow-codebase-design/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/writing-readme/SKILL.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-48
+skills/writing-readme/agents/openai.yaml
+  s_9967518b799cec::t_3d26e1d1031b11 1-4
+skills/writing-simple-english/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+upstreams/stately/skills/xstate-v6/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-11
+skills/workflow-code-review/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/writing-technical-writing/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+upstreams/stately/skills/stately/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-13
+skills/workflow-stately/scripts/chart.css
+  s_9967518b799cec::t_3d26e1d1031b11 1-80
+skills/t3-full-send/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+sources.json
+  s_9967518b799cec::t_89940db4f9877b 221-255
+upstreams/stately/skills/state-management/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-stately/scripts/engine/frontends/dot.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-74
+skills/workflow-state-management/references/no-library.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/t3-babysit-pr/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/SKILL.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-438
+skills/t3-modernize/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-writing-for-agents/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/LICENSE.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+upstreams/stately/skills/xstate-v6/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/t3-full-stop/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-state-management/references/typescript-modeling.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/workflow-stately/scripts/engine/upstream.json
+  s_9967518b799cec::t_3d26e1d1031b11 1-100
+skills/writing-i-have-adhd/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/stately-check.ps1
+  s_9967518b799cec::t_3d26e1d1031b11 1-47
+skills/workflow-how/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine-result.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-109
+upstreams/stately/skills/readme/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-to-questionnaire/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/frontends/value.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-166
+skills/workflow-xstate-v5/references/adapters.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-49
+skills/workflow-setup-matt-pocock-skills/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/references/statechart-handoff.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-55
+skills/workflow-stately/scripts/check-result.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-514
+skills/workflow-stately/scripts/engine/passes/lift.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-85
+skills/workflow-stately/scripts/engine/pipeline.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-77
+skills/workflow-stately/scripts/engine/frontends/marks.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-93
+skills/workflow-to-tickets/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/run-native-conform.mjs
+  s_9967518b799cec::t_3d26e1d1031b11 1-115
+skills/workflow-xstate-v5/SKILL.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-239
+upstreams/stately/skills/readme/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-11
+skills/workflow-stately/scripts/engine/statechart.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-171
+skills/workflow-state-management/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-jscpd/COLLECTION.md
+  s_9967518b799cec::t_3d26e1d1031b11 33,38,40,51-52
+skills/workflow-stately/scripts/engine/frontends/messages.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-52
+skills/workflow-stately/scripts/engine/frontends/verdict.ts
+  s_9967518b799cec::t_3d26e1d1031b11 1-40
+skills/workflow-state-management/UPSTREAM.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-17
+skills/workflow-xstate-v5/LICENSE.upstream
+  s_9967518b799cec::t_3d26e1d1031b11 1-21
+skills/workflow-state-management/references/zustand.md
+  s_9967518b799cec::t_3d26e1d1031b11 1-63
+skills/.generated.json
+  s_9967518b799cec::t_0aaaaae87cf71f 5,25,41,57,77,97,117,137,153,169,189,221,245,261,281,301,321,341,365,385,413,429,457,477,515-562,565,699-1010,1013,1041,1077,1097,1117,1137,1157,1179-1242,1245,1267-1286,1289,1321,1337,1377,1379,1387-1388,1390
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9ae946f7f0f6f485f611ef25b644fbf0618988a7",
+  "prompts": {},
+  "sessions": {
+    "s_9967518b799cec": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a2107b-f5f9-7a32-b07c-e3bcffc37db3",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
