@@ -218,5 +218,41 @@
         "purpose": "Write concise GitHub comments with explicit agent attribution."
       }
     ]
+  },
+  {
+    "source": "statelyai/skills",
+    "author": "Stately Software, Inc.",
+    "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Stately Software, Inc." },
+    "reviewed": "b9167d86e5522e9e990eef1f3a6bf3bc9bad3435",
+    "category": "Workflow",
+    "skills": [
+      {
+        "name": "stately",
+        "purpose": "Find implicit state machines, check flows, and review changes for state bugs.",
+        "recommends": ["xstate-v5", "create-formal-verification-skill", "maintain-formal-verification-skill"],
+        "exclude": ["scripts/engine/test", "scripts/engine/tsconfig.json"]
+      },
+      {
+        "name": "xstate-v5",
+        "purpose": "Design, implement, review, and migrate XState v5 machines and actors.",
+        "exclude": ["evals"]
+      },
+      {
+        "name": "xstate-v6",
+        "purpose": "Write, review, test, and migrate XState v6 machines using the installed package's docs.",
+        "requires": ["xstate-v5", "stately"]
+      },
+      {
+        "name": "state-management",
+        "purpose": "Model and refactor application state, derived values, events, and ownership.",
+        "requires": ["xstate-v5"],
+        "exclude": ["evals"]
+      },
+      {
+        "name": "readme",
+        "category": "Writing",
+        "purpose": "Keep README sections aligned with code through symbolic HTML comments."
+      }
+    ]
   }
 ]

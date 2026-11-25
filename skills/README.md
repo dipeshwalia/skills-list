@@ -34,6 +34,10 @@ These folders contain the actual installable packages. The tables below are gene
 | [`/workflow-dry-refactoring`](workflow-dry-refactoring/SKILL.md) | `dry-refactoring` | Refactor confirmed duplication detected by jscpd. | [Andrey Kucherenko · original](https://github.com/kucherenko/jscpd/tree/b79927a32fbfa38f9580c224d679c8ef855c1d5f/skills/dry-refactoring) |
 | [`/workflow-jscpd`](workflow-jscpd/SKILL.md) | `jscpd` | Detect duplication before dry-refactoring. Supporting dependency. | [Andrey Kucherenko · original](https://github.com/kucherenko/jscpd/tree/b79927a32fbfa38f9580c224d679c8ef855c1d5f/skills/jscpd) |
 | [`/workflow-improve`](workflow-improve/SKILL.md) | `improve` | Audit a codebase and prepare plans for another agent to execute. | [shadcn · original](https://github.com/shadcn/improve/tree/cac56e1ebd3c279aa9153616cfeac7b174ab90f9/skills/improve) |
+| [`/workflow-stately`](workflow-stately/SKILL.md) | `stately` | Find implicit state machines, check flows, and review changes for state bugs. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/stately) |
+| [`/workflow-xstate-v5`](workflow-xstate-v5/SKILL.md) | `xstate-v5` | Design, implement, review, and migrate XState v5 machines and actors. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/xstate-v5) |
+| [`/workflow-xstate-v6`](workflow-xstate-v6/SKILL.md) | `xstate-v6` | Write, review, test, and migrate XState v6 machines using the installed package's docs. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/xstate-v6) |
+| [`/workflow-state-management`](workflow-state-management/SKILL.md) | `state-management` | Model and refactor application state, derived values, events, and ownership. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/state-management) |
 
 ## Writing
 
@@ -43,6 +47,7 @@ These folders contain the actual installable packages. The tables below are gene
 | [`/writing-unslop`](writing-unslop/SKILL.md) | `unslop` | Remove filler and common AI writing patterns. | [Lauren Tan · original](https://github.com/cursor/plugins/tree/3dbd22ff12742fb28c9700b9760baa29ed41dc13/pstack/skills/unslop) |
 | [`/writing-i-have-adhd`](writing-i-have-adhd/SKILL.md) | `i-have-adhd` | Make answers direct, scannable, and easier to follow. | [Ayoub Ghriss · original](https://github.com/ayghri/i-have-adhd/tree/1ecea1993b7fce257ffbd686c070948b5e07eda6/skills/i-have-adhd) |
 | [`/writing-simple-english`](writing-simple-english/SKILL.md) | `simple-english` | Write clear instructions using simplified technical English. | [AminBlg · original](https://github.com/AminBlg/SimpleEnglish/tree/300432a9e4c473229a7049ab61b8ca2522d9214c/skills/simple-english) |
+| [`/writing-readme`](writing-readme/SKILL.md) | `readme` | Keep README sections aligned with code through symbolic HTML comments. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/readme) |
 
 ## T3
 

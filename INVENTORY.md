@@ -16,6 +16,7 @@ This collection curates editable upstream copies and publishes category-prefixed
 | [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish) | AminBlg | [MIT — 2026 AminBlg](upstreams/simple-english/LICENSE) | [`300432a9e4c473229a7049ab61b8ca2522d9214c`](https://github.com/AminBlg/SimpleEnglish/commit/300432a9e4c473229a7049ab61b8ca2522d9214c) |
 | [shadcn/improve](https://github.com/shadcn/improve) | shadcn | [MIT — 2026 shadcn](upstreams/improve/LICENSE.md) | [`cac56e1ebd3c279aa9153616cfeac7b174ab90f9`](https://github.com/shadcn/improve/commit/cac56e1ebd3c279aa9153616cfeac7b174ab90f9) |
 | [t3dotgg/tstack](https://github.com/t3dotgg/tstack) | Theo Browne | [MIT — 2026 Theo Browne](upstreams/tstack/LICENSE) | [`11e37a74d0a6868c121cd0910ab2b3bd9873b92a`](https://github.com/t3dotgg/tstack/commit/11e37a74d0a6868c121cd0910ab2b3bd9873b92a) |
+| [statelyai/skills](https://github.com/statelyai/skills) | Stately Software, Inc. | [MIT — 2026 Stately Software, Inc.](upstreams/stately/LICENSE) | [`b9167d86e5522e9e990eef1f3a6bf3bc9bad3435`](https://github.com/statelyai/skills/commit/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435) |
 
 <!-- /inventory:sources -->
 
@@ -59,6 +60,11 @@ The source repositories remain Git subtrees so upstream updates can merge with l
 | T3 | `/t3-babysit-pr` / `babysit-pr` | Monitor pull request checks and reviews and address verified findings. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/babysit-pr) | [SKILL.md](skills/t3-babysit-pr/SKILL.md) |
 | T3 | `/t3-modernize` / `modernize` | Rebase an older pull request and reassess whether its change still belongs. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/modernize) | [SKILL.md](skills/t3-modernize/SKILL.md) |
 | T3 | `/t3-leaving-pr-comments` / `leaving-pr-comments` | Write concise GitHub comments with explicit agent attribution. | [Theo Browne · original](https://github.com/t3dotgg/tstack/tree/11e37a74d0a6868c121cd0910ab2b3bd9873b92a/skills/leaving-pr-comments) | [SKILL.md](skills/t3-leaving-pr-comments/SKILL.md) |
+| Workflow | `/workflow-stately` / `stately` | Find implicit state machines, check flows, and review changes for state bugs. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/stately) | [SKILL.md](skills/workflow-stately/SKILL.md) |
+| Workflow | `/workflow-xstate-v5` / `xstate-v5` | Design, implement, review, and migrate XState v5 machines and actors. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/xstate-v5) | [SKILL.md](skills/workflow-xstate-v5/SKILL.md) |
+| Workflow | `/workflow-xstate-v6` / `xstate-v6` | Write, review, test, and migrate XState v6 machines using the installed package's docs. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/xstate-v6) | [SKILL.md](skills/workflow-xstate-v6/SKILL.md) |
+| Workflow | `/workflow-state-management` / `state-management` | Model and refactor application state, derived values, events, and ownership. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/state-management) | [SKILL.md](skills/workflow-state-management/SKILL.md) |
+| Writing | `/writing-readme` / `readme` | Keep README sections aligned with code through symbolic HTML comments. | [Stately Software, Inc. · original](https://github.com/statelyai/skills/tree/b9167d86e5522e9e990eef1f3a6bf3bc9bad3435/skills/readme) | [SKILL.md](skills/writing-readme/SKILL.md) |
 
 <!-- /inventory:requested -->
 
@@ -104,6 +110,9 @@ The builder rejects a selection that leaves out a required companion. Recommenda
 | `takeover` | `modernize`, `file-pr`, `babysit-pr`, `leaving-pr-comments` | — |
 | `babysit-pr` | `leaving-pr-comments` | — |
 | `modernize` | `leaving-pr-comments` | — |
+| `stately` | — | `xstate-v5`, `create-formal-verification-skill` (not selected), `maintain-formal-verification-skill` (not selected) |
+| `xstate-v6` | `xstate-v5`, `stately` | — |
+| `state-management` | `xstate-v5` | — |
 
 <!-- /inventory:companions -->
 
@@ -118,6 +127,7 @@ The builder rejects a selection that leaves out a required companion. Recommenda
 - `dry-refactoring` and `jscpd` use the jscpd CLI when invoked. `improve` can audit without subagents, but its optional `execute` mode requires isolated-worktree delegation and host-compatible model settings.
 - This inventory does not install runtime dependencies or activate upstream plugin hooks. `simple-english` includes its four reference files, not the copyrighted official STE dictionary.
 - The `t3-` namespace contains all nine tstack skills by Theo Browne. Its GitHub workflows need an authenticated `gh` CLI; `babysit-pr` includes the original executable `scripts/pr-wait`, which uses Python 3 and POSIX file locking. `council` needs models from three providers, and `sol-loop` needs a host that can delegate to GPT Sol. T3 Code integrations are used when available, with the upstream's documented alternatives elsewhere.
+- Stately's five public skills use the Workflow category, except `readme`, which uses Writing. The `stately` package retains its checker, references, and Lauren Tan's bundled engine license and notices; engine tests, its development TypeScript configuration, and the `xstate-v5` and `state-management` evaluation fixtures stay in the canonical upstream only. Checking requires a supported Node, Bun, or Deno runtime and downloads checksum-verified dependencies into the Stately cache when first needed: XState for native checks, Java/TLC for TLA+, and Pele for chart rendering. Saving and opening hosted models requires a separately connected Stately MCP server and sign-in. The `xstate-v6` skill reads documentation from the project's installed XState package. The unlisted Stately Agent skills and plugin configuration are retained in the subtree but are not selected for installation.
 
 ## Keep attribution with each copy
 

@@ -30,11 +30,14 @@ Use these names when the imported instructions refer to another selected skill:
 | `leaving-pr-comments` | `/t3-leaving-pr-comments` |
 | `modernize` | `/t3-modernize` |
 | `prototype` | `/workflow-prototype` |
+| `readme` | `/writing-readme` |
 | `research` | `/workflow-research` |
 | `setup-matt-pocock-skills` | `/workflow-setup-matt-pocock-skills` |
 | `simple-english` | `/writing-simple-english` |
 | `sol-loop` | `/t3-sol-loop` |
+| `state-management` | `/workflow-state-management` |
 | `statechart` | `/workflow-statechart` |
+| `stately` | `/workflow-stately` |
 | `takeover` | `/t3-takeover` |
 | `tdd` | `/workflow-tdd` |
 | `teach` | `/workflow-teach` |
@@ -45,3 +48,5 @@ Use these names when the imported instructions refer to another selected skill:
 | `unslop` | `/writing-unslop` |
 | `wayfinder` | `/workflow-wayfinder` |
 | `writing-for-agents` | `/workflow-writing-for-agents` |
+| `xstate-v5` | `/workflow-xstate-v5` |
+| `xstate-v6` | `/workflow-xstate-v6` |

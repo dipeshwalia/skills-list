@@ -100,6 +100,7 @@ Every selected skill is listed here, including supporting dependencies. Names us
 | AminBlg | [AminBlg/SimpleEnglish](https://github.com/AminBlg/SimpleEnglish) | [simple-english](skills/writing-simple-english/SKILL.md) | [MIT](upstreams/simple-english/LICENSE) |
 | shadcn | [shadcn/improve](https://github.com/shadcn/improve) | [improve](skills/workflow-improve/SKILL.md) | [MIT](upstreams/improve/LICENSE.md) |
 | Theo Browne | [t3dotgg/tstack](https://github.com/t3dotgg/tstack) | [babysit-pr](skills/t3-babysit-pr/SKILL.md), [council](skills/t3-council/SKILL.md), [file-pr](skills/t3-file-pr/SKILL.md), [full-send](skills/t3-full-send/SKILL.md), [full-stop](skills/t3-full-stop/SKILL.md), [leaving-pr-comments](skills/t3-leaving-pr-comments/SKILL.md), [modernize](skills/t3-modernize/SKILL.md), [sol-loop](skills/t3-sol-loop/SKILL.md), [takeover](skills/t3-takeover/SKILL.md) | [MIT](upstreams/tstack/LICENSE) |
+| Stately Software, Inc. | [statelyai/skills](https://github.com/statelyai/skills) | [readme](skills/writing-readme/SKILL.md), [state-management](skills/workflow-state-management/SKILL.md), [stately](skills/workflow-stately/SKILL.md), [xstate-v5](skills/workflow-xstate-v5/SKILL.md), [xstate-v6](skills/workflow-xstate-v6/SKILL.md) | [MIT](upstreams/stately/LICENSE) |
 
 <!-- /inventory:attribution -->
 
