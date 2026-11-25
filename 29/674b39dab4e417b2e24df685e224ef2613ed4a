@@ -1,0 +1,628 @@
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/statechart.ts
+  s_9967518b799cec::t_4de7e50897e10e 7-8,114,118-119,122-123,125-128,131-133
+upstreams/cursor-plugins/third_party/google-search-console/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/pstack/skills/reframe/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 1-16
+upstreams/cursor-plugins/third_party/google-search-console/assets/logo.svg
+  s_9967518b799cec::t_4de7e50897e10e 1
+upstreams/cursor-plugins/pstack/skills/architect/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11
+upstreams/cursor-plugins/third_party/front/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/run.ts
+  s_9967518b799cec::t_4de7e50897e10e 11,58,61,71,85,137,140,165,223-228,240-247,293-294,314-328
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/feature.md
+  s_9967518b799cec::t_4de7e50897e10e 5-6,12
+upstreams/cursor-plugins/third_party/hospitable/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/shipping.md
+  s_9967518b799cec::t_4de7e50897e10e 9
+upstreams/cursor-plugins/third_party/fiscal-ai/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-42
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/worktree-cleanup.md
+  s_9967518b799cec::t_4de7e50897e10e 5
+upstreams/cursor-plugins/README.md
+  s_9967518b799cec::t_4de7e50897e10e 34,103,110,130,141-157
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/02-poteto-mode.md
+  s_9967518b799cec::t_4de7e50897e10e 3,28,38,75-83,143
+upstreams/cursor-plugins/third_party/jobber/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-55
+upstreams/cursor-plugins/third_party/redo/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-90
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/messages.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 2-3,5,8-10,17-23
+  s_9967518b799cec::t_5ca87b4b97e6f3 24
+upstreams/cursor-plugins/pstack/skills/swarm/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 22
+upstreams/cursor-plugins/pstack/skills/principle-foundational-thinking/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13
+upstreams/cursor-plugins/third_party/hospitable/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-79
+upstreams/cursor-plugins/third_party/tailscale/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/automate-me/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 33
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-help/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 50,54,73,114,120,133
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/chart.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 45,697-737
+  s_9967518b799cec::t_f76104ba093248 738
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/run.ts
+  s_9967518b799cec::t_4de7e50897e10e 11,58,61,71,85,137,140,165,223-228,240-247,293-294,314-328
+upstreams/cursor-plugins/third_party/quickbooks-online/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1,10
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-model-the-domain/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13,15
+upstreams/cursor-plugins/third_party/item/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/pstack/skills/reflect/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 3,9,11,13,15
+upstreams/cursor-plugins/third_party/sap-s4hana-cloud/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-61
+upstreams/cursor-plugins/third_party/uber-courier/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-42
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-make-operations-idempotent/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13,15
+upstreams/cursor-plugins/pstack/skills/statechart/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 19
+upstreams/cursor-plugins/third_party/factset/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/third_party/x/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 5-12
+upstreams/cursor-plugins/pstack/README.md
+  s_9967518b799cec::t_4de7e50897e10e 43,53,66,111,129-130,132,281
+upstreams/cursor-plugins/pstack/skills/figure-it-out/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 31
+upstreams/cursor-plugins/pstack/automations/benny/skills/triage-issue-reports/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 71
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/10-recipes-and-pitfalls.md
+  s_9967518b799cec::t_4de7e50897e10e 165
+upstreams/cursor-plugins/pstack/skills/sharpen/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 16
+upstreams/cursor-plugins/third_party/jobber/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/pstack/docs/guide/03-understand.md
+  s_9967518b799cec::t_4de7e50897e10e 17,25,33
+upstreams/cursor-plugins/pstack/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/third_party/factset/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/third_party/strava/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/freshbooks/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-35
+upstreams/cursor-plugins/third_party/uber-courier/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-34
+upstreams/cursor-plugins/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 161
+upstreams/cursor-plugins/pstack/skills/how/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,13,19,21,23
+  s_9967518b799cec::t_071b4b4fdc47c1 15,17
+upstreams/cursor-plugins/third_party/expensify/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-37
+upstreams/cursor-plugins/third_party/tailscale/skills/tailscale-setup/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 63,79-80
+upstreams/cursor-plugins/third_party/easyship/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/hospitable/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/google-docs/assets/logo.svg
+  s_9967518b799cec::t_4de7e50897e10e 1
+upstreams/cursor-plugins/pstack/skills/principle-boundary-discipline/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11
+upstreams/cursor-plugins/third_party/jobber/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-75
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/janitor.ts
+  s_9967518b799cec::t_4de7e50897e10e 1-13
+upstreams/cursor-plugins/third_party/createos/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-11
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/perf-issue.md
+  s_9967518b799cec::t_4de7e50897e10e 6,17
+upstreams/cursor-plugins/pstack/automations/benny/FOR_AGENTS.md
+  s_9967518b799cec::t_4de7e50897e10e 32,79
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-test-behavior-not-implementation/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,13-14,16
+upstreams/cursor-plugins/third_party/google-search-console/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-foundational-thinking/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13
+upstreams/cursor-plugins/third_party/x/skills/x-api-mcp-guide/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 95-97,99,103-107,109-206,305-306
+upstreams/cursor-plugins/third_party/close/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-83
+upstreams/cursor-plugins/third_party/easyship/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/google-sheets/assets/logo.svg
+  s_9967518b799cec::t_4de7e50897e10e 1
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/session-pickup.md
+  s_9967518b799cec::t_4de7e50897e10e 5
+upstreams/cursor-plugins/third_party/freshbooks/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/trace-forensics.md
+  s_9967518b799cec::t_4de7e50897e10e 7
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/chart.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 45,697-737
+  s_9967518b799cec::t_1289adaba5a464 738
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/show-me-your-work/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 69
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-type-system-discipline/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11-17
+upstreams/cursor-plugins/third_party/quickbooks-online/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 5-11
+upstreams/cursor-plugins/third_party/rillet/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/pstack/docs/guide/01-setup.md
+  s_9967518b799cec::t_4de7e50897e10e 27,29,62
+upstreams/cursor-plugins/pstack/skills/principle-make-operations-idempotent/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13,15
+upstreams/cursor-plugins/pstack/docs/guide/04-design.md
+  s_9967518b799cec::t_4de7e50897e10e 15,17,25,103,118
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/harness/claude-code.md
+  s_9967518b799cec::t_4de7e50897e10e 11,21,36,46
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/labels.ts
+  s_9967518b799cec::t_4de7e50897e10e 2,401,417-423,427-433
+upstreams/cursor-plugins/third_party/google-sheets/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/third_party/sap-s4hana-cloud/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-10
+upstreams/cursor-plugins/third_party/freshbooks/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/item/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-62
+upstreams/cursor-plugins/third_party/close/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-37
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/babysit.md
+  s_9967518b799cec::t_4de7e50897e10e 3-10
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/swarm/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 24
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/shipping.md
+  s_9967518b799cec::t_4de7e50897e10e 9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/blast-radius/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 33,36
+upstreams/cursor-plugins/third_party/hospitable/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-39
+upstreams/cursor-plugins/pstack/docs/guide/07-overnight.md
+  s_9967518b799cec::t_4de7e50897e10e 74,88,91,96
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/opening-a-pr.md
+  s_9967518b799cec::t_4de7e50897e10e 5,7,9
+upstreams/cursor-plugins/third_party/hq/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-79
+upstreams/cursor-plugins/third_party/redo/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/backends/mermaid.ts
+  s_9967518b799cec::t_4de7e50897e10e 96-141,170-172,186-188,208
+upstreams/cursor-plugins/harness/pstack/claude-code/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/no-comments/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 21-22
+upstreams/cursor-plugins/third_party/rillet/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-66
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/03-understand.md
+  s_9967518b799cec::t_4de7e50897e10e 17,25,33
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/frontends/dot.ts
+  s_9967518b799cec::t_4de7e50897e10e 38-41
+upstreams/cursor-plugins/third_party/expensify/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-10
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/trace-forensics.md
+  s_9967518b799cec::t_4de7e50897e10e 7
+upstreams/cursor-plugins/third_party/fiscal-ai/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/lmty/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/pstack/skills/principle-fix-root-causes/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11-14
+upstreams/cursor-plugins/third_party/lmty/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-42
+upstreams/cursor-plugins/pstack/skills/technical-writing/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11-15,19-21,25,27-30,34-40,42,48-51,56-62
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/scripts/package.json
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/cli.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 12,105-133,947,963-970,992,1030,1067-1075
+upstreams/cursor-plugins/third_party/google-search-console/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-35
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/session-pickup.md
+  s_9967518b799cec::t_4de7e50897e10e 5
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/feature.md
+  s_9967518b799cec::t_4de7e50897e10e 5-6,12
+upstreams/cursor-plugins/third_party/google-sheets/README.md
+  s_9967518b799cec::t_4de7e50897e10e 39-40
+upstreams/cursor-plugins/third_party/uber-courier/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/uber-courier/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/harness/pstack/claude-code/agents/poteto-agent.md
+  s_9967518b799cec::t_4de7e50897e10e 5
+upstreams/cursor-plugins/pstack/docs/guide/10-recipes-and-pitfalls.md
+  s_9967518b799cec::t_4de7e50897e10e 165
+upstreams/cursor-plugins/third_party/redo/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/autonomous-run.md
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/third_party/sabre-developer-hub/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-11
+upstreams/cursor-plugins/pstack/skills/principle-build-the-lever/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 7,9,11-14
+upstreams/cursor-plugins/third_party/easyship/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-62
+upstreams/cursor-plugins/third_party/front/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 5
+upstreams/cursor-plugins/third_party/campfire/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/bug-fix.md
+  s_9967518b799cec::t_4de7e50897e10e 3,8-9
+upstreams/cursor-plugins/third_party/google-docs/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-fix-root-causes/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11-14
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/autopilot-full.md
+  s_9967518b799cec::t_4de7e50897e10e 8
+upstreams/cursor-plugins/pstack/skills/principle-model-the-domain/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13,15
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/drawn.ts
+  s_9967518b799cec::t_4de7e50897e10e 1-20
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-attack-the-premise/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 11-13,15
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 19-31,88,90,92-94,96,98,100,102,104,106,110-112
+upstreams/cursor-plugins/third_party/createos/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-41
+upstreams/cursor-plugins/third_party/google-slides/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 5-8
+upstreams/cursor-plugins/pstack/skills/show-me-your-work/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 67
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/opening-a-pr.md
+  s_9967518b799cec::t_4de7e50897e10e 5,7,9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/reframe/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 1-16
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/corpus/Login/chart.mmd
+  s_9967518b799cec::t_4de7e50897e10e 9,15
+upstreams/cursor-plugins/third_party/close/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/pstack/skills/recall/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 13,19-20
+upstreams/cursor-plugins/third_party/google-slides/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/third_party/uber-courier/assets/logo.svg
+  s_9967518b799cec::t_4de7e50897e10e 1-35
+upstreams/cursor-plugins/third_party/expensify/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-57
+upstreams/cursor-plugins/pstack/skills/principle-explain-the-number/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9-12,14
+upstreams/cursor-plugins/pstack/docs/guide/06-verify-and-ship.md
+  s_9967518b799cec::t_4de7e50897e10e 134,144
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/05-build-and-clean.md
+  s_9967518b799cec::t_4de7e50897e10e 59
+upstreams/cursor-plugins/third_party/createos/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/sap-s4hana-cloud/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/harness/pstack/claude-code/README.md
+  s_9967518b799cec::t_4de7e50897e10e 43,53,66,111,129-130,132,281
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/worktree-cleanup.md
+  s_9967518b799cec::t_4de7e50897e10e 5
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-prove-it-works/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11
+upstreams/cursor-plugins/third_party/uber-courier/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/pstack/skills/poteto-mode/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 17-29,86,88,90-92,94,96,98,100,102,104,108-110
+upstreams/cursor-plugins/third_party/strava/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-10
+upstreams/cursor-plugins/third_party/item/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/unslop/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 13-40
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/janitor.ts
+  s_9967518b799cec::t_4de7e50897e10e 1-13
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/architect/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 11,13
+upstreams/cursor-plugins/pstack/skills/poteto-mode/scripts/package.json
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/pstack/skills/principle-type-system-discipline/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11-15
+upstreams/cursor-plugins/third_party/freshbooks/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-60
+upstreams/cursor-plugins/third_party/hq/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/pstack/docs/guide/02-poteto-mode.md
+  s_9967518b799cec::t_4de7e50897e10e 3,28,38,75-83,143
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/autonomous-run.md
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-build-the-lever/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 7,9,11-14
+upstreams/cursor-plugins/third_party/google-search-console/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/hq/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-39
+upstreams/cursor-plugins/third_party/hospitable/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/strava/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-37
+upstreams/cursor-plugins/third_party/sap-s4hana-cloud/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-72
+upstreams/cursor-plugins/pstack/skills/blast-radius/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 33,36
+upstreams/cursor-plugins/harness/pstack/claude-code/.claude-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/pstack/skills/no-comments/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 19-20
+upstreams/cursor-plugins/pstack/skills/how/UPSTREAM.md
+  s_9967518b799cec::t_071b4b4fdc47c1 10
+upstreams/cursor-plugins/pstack/agents/comment-sicko.md
+  s_9967518b799cec::t_4de7e50897e10e 26
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/multi-phase-plan.md
+  s_9967518b799cec::t_4de7e50897e10e 6-9,11
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-explain-the-number/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9-12,14
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/teach/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 16
+upstreams/cursor-plugins/pstack/skills/unslop/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 12-39
+upstreams/cursor-plugins/pstack/skills/principle-prove-it-works/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-boundary-discipline/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11
+upstreams/cursor-plugins/third_party/freshbooks/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/hillclimb.md
+  s_9967518b799cec::t_4de7e50897e10e 7,12
+upstreams/cursor-plugins/third_party/rillet/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/google-docs/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 5-8
+upstreams/cursor-plugins/pstack/agents/poteto-agent.md
+  s_9967518b799cec::t_4de7e50897e10e 5
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/figure-it-out/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 33
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/runtime-forensics.md
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/labels.ts
+  s_9967518b799cec::t_4de7e50897e10e 2,401,417-423,427-433
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/corpus/Login/chart.mmd
+  s_9967518b799cec::t_4de7e50897e10e 9,15
+upstreams/cursor-plugins/pstack/skills/arena/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 17,28
+upstreams/cursor-plugins/pstack/skills/automate-me/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 31
+upstreams/cursor-plugins/third_party/createos/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/third_party/createos/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-79
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/drawn.ts
+  s_9967518b799cec::t_4de7e50897e10e 1-20
+upstreams/cursor-plugins/third_party/campfire/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/fiscal-ai/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/rillet/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-37
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/backends/mermaid.ts
+  s_9967518b799cec::t_4de7e50897e10e 96-141,170-172,186-188,208
+upstreams/cursor-plugins/pstack/skills/why/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 3,9
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/autopilot-stack.md
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/pstack/docs/guide/09-make-it-yours.md
+  s_9967518b799cec::t_4de7e50897e10e 31
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/07-overnight.md
+  s_9967518b799cec::t_4de7e50897e10e 74,88,91,96
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/eval.md
+  s_9967518b799cec::t_4de7e50897e10e 20
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/09-make-it-yours.md
+  s_9967518b799cec::t_4de7e50897e10e 31
+upstreams/cursor-plugins/pstack/skills/benchmark-checklist/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 34
+upstreams/cursor-plugins/third_party/google-sheets/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 5-8
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 19
+upstreams/cursor-plugins/third_party/front/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 5-13
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/autopilot-stack.md
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/third_party/close/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/third_party/lmty/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-84
+upstreams/cursor-plugins/third_party/factset/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-34
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/benchmark-checklist/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 34
+upstreams/cursor-plugins/pstack/skills/principle-minimize-reader-load/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11-13,15
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/multi-phase-plan.md
+  s_9967518b799cec::t_4de7e50897e10e 6-9,11
+upstreams/cursor-plugins/pstack/skills/principle-test-behavior-not-implementation/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,13-14,16
+upstreams/cursor-plugins/pstack/skills/poteto-help/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 48,52,71,112,118,131
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/kill.ts
+  s_9967518b799cec::t_4de7e50897e10e 1-15
+upstreams/cursor-plugins/third_party/close/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/third_party/google-slides/README.md
+  s_9967518b799cec::t_4de7e50897e10e 39-40
+upstreams/cursor-plugins/third_party/strava/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/messages.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 2-3,5,8-10,17-23
+  s_9967518b799cec::t_060597de2f352e 24
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/bug-fix.md
+  s_9967518b799cec::t_4de7e50897e10e 3,8-9
+upstreams/cursor-plugins/third_party/x/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/third_party/lmty/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/third_party/google-docs/README.md
+  s_9967518b799cec::t_4de7e50897e10e 39-40
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/01-setup.md
+  s_9967518b799cec::t_4de7e50897e10e 27,29,62
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/investigation.md
+  s_9967518b799cec::t_4de7e50897e10e 7,9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/hillclimb.md
+  s_9967518b799cec::t_4de7e50897e10e 7,12
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/cli.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 12,105-133,947,963-970,992,1030,1067-1075
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/04-design.md
+  s_9967518b799cec::t_4de7e50897e10e 15,17,25,103,118
+upstreams/cursor-plugins/third_party/campfire/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-61
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/refactoring.md
+  s_9967518b799cec::t_4de7e50897e10e 7,9,11
+upstreams/cursor-plugins/third_party/campfire/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-36
+upstreams/cursor-plugins/pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/kill.ts
+  s_9967518b799cec::t_4de7e50897e10e 1-15
+upstreams/cursor-plugins/third_party/redo/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/corpus.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 386-423
+upstreams/cursor-plugins/third_party/campfire/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/expensify/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/pstack/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 4
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-sequence-verifiable-units/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13
+upstreams/cursor-plugins/pstack/docs/guide/05-build-and-clean.md
+  s_9967518b799cec::t_4de7e50897e10e 59
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/statechart.ts
+  s_9967518b799cec::t_4de7e50897e10e 7-8,114,118-119,122-123,125-128,131-133
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/reflect/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 3,11,13,15,17
+upstreams/cursor-plugins/pstack/skills/teach/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 14
+upstreams/cursor-plugins/third_party/google-search-console/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-39
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/frontends/dot.ts
+  s_9967518b799cec::t_4de7e50897e10e 38-41
+upstreams/cursor-plugins/third_party/hq/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/expensify/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/factset/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/lmty/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/corpus.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 386-423
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-minimize-reader-load/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11-13,15
+upstreams/cursor-plugins/pstack/skills/principle-attack-the-premise/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 11-13,15
+upstreams/cursor-plugins/pstack/skills/poteto-mode/worker.md
+  s_9967518b799cec::t_4de7e50897e10e 1-11
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/technical-writing/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 11,13-17,21-23,27,29-32,36-42,44,50-53,58-64
+upstreams/cursor-plugins/third_party/easyship/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/eval.md
+  s_9967518b799cec::t_4de7e50897e10e 20
+upstreams/cursor-plugins/third_party/hq/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/third_party/item/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-38
+upstreams/cursor-plugins/third_party/fiscal-ai/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/sharpen/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 16
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/recall/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 15,21-22
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/why/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 3,9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/statechart/scripts/test/render.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 9-12,82-139
+  s_9967518b799cec::t_78c3e2ace1c0b7 140-141
+upstreams/cursor-plugins/pstack/docs/harness/claude-code.md
+  s_9967518b799cec::t_4de7e50897e10e 11,21,36,46
+upstreams/cursor-plugins/pstack/skills/principle-sequence-verifiable-units/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11,13
+upstreams/cursor-plugins/third_party/easyship/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-37
+upstreams/cursor-plugins/third_party/factset/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-73
+upstreams/cursor-plugins/third_party/jobber/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/tailscale/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 5-9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/how/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 11,15,17,19,21,23
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/refactoring.md
+  s_9967518b799cec::t_4de7e50897e10e 7,9,11
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/investigation.md
+  s_9967518b799cec::t_4de7e50897e10e 7,9
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/setup-pstack/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 20-30,34,40,42,46,50,58-59,61-69
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/runtime-forensics.md
+  s_9967518b799cec::t_4de7e50897e10e 6
+upstreams/cursor-plugins/third_party/jobber/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-12
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/arena/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 19,30
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/playbooks/autopilot-full.md
+  s_9967518b799cec::t_4de7e50897e10e 8
+upstreams/cursor-plugins/third_party/quickbooks-online/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 3-4,8,29
+upstreams/cursor-plugins/third_party/sabre-developer-hub/LICENSE
+  s_9967518b799cec::t_4de7e50897e10e 1-21
+upstreams/cursor-plugins/third_party/google-slides/assets/logo.svg
+  s_9967518b799cec::t_4de7e50897e10e 1
+upstreams/cursor-plugins/third_party/redo/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-42
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/perf-issue.md
+  s_9967518b799cec::t_4de7e50897e10e 6,17
+upstreams/cursor-plugins/third_party/fiscal-ai/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-76
+upstreams/cursor-plugins/third_party/rillet/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/.cursor-plugin/marketplace.json
+  s_9967518b799cec::t_4de7e50897e10e 136-140,581-585,701-705,755-839
+upstreams/cursor-plugins/third_party/front/README.md
+  s_9967518b799cec::t_4de7e50897e10e 9-10,21,27,31,33
+upstreams/cursor-plugins/harness/pstack/claude-code/docs/guide/06-verify-and-ship.md
+  s_9967518b799cec::t_4de7e50897e10e 134,144
+upstreams/cursor-plugins/third_party/sabre-developer-hub/CHANGELOG.md
+  s_9967518b799cec::t_4de7e50897e10e 1-9
+upstreams/cursor-plugins/harness/pstack/claude-code/agents/comment-sicko.md
+  s_9967518b799cec::t_4de7e50897e10e 26
+upstreams/cursor-plugins/third_party/sabre-developer-hub/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-62
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/poteto-mode/worker.md
+  s_9967518b799cec::t_4de7e50897e10e 1-11
+upstreams/cursor-plugins/pstack/skills/poteto-mode/playbooks/babysit.md
+  s_9967518b799cec::t_4de7e50897e10e 3-10
+upstreams/cursor-plugins/pstack/skills/setup-pstack/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 18-28,32,38,40,44,48,56-57,59-67
+upstreams/cursor-plugins/pstack/skills/statechart/scripts/test/render.test.ts
+  s_9967518b799cec::t_4de7e50897e10e 9-12,82-139
+  s_9967518b799cec::t_aa3ba984a7dd34 140-141
+upstreams/cursor-plugins/third_party/item/mcp.json
+  s_9967518b799cec::t_4de7e50897e10e 1-8
+upstreams/cursor-plugins/third_party/sabre-developer-hub/.cursor-plugin/plugin.json
+  s_9967518b799cec::t_4de7e50897e10e 1-39
+upstreams/cursor-plugins/third_party/strava/README.md
+  s_9967518b799cec::t_4de7e50897e10e 1-59
+upstreams/cursor-plugins/harness/pstack/claude-code/skills/principle-separate-before-serializing-shared-state/SKILL.md
+  s_9967518b799cec::t_4de7e50897e10e 9,11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "29674b39dab4e417b2e24df685e224ef2613ed4a",
+  "prompts": {},
+  "sessions": {
+    "s_9967518b799cec": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a2107b-f5f9-7a32-b07c-e3bcffc37db3",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dipesh <dipesh.walia@b-yond.com>"
+    }
+  }
+}
