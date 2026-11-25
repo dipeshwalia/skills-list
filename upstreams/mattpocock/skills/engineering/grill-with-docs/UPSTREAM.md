@@ -3,7 +3,7 @@
 - Original author: [Matt Pocock](https://github.com/mattpocock).
 - Original repository: [mattpocock/skills](https://github.com/mattpocock/skills).
 - Original skill: [grill-with-docs](https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs).
-- Reviewed upstream revision: [`5863806dd4e15c63174bee4e7515a4256792ecfa`](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/engineering/grill-with-docs).
+- Reviewed upstream revision: [`d65391149dbb5fe76478e76fa8d5122b2aa5a70e`](https://github.com/mattpocock/skills/tree/d65391149dbb5fe76478e76fa8d5122b2aa5a70e/skills/engineering/grill-with-docs).
 - Original copyright: Copyright (c) 2026 Matt Pocock.
 - License: MIT; the complete original notice is in [LICENSE.upstream](LICENSE.upstream).
 

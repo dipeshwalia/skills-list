@@ -17,7 +17,7 @@
     "source": "mattpocock/skills",
     "author": "Matt Pocock",
     "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Matt Pocock" },
-    "reviewed": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "reviewed": "d65391149dbb5fe76478e76fa8d5122b2aa5a70e",
     "category": "Workflow",
     "skills": [
       {
@@ -90,7 +90,7 @@
     "source": "cursor/plugins/pstack",
     "author": "Lauren Tan",
     "license": { "file": "LICENSE", "name": "MIT", "copyright": "2026 Lauren Tan" },
-    "reviewed": "3dbd22ff12742fb28c9700b9760baa29ed41dc13",
+    "reviewed": "41e400932eca14f289e7db717a70455256b6d388",
     "skills": [
       {
         "name": "how",
@@ -131,7 +131,7 @@
     "source": "kucherenko/jscpd",
     "author": "Andrey Kucherenko",
     "license": { "file": "LICENSE", "name": "MIT", "copyright": "2013-2024 Andrey Kucherenko" },
-    "reviewed": "b79927a32fbfa38f9580c224d679c8ef855c1d5f",
+    "reviewed": "28d2236026990badcabbd3ae3f73171b78cf77b1",
     "category": "Workflow",
     "skills": [
       {

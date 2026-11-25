@@ -1,9 +1,9 @@
 # Original-source attribution
 
-- Original author: Lauren Tan, as credited in [pstack's plugin metadata](https://github.com/cursor/plugins/blob/3dbd22ff12742fb28c9700b9760baa29ed41dc13/pstack/plugin.json).
+- Original author: Lauren Tan, as credited in [pstack's plugin metadata](https://github.com/cursor/plugins/blob/41e400932eca14f289e7db717a70455256b6d388/pstack/plugin.json).
 - Original repository: [cursor/plugins](https://github.com/cursor/plugins), pstack plugin.
 - Original skill: [technical-writing](https://github.com/cursor/plugins/tree/main/pstack/skills/technical-writing).
-- Reviewed upstream revision: [`3dbd22ff12742fb28c9700b9760baa29ed41dc13`](https://github.com/cursor/plugins/tree/3dbd22ff12742fb28c9700b9760baa29ed41dc13/pstack/skills/technical-writing).
+- Reviewed upstream revision: [`41e400932eca14f289e7db717a70455256b6d388`](https://github.com/cursor/plugins/tree/41e400932eca14f289e7db717a70455256b6d388/pstack/skills/technical-writing).
 - Original copyright: Copyright (c) 2026 Lauren Tan.
 - License: MIT, from [pstack/LICENSE](../../LICENSE); the complete original notice is copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 

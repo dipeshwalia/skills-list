@@ -2,8 +2,8 @@
 
 - Original author: Andrey Kucherenko.
 - Original repository: [kucherenko/jscpd](https://github.com/kucherenko/jscpd).
-- Original skill: [dry-refactoring](https://github.com/kucherenko/jscpd/tree/b79927a32fbfa38f9580c224d679c8ef855c1d5f/skills/dry-refactoring).
-- Reviewed upstream revision: [`b79927a32fbfa38f9580c224d679c8ef855c1d5f`](https://github.com/kucherenko/jscpd/commit/b79927a32fbfa38f9580c224d679c8ef855c1d5f).
+- Original skill: [dry-refactoring](https://github.com/kucherenko/jscpd/tree/28d2236026990badcabbd3ae3f73171b78cf77b1/skills/dry-refactoring).
+- Reviewed upstream revision: [`28d2236026990badcabbd3ae3f73171b78cf77b1`](https://github.com/kucherenko/jscpd/commit/28d2236026990badcabbd3ae3f73171b78cf77b1).
 - License: MIT; the original copyright and complete notice are copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 
 Original instructions, supporting resources, and invocation metadata are preserved. Local additions are this provenance file and `LICENSE.upstream`.

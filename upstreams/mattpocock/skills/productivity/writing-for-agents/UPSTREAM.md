@@ -2,8 +2,8 @@
 
 - Original author: Matt Pocock.
 - Original repository: [mattpocock/skills](https://github.com/mattpocock/skills).
-- Original skill: [writing-for-agents](https://github.com/mattpocock/skills/tree/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/productivity/writing-for-agents).
-- Reviewed upstream revision: [`5863806dd4e15c63174bee4e7515a4256792ecfa`](https://github.com/mattpocock/skills/commit/5863806dd4e15c63174bee4e7515a4256792ecfa).
+- Original skill: [writing-for-agents](https://github.com/mattpocock/skills/tree/d65391149dbb5fe76478e76fa8d5122b2aa5a70e/skills/productivity/writing-for-agents).
+- Reviewed upstream revision: [`d65391149dbb5fe76478e76fa8d5122b2aa5a70e`](https://github.com/mattpocock/skills/commit/d65391149dbb5fe76478e76fa8d5122b2aa5a70e).
 - License: MIT; the original copyright and complete notice are copied verbatim in [LICENSE.upstream](LICENSE.upstream).
 
 Original instructions, supporting resources, and invocation metadata are preserved. Local additions are this provenance file and `LICENSE.upstream`.

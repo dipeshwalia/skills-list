@@ -178,7 +178,7 @@
     },
     "skills/workflow-code-review/UPSTREAM.md": {
       "executable": false,
-      "sha256": "e5c90001b05e0bd61cf41370fc6bd32ff279edac6a3bbe698fc556ad908e3951"
+      "sha256": "8b1b5c52dc93a911e8ec3f9a8fa00f1e5ed13787c8ac84efcbe6da47cc2c8d79"
     },
     "skills/workflow-code-review/agents/openai.yaml": {
       "executable": false,
@@ -206,7 +206,7 @@
     },
     "skills/workflow-codebase-design/UPSTREAM.md": {
       "executable": false,
-      "sha256": "414d990872269644e28ec4bb9985e461e60bd5b95399dcde48fc2ff5bc9e0d38"
+      "sha256": "1e08f19c7b1bf3bc7ca9b9a12635c9e87da58c89b2bd0f51ebdd61e0cc2525fa"
     },
     "skills/workflow-codebase-design/agents/openai.yaml": {
       "executable": false,
@@ -234,7 +234,7 @@
     },
     "skills/workflow-domain-modeling/UPSTREAM.md": {
       "executable": false,
-      "sha256": "870b7fb7b8ce80b7536f9108833166256211e68844f8a0bcdafd04fa28041f62"
+      "sha256": "c28524231ec214c8ce281189d779bf135d3685d2ffb687621f93a9751eb6ef35"
     },
     "skills/workflow-domain-modeling/agents/openai.yaml": {
       "executable": false,
@@ -254,7 +254,7 @@
     },
     "skills/workflow-dry-refactoring/UPSTREAM.md": {
       "executable": false,
-      "sha256": "079f112fbfe62fc21d3dcf27e6ffef9172462369fa199c4ea3ab0d187eb11979"
+      "sha256": "1fc6a353a6853d0448b38293efb8019c5e3ec4e44ee81378be36dbf33d59dca9"
     },
     "skills/workflow-grill-me/COLLECTION.md": {
       "executable": false,
@@ -270,7 +270,7 @@
     },
     "skills/workflow-grill-me/UPSTREAM.md": {
       "executable": false,
-      "sha256": "11bac03217575d39a62f0313ea811560b25402f15bf4bce0ca6493f742ebc7ca"
+      "sha256": "d300b18c1ac2ce05a50e4fd28c9cf7e6440d38ec65ded38ed1755f328278d7d3"
     },
     "skills/workflow-grill-me/agents/openai.yaml": {
       "executable": false,
@@ -290,7 +290,7 @@
     },
     "skills/workflow-grill-with-docs/UPSTREAM.md": {
       "executable": false,
-      "sha256": "8b37abbb3dc44b05ee9741162aae9fd1839788336977b9a537872fa0f1b2fa8b"
+      "sha256": "e2637a27c39faadcab20644281cfe7df288d029d86fac6de246873cba9dcce39"
     },
     "skills/workflow-grill-with-docs/agents/openai.yaml": {
       "executable": false,
@@ -310,7 +310,7 @@
     },
     "skills/workflow-grilling/UPSTREAM.md": {
       "executable": false,
-      "sha256": "2ae1465e627ded766168b690ccf4ba8cc4eca905df400e2e6223392a01681b18"
+      "sha256": "b554241bf26beb13398be6f9962ec7b8b968776ef0272a8e8f65b954f40b45c2"
     },
     "skills/workflow-grilling/agents/openai.yaml": {
       "executable": false,
@@ -330,7 +330,7 @@
     },
     "skills/workflow-handoff/UPSTREAM.md": {
       "executable": false,
-      "sha256": "ea03898a6ed969ae4b560923fffa06ba9bdd81c075ec4fef7622eacc5ce6fc0d"
+      "sha256": "555ec644da4a379527943c0bd4a5bc8e2d29f802524349632d6f5e82148e432e"
     },
     "skills/workflow-handoff/agents/openai.yaml": {
       "executable": false,
@@ -346,19 +346,11 @@
     },
     "skills/workflow-how/SKILL.md": {
       "executable": false,
-      "sha256": "4d020f720842f2cfc1139db9f82fb2a140bce68b9e455cc55cb8c037d14562cb"
+      "sha256": "753d38779b70bd092d70d5857df1bd22afbf00d71d1880dd55f6598b179fbf46"
     },
     "skills/workflow-how/UPSTREAM.md": {
       "executable": false,
-      "sha256": "c5817f2e74552828c85096e4b6f93f73699bbd36ff3b0aae53682e814ec73aad"
-    },
-    "skills/workflow-how/references/explainer-prompt.md": {
-      "executable": false,
-      "sha256": "ddb89cebefc24e2b54517a331aedfe045b6971e101f45c71b8cef4cccff45bff"
-    },
-    "skills/workflow-how/references/explorer-prompt.md": {
-      "executable": false,
-      "sha256": "6300128385ee940fd42ecb84b0e623435440a2dc283eae54ee4a52ba56947ba1"
+      "sha256": "c2553981fb9b3fd572ebf841fb3c83323d03900915ebfc0a11835db4c127cee8"
     },
     "skills/workflow-implement-spec/COLLECTION.md": {
       "executable": false,
@@ -374,7 +366,7 @@
     },
     "skills/workflow-implement-spec/UPSTREAM.md": {
       "executable": false,
-      "sha256": "62bb9db56d420cbdb291452e600fbd9f9cd40dbd7da071c37e8778c1ffd89495"
+      "sha256": "693365dc69ea86b1a983799db41fa24f530eaa6af357ba2f7d90edb6b706be0c"
     },
     "skills/workflow-implement-spec/agents/openai.yaml": {
       "executable": false,
@@ -418,11 +410,11 @@
     },
     "skills/workflow-jscpd/SKILL.md": {
       "executable": false,
-      "sha256": "82207f0b16464d98467f4e4bb14bac8931266042d17d6494064ac55a3b447153"
+      "sha256": "1dfb92812dfe7f68433c3d0167dcf166fe9d4cab4155527feaa230c3d7e31f94"
     },
     "skills/workflow-jscpd/UPSTREAM.md": {
       "executable": false,
-      "sha256": "8793e2da1d9aa112c3f75e63f760953ac5445057fcfa09343820fa01f026a541"
+      "sha256": "01dcdfe3ec6e2ff8dfd92597069ffaf0c495bc889b96e950ba9b7f2509c974e1"
     },
     "skills/workflow-prototype/COLLECTION.md": {
       "executable": false,
@@ -446,7 +438,7 @@
     },
     "skills/workflow-prototype/UPSTREAM.md": {
       "executable": false,
-      "sha256": "d210116f552c1e0af4121594f413a0784937054ce47ddc7eb36bb6b25ab2c32f"
+      "sha256": "54581480230ea38ac4168129a6324c506668ffc1087597acad2afae1bd55b35d"
     },
     "skills/workflow-prototype/agents/openai.yaml": {
       "executable": false,
@@ -466,7 +458,7 @@
     },
     "skills/workflow-research/UPSTREAM.md": {
       "executable": false,
-      "sha256": "2ccb8f95551931ebe4b6a4d8f3474fb8d2131e36f2502894878628afc3372049"
+      "sha256": "534b1a2630c39a37ba9c87cee06c2c777d85f08c642ddfe02d222a2f5807a482"
     },
     "skills/workflow-research/agents/openai.yaml": {
       "executable": false,
@@ -486,7 +478,7 @@
     },
     "skills/workflow-setup-matt-pocock-skills/UPSTREAM.md": {
       "executable": false,
-      "sha256": "1c3645592d0a5577e571a13221fd9efdd9ce9c5a44ffd732f78be1901de741ab"
+      "sha256": "19552c0d48ffee9b37d93f327971ec562ceff7458381878bd91f6dd924c94fbf"
     },
     "skills/workflow-setup-matt-pocock-skills/agents/openai.yaml": {
       "executable": false,
@@ -570,11 +562,11 @@
     },
     "skills/workflow-statechart/SKILL.md": {
       "executable": false,
-      "sha256": "6818efedb27b8cce422368bb7e264f82be15733c0c6033a0cd7e60ce4612558d"
+      "sha256": "c76defff13c530fab9f7fe9a5a93590eeb01052d6fd4574b640917f818648b14"
     },
     "skills/workflow-statechart/UPSTREAM.md": {
       "executable": false,
-      "sha256": "fd4410f59db92540dcb75cb05dc915150ee73684a61264369e3ec4b8c3fb9c3a"
+      "sha256": "2530448e580620e88aba27745e9a514b17c863b981ab57b20c2b9189dea54d0b"
     },
     "skills/workflow-statechart/references/render.md": {
       "executable": false,
@@ -586,7 +578,7 @@
     },
     "skills/workflow-statechart/scripts/backends/mermaid.ts": {
       "executable": false,
-      "sha256": "75704b2704a9399a39479ff704a580d5b9a1d0fede01fe771df28bf799b434b6"
+      "sha256": "ce293d34ce3928d93329bd6d1a889d5722620008dae4339add79ef226c3f9b88"
     },
     "skills/workflow-statechart/scripts/backends/plain-text.ts": {
       "executable": false,
@@ -602,7 +594,7 @@
     },
     "skills/workflow-statechart/scripts/frontends/dot.ts": {
       "executable": false,
-      "sha256": "4eef9ec848557dcd01ca8dbbec75b71c0653c1b73583108bafbb6f559f6d677b"
+      "sha256": "cd2e681ff58c759ddeaa17c2f3d4af1f0c3e71273566be555187b5d0e7767dac"
     },
     "skills/workflow-statechart/scripts/frontends/marks.ts": {
       "executable": false,
@@ -635,6 +627,14 @@
     "skills/workflow-statechart/scripts/ir.ts": {
       "executable": false,
       "sha256": "5602beca4e4ac08421cfa07e4da989f0e75439f1d136cc923226909e771dc7ff"
+    },
+    "skills/workflow-statechart/scripts/janitor.ts": {
+      "executable": false,
+      "sha256": "defac41e4cbfca3044c5078c544a0667f857a610c500c5ec96cb3bfaeec7120b"
+    },
+    "skills/workflow-statechart/scripts/kill.ts": {
+      "executable": false,
+      "sha256": "058df69d1184029e55d7e81b4fd37a6dc8557c9208979fb7032482d5ab0db448"
     },
     "skills/workflow-statechart/scripts/package.json": {
       "executable": false,
@@ -678,7 +678,7 @@
     },
     "skills/workflow-statechart/scripts/run.ts": {
       "executable": false,
-      "sha256": "f330e0a3b0a9f8181c2e52252c4a47db3f0a64f79a7cca5490263e33a5f13c72"
+      "sha256": "fb6ec4a1835a15e6e72df28bb932b8df5a4c04c5de6f9c270fd63ff5cd148dc7"
     },
     "skills/workflow-statechart/scripts/statechart": {
       "executable": true,
@@ -686,7 +686,7 @@
     },
     "skills/workflow-statechart/scripts/statechart.ts": {
       "executable": false,
-      "sha256": "1c653f05d0cd0f3298455701f36e3d7d1f837f93e6e642f7c20afb5d613c2d12"
+      "sha256": "5d5feff7d78204c828a8e30d531d23419234a81a7149dc3e48efb08dd770d6c1"
     },
     "skills/workflow-statechart/scripts/tsconfig.json": {
       "executable": false,
@@ -1022,7 +1022,7 @@
     },
     "skills/workflow-tdd/UPSTREAM.md": {
       "executable": false,
-      "sha256": "c039e3bc24eeac5379b5cae43801d5f699d0c0a88d81c99878276de510217aa6"
+      "sha256": "0e9532b43d561ebe4f4d247324989597bf1aa9626ca0ba5d06df5edf7ed986eb"
     },
     "skills/workflow-tdd/agents/openai.yaml": {
       "executable": false,
@@ -1066,7 +1066,7 @@
     },
     "skills/workflow-teach/UPSTREAM.md": {
       "executable": false,
-      "sha256": "235a5f7ace27911f0d8c873353a0d594562544b70375967a605e770f01900c33"
+      "sha256": "99df533c7a6774bf81ad01c28a5f5331fbda9158c18d3794789ae46fa7c76d7e"
     },
     "skills/workflow-teach/agents/openai.yaml": {
       "executable": false,
@@ -1086,7 +1086,7 @@
     },
     "skills/workflow-to-questionnaire/UPSTREAM.md": {
       "executable": false,
-      "sha256": "9e103d310430bb0cdd80f1159b51f0686385d57d612a4298da95ba9c5e6dc68a"
+      "sha256": "72fdbb28ab2ae883d95337ebb87259ac92571735ee6efe234ffd288480692b0c"
     },
     "skills/workflow-to-questionnaire/agents/openai.yaml": {
       "executable": false,
@@ -1106,7 +1106,7 @@
     },
     "skills/workflow-to-spec/UPSTREAM.md": {
       "executable": false,
-      "sha256": "96d52db6a5457ce483789792d2765d900c710d558c4addd8442543086fca3a59"
+      "sha256": "33047d54418ed4efb29b5c2117c401d60b2343ae00c6f04fb8a26d59e61f9510"
     },
     "skills/workflow-to-spec/agents/openai.yaml": {
       "executable": false,
@@ -1126,7 +1126,7 @@
     },
     "skills/workflow-to-tickets/UPSTREAM.md": {
       "executable": false,
-      "sha256": "2b5294969fcc27847707b172ed8d87b0ae829f28f0c96ccda7a4397ae2db73f6"
+      "sha256": "accb163952e8c5a2a73a5fb8786717693d48867130a7c32c1e19ace635c6f4c3"
     },
     "skills/workflow-to-tickets/agents/openai.yaml": {
       "executable": false,
@@ -1146,7 +1146,7 @@
     },
     "skills/workflow-wayfinder/UPSTREAM.md": {
       "executable": false,
-      "sha256": "67db60f4c4de9623681fb48aba9457e3d83024ef5466984b000f0d9166d9a25e"
+      "sha256": "7a9b25c0ccd3c22d72e96bb542898737e4646a2dcfc854554385db2ce8abd921"
     },
     "skills/workflow-wayfinder/agents/openai.yaml": {
       "executable": false,
@@ -1170,7 +1170,7 @@
     },
     "skills/workflow-writing-for-agents/UPSTREAM.md": {
       "executable": false,
-      "sha256": "9604de78a69ce8b5226737354bc053390cb01f69cdc3e034149702671f4c9fae"
+      "sha256": "c23684ed041f0354c011d258e7e745740c689a805b83892758819731766a5ddf"
     },
     "skills/workflow-writing-for-agents/agents/openai.yaml": {
       "executable": false,
@@ -1314,11 +1314,11 @@
     },
     "skills/writing-technical-writing/SKILL.md": {
       "executable": false,
-      "sha256": "2233d743ecc7fe3659c31a4d16778663c5b65d4636e3c360cd7eb7356ab556cb"
+      "sha256": "ef97c1a76d229857b98fca55677bfcfe6c9a3b5e862fc3b298b3eade26d16871"
     },
     "skills/writing-technical-writing/UPSTREAM.md": {
       "executable": false,
-      "sha256": "a561eace46d7225143d248d89a6f3cec10af437daff0064a40fe189f95055eb9"
+      "sha256": "5ffb76c23de25de13d57aefbdda0126a23620adf0ffd14e6041aa76b6b72702c"
     },
     "skills/writing-unslop/COLLECTION.md": {
       "executable": false,
@@ -1330,11 +1330,11 @@
     },
     "skills/writing-unslop/SKILL.md": {
       "executable": false,
-      "sha256": "d26d760ef2e5e7bdedc03502c5b3ef4f2af83fcd9085c6875eb7c84d6d031fde"
+      "sha256": "900b9755e542e318f384c6ca408c509c7e529e417096baf4d69fe5fdf40fc405"
     },
     "skills/writing-unslop/UPSTREAM.md": {
       "executable": false,
-      "sha256": "b1c5f024b9dd2a95607f9c66c1848103c364e6a74ffeb3696c40dcb2d21c4ab0"
+      "sha256": "dcbb1c4ec0a62bb89397d0f6dee527c8a4a073a6519e2470cf508ae83e7d0934"
     }
   },
   "packages": {
